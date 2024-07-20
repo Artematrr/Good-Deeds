@@ -1,0 +1,252 @@
+.footer {
+	color: var(--white);
+	background: var(--primary-900);
+	padding-block: 54px;
+	margin-top: 50px;
+
+	@include mobile {
+		padding-block: 30px;
+		margin-top: 30px;
+	}
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		align-items: stretch;
+		gap: 30px;
+
+		@include desktop {
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+		}
+
+		@include mobile {
+			flex-direction: column;
+			align-items: center;
+			gap: 15px;
+		}
+	}
+
+	&__column {
+		display: flex;
+	}
+
+	&__logo {
+		flex-direction: column;
+		justify-content: space-between;
+		row-gap: 20px;
+		max-width: 40%;
+
+		@include mobile {
+			max-width: 100%;
+			align-items: center;
+			gap: 6px;
+		}
+	}
+
+	&__logo-link {
+		max-width: 210px;
+	}
+
+	&__logo-description {
+		@include fluid-text(12, 14);
+
+		font-family: var(--font-family-accent);
+		line-height: 1.25;
+		letter-spacing: 0.42px;
+		text-transform: uppercase;
+		max-width: 430px;
+
+		@include mobile {
+			text-align: center;
+		}
+	}
+
+	&__logo-info {
+		color: var(--gray-700);
+		font-size: 14px;
+		width: 100%;
+	}
+
+	&__contacts {
+		flex-direction: column;
+		row-gap: 25px;
+
+		@include mobile {
+			align-items: center;
+			text-align: center;
+			row-gap: 15px;
+		}
+	}
+
+	&__contacts-list {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__contacts-title {
+		color: var(--gray-700);
+		font-size: 12px;
+		margin-bottom: 3px;
+
+		&:not(:first-child) {
+			margin-top: 10px;
+		}
+	}
+
+	&__contacts-item {
+		@include fluid-text(18, 20);
+
+		font-weight: 700;
+
+		&:not(:first-of-type) {
+			font-family: var(--font-family-accent);
+		}
+
+		& + & {
+			margin-top: 5px;
+		}
+	}
+
+	&__contacts-links {
+		display: flex;
+		gap: 15px;
+	}
+
+	&__contacts-links-item {
+		@include square(36px);
+		@include flex-center(true);
+
+		border-radius: 50%;
+		border: 2px solid var(--white);
+		transition: border-color var(--transition-duration) ease-in-out;
+
+		&[data-item='odnoklassniki']:hover {
+			border-color: #ff7700;
+		}
+		&[data-item='vkontakte']:hover {
+			border-color: #0077ff;
+		}
+		&[data-item='youtube']:hover {
+			border-color: #c4302b;
+		}
+	}
+
+	&__contacts-link {
+		@include flex-center(true);
+		@include square(24px);
+	}
+
+	&__qr {
+		display: flex;
+		align-items: center;
+		gap: 30px;
+
+		@include desktop {
+			width: 100%;
+			justify-content: center;
+		}
+
+		@include mobile {
+			flex-wrap: wrap;
+			gap: 15px;
+		}
+	}
+
+	&__qr-description {
+		font-size: 14px;
+		max-width: 245px;
+
+		p:not(:last-child) {
+			margin-bottom: 1.35em;
+		}
+
+		@include mobile {
+			text-align: center;
+
+			p:not(:last-child) {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__qr-links {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 15px;
+	}
+
+	&__qr-list {
+		display: flex;
+		align-items: center;
+		gap: 30px;
+	}
+
+	&__qr-item {
+		@include square(32px);
+
+		&:not(:hover) svg *:not(.no-recolor) {
+			fill: var(--gray-400);
+		}
+	}
+
+	&__qr-image {
+		@include square(165px);
+	}
+
+	&__bottom {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 10px 30px;
+		padding-top: 30px;
+		margin-top: 30px;
+		border-top: 1px solid var(--gray-700);
+
+		@include mobile {
+			flex-direction: column;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 10px;
+		}
+	}
+
+	&__copyright {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0 10px;
+		color: var(--gray-700);
+
+		a {
+			@include hover {
+				color: var(--gray-400);
+			}
+		}
+
+		@include mobile {
+			flex-direction: column;
+			justify-content: center;
+		}
+	}
+
+	&__develop-by {
+		font-family: Montserrat, sans-serif;
+		font-size: 14px;
+		line-height: 1.25;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+
+	&__develop-by-link {
+		width: 85px;
+		height: 30px;
+	}
+}

@@ -1,0 +1,38 @@
+.breadcrumbs {
+	margin-block: 10px;
+	
+	&-list {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 5px 10px;
+	}
+
+	&-item {
+		color: var(--gray-400);
+		font-size: 12px;
+
+		&:last-child {
+			color: var(--primary-900);
+		}
+
+		@include hover {
+			color: var(--primary-600);
+		}
+
+		&:not(:first-child) {
+			&::before {
+				content: '';
+				display: inline-block;
+				width: 6px;
+				height: 6px;
+				border-radius: 50%;
+				background-color: var(--primary-500);
+				margin-right: 10px;
+			}
+		}
+	}
+
+	&-link {
+	}
+}

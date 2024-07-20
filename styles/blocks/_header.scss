@@ -1,0 +1,246 @@
+.header {
+	background-image: url('/images/bg-wide.png');
+	position: relative;
+	z-index: 1;
+
+	@include mobile {
+		background-image: none;
+		background-color: var(--white);
+	}
+
+	&::after {
+		content: '';
+		width: 50%;
+		height: 100%;
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		background-color: var(--white);
+
+		@include mobile {
+			display: none;
+		}
+	}
+
+	&__inner {
+		display: flex;
+		position: relative;
+		z-index: 2;
+
+		@include mobile {
+			justify-content: space-between;
+			gap: 10px;
+		}
+	}
+
+	&__logo {
+		display: flex;
+		align-items: center;
+		gap: 30px;
+		width: 100%;
+		max-width: 690px;
+		padding-right: 20px;
+
+		@include mobile {
+			display: contents;
+		}
+
+		&-link {
+			display: flex;
+			flex-shrink: 0;
+			width: 210px;
+
+			@include desktop {
+				width: 150px;
+			}
+
+			@include tablet {
+				width: 180px;
+			}
+
+			@include mobile-s {
+				width: 100px;
+			}
+		}
+
+		&-description {
+			max-width: 360px;
+
+			@include tablet {
+				@include visually-hidden;
+			}
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-end;
+		gap: 15px;
+		width: 100%;
+		max-width: 720px;
+		padding-top: 15px;
+		padding-left: 20px;
+		background-color: var(--white);
+
+		@include mobile {
+			display: contents;
+		}
+
+		&-top {
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			gap: 10px 30px;
+			align-self: stretch;
+
+			@include desktop {
+				flex-wrap: wrap;
+			}
+		}
+
+		&-bottom {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			gap: 30px;
+
+			@include mobile {
+				display: contents;
+			}
+		}
+	}
+
+	&__contacts {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+
+		@include mobile {
+			display: contents;
+		}
+
+		&-tel {
+			color: var(--black);
+			font-weight: 700;
+			white-space: nowrap;
+
+			@include hover {
+				color: var(--primary-600);
+			}
+
+			@include mobile {
+				display: none;
+			}
+		}
+
+		&-links {
+			display: flex;
+			align-items: center;
+			gap: 5px;
+
+			@include mobile {
+				display: none;
+			}
+		}
+
+		&-link {
+			@include flex-center(true);
+			@include square(24px);
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+	}
+
+	&__button {
+		padding: 10px 15px;
+		flex-basis: max-content;
+		white-space: nowrap;
+
+		@include desktop {
+			white-space: unset;
+		}
+
+		@include mobile {
+			padding: 10px;
+			font-size: 12px;
+		}
+
+		@include mobile {
+			&:last-child {
+				display: none;
+			}
+		}
+	}
+
+	&__nav {
+		@include mobile {
+			display: contents;
+		}
+
+		&-list {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 10px;
+			min-height: 32px;
+
+			@include mobile {
+				display: none;
+			}
+		}
+
+		&-item {
+			font-size: 12px;
+
+			@include hover {
+				color: var(--primary-600);
+			}
+
+			&.is-active {
+				color: var(--secondary-500);
+				position: relative;
+
+				@include hover {
+					color: var(--secondary-500);
+				}
+
+				&::before {
+					content: '';
+					position: absolute;
+					top: calc(100% - 2px);
+					left: var(--underlineOffset, 0);
+					display: block;
+					width: var(--underlineWidth, 100%);
+					aspect-ratio: var(--underlineAspectRatio, 27 / 3);
+					background-image: var(
+						--underlineImage,
+						url('/images/icons/underline-134.svg')
+					);
+					background-size: 100% 100%;
+					background-repeat: no-repeat;
+					background-position: left;
+				}
+			}
+		}
+
+		&-link {
+			padding-block: 8px;
+			white-space: nowrap;
+
+			@include tablet {
+				white-space: unset;
+			}
+		}
+	}
+
+	&__burger {
+		@include reset-button;
+	}
+}
