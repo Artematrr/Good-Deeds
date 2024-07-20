@@ -16,7 +16,7 @@
 	&__list {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		background-image: url('/images/bg-wide.png');
+		background-image: url('/images/bg-transparent.png');
 
 		@include mobile {
 			grid-template-columns: repeat(2, 1fr);
