@@ -24,41 +24,44 @@ a {
 
 h1,
 .h1 {
+	@include fluid-text(24, 34);
+
 	font-weight: 500;
 	color: var(--primary-600);
-
-	@include fluid-text(24, 34);
 }
 
 h2,
 .h2 {
+	@include fluid-text(24, 48);
+
 	font-weight: 400;
 	color: var(--primary-600);
-
-	@include fluid-text(24, 48);
 }
 
 h3,
 .h3 {
+	@include fluid-text(24, 34);
+
 	font-weight: 500;
 	color: var(--primary-500);
-
-	@include fluid-text(24, 34);
 }
 
 h4,
 .h4 {
+	@include fluid-text(20, 24);
+
 	font-family: var(--font-family-base);
 	font-weight: 700;
 	line-height: 1.35;
 	color: var(--primary-600);
-
-	@include fluid-text(20, 24);
 }
 
-h1, .h1,
-h2, .h2,
-h3, .h3 {
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
 	font-family: var(--font-family-accent);
 	line-height: 1.25;
 

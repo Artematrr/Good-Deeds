@@ -4,6 +4,21 @@
 	padding-inline: var(--container-padding-x);
 }
 
+.section--margin-bottom {
+	margin-bottom: var(--section-margin-bottom);
+}
+
+.section--flex-column {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 30px;
+
+	@include mobile {
+		gap: 15px;
+	}
+}
+
 .visually-hidden {
 	@include visually-hidden;
 }
@@ -19,4 +34,3 @@
 		display: none !important;
 	}
 }
-

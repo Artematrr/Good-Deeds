@@ -7,13 +7,17 @@
 	'utils', 
 	'globals';
 
-@import 
+@import 	
 	'blocks/button',
+	'blocks/breadcrumbs', 	
+	'blocks/header',
+	'blocks/footer',
 	'blocks/help-now', 
 	'blocks/our-purpose',
-	'blocks/breadcrumbs', 
-	'blocks/header',
-	'blocks/footer'
+	'blocks/projects.scss',
+	'blocks/cooperation',
+	'blocks/banner'
+	
 	 // 'blocks/field',
 	// 'blocks/radios',
 	// 'blocks/radio',

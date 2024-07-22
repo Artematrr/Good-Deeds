@@ -1,0 +1,249 @@
+.projects {
+	// .is-hidden {
+	// 	opacity: 0;
+	// 	width: 0;
+	// 	z-index: -1;
+	// }
+
+	&__header {
+		text-align: center;
+		padding-block: 30px;
+		width: 100%;
+		background-image: url('/images/bg-wide.png');
+	}
+
+	&__container {
+		@include flex-center();
+
+		width: 100%;
+		background-color: var(--primary-500);
+	}
+
+	&__list {
+		position: relative;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+
+		@include desktop {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		@include tablet {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include mobile {
+			grid-template-columns: 1fr;
+			width: 100%;
+		}
+	}
+
+	&__item {
+		max-width: 352px;
+		width: 100%;
+		aspect-ratio: 1 / 1;
+		background-color: var(--primary-500);
+		z-index: 1;
+
+		&--last {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			background-color: var(--primary-500) !important;
+			z-index: 0;
+
+			.projects__item-image svg * {
+				fill: var(--primary-600) !important;
+				stroke: var(--primary-600) !important;
+			}
+
+			@include mobile {
+				display: none;
+			}
+		}
+
+		.projects__item-image svg * {
+			fill: var(--primary-600);
+			stroke: var(--primary-600);
+		}
+
+		&:nth-child(8n + 2),
+		&:nth-child(8n + 4),
+		&:nth-child(8n + 5),
+		&:nth-child(8n + 7) {
+			background-color: var(--primary-600);
+
+			.projects__item-image svg * {
+				fill: var(--primary-500);
+				stroke: var(--primary-500);
+			}
+		}
+
+		@include desktop {
+			&:nth-child(odd) {
+				background-color: var(--primary-500);
+
+				.projects__item-image svg * {
+					fill: var(--primary-600);
+					stroke: var(--primary-600);
+				}
+			}
+
+			&:nth-child(even) {
+				background-color: var(--primary-600);
+
+				.projects__item-image svg * {
+					fill: var(--primary-500);
+					stroke: var(--primary-500);
+				}
+			}
+		}
+
+		@include tablet {
+			&:nth-child(4n + 2),
+			&:nth-child(4n + 3) {
+				background-color: var(--primary-600);
+
+				.projects__item-image svg * {
+					fill: var(--primary-500);
+					stroke: var(--primary-500);
+				}
+			}
+
+			&:nth-child(4n),
+			&:nth-child(4n + 1) {
+				background-color: var(--primary-500);
+
+				.projects__item-image svg * {
+					fill: var(--primary-600);
+					stroke: var(--primary-600);
+				}
+			}
+		}
+
+		@include mobile {
+			max-width: none;
+			aspect-ratio: unset;
+
+			&:nth-child(odd) {
+				background-color: var(--primary-500);
+
+				.projects__item-image svg * {
+					fill: var(--primary-600);
+					stroke: var(--primary-600);
+				}
+			}
+
+			&:nth-child(even) {
+				background-color: var(--primary-600);
+
+				.projects__item-image svg * {
+					fill: var(--primary-500);
+					stroke: var(--primary-500);
+				}
+			}
+		}
+	}
+
+	&__item-button {
+		@include reset-button;
+
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		row-gap: 30px;
+		height: 100%;
+		width: 100%;
+		padding: 30px 40px;
+		overflow: hidden;
+
+		@include mobile {
+			row-gap: 10px;
+			padding: 15px;
+		}
+
+		@include mobile-above {
+			@include hover {
+				cursor: pointer;
+
+				.projects__item-icon {
+					transform: translateY(10px);
+				}
+			}
+		}
+	}
+
+	&__item-image {
+		position: absolute;
+		right: var(--iconPositionRight, 0);
+		bottom: var(--iconPositionBottom, 0);
+		z-index: 0;
+
+		@include mobile {
+			right: var(--iconMobilePositionRight, 15px);
+			bottom: var(--iconMobilePositionBottom, 0);
+			scale: var(--iconMobileScale, 0.6);
+			transform-origin: right bottom;
+		}
+	}
+
+	&__item-title {
+		color: var(--white);
+		text-align: left;
+		word-spacing: 100em;
+		width: 100%;
+		z-index: 1;
+
+		@include mobile {
+			word-spacing: initial;
+		}
+	}
+
+	&__item-icon {
+		@include square(26px);
+
+		z-index: 1;
+		transition: transform var(--transition-duration) ease-in-out;
+	}
+
+	&__swiper-wrapper {
+		// display: none;
+	}
+
+	&__swiper-container {
+	}
+
+	&__swiper {
+	}
+
+	&__card {
+	}
+
+	&__card-content {
+	}
+
+	&__card-title {
+	}
+
+	&__card-description {
+	}
+
+	&__card-link {
+	}
+
+	&__card-image {
+	}
+}
+
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.swiper-button-prev {
+}
+.swiper-button-next {
+}

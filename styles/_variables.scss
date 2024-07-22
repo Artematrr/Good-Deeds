@@ -49,9 +49,13 @@
 
 	--container-width: 1410px;
 	--container-padding-x: 17px;
-
+	
 	--transition-duration: 0.2s;
-
+	
+	--section-margin-bottom: 50px;
+	@include mobile {
+		--section-margin-bottom: 30px;
+	}
 	// --section-padding-y: 70px;
 	// @include desktop {
 	// 	--section-padding-y: 50px;
