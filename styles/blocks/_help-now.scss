@@ -28,6 +28,7 @@
 
 	&__card-image-wrapper {
 		width: 50%;
+
 		@include tablet {
 			width: 100%;
 		}

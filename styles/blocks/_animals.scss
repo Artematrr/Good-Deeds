@@ -1,0 +1,177 @@
+.animals {
+	&__filter {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 15px 10px;
+		width: 100%;
+	}
+
+	&__tabs {
+		max-width: fit-content;
+		margin-inline: unset;
+
+		.swiper-scrollbar {
+			opacity: 0;
+		}
+
+		.swiper-slide {
+			max-width: fit-content;
+		}
+
+		@include mobile {
+			padding-left: var(--container-padding-x);
+		}
+	}
+
+	&__tab {
+		@include fluid-text(14, 20);
+
+		padding: 8px 30px;
+		font-family: var(--font-family-base);
+		text-transform: capitalize;
+
+		&:focus-visible {
+			outline-color: var(--primary-600);
+			color: var(--primary-600);
+
+			&.is-active {
+				color: inherit;
+				border-color: inherit;
+			}
+		}
+
+		&.is-active {
+			color: var(--secondary-500);
+			border: 1px solid var(--secondary-500);
+		}
+	}
+
+	&__swiper {
+		.swiper-slide {
+			justify-content: center;
+		}
+	}
+
+	&__card {
+		position: relative;
+		display: flex;
+		min-height: 350px;
+		width: 100%;
+		max-width: 500px;
+		overflow: hidden;
+
+		@include hover {
+			.animals__card-image {
+				filter: brightness(0.8);
+			}
+
+			.animals__card-description {
+				display: inline-block;
+			}
+		}
+
+		&--girl {
+			@include hover {
+				box-shadow: var(--shadow-girl);
+
+				.animals__card-title {
+					color: var(--color-girl) !important;
+				}
+			}
+		}
+
+		&--boy {
+			@include hover {
+				box-shadow: var(--shadow-boy);
+
+				.animals__card-title {
+					color: var(--color-boy) !important;
+				}
+			}
+		}
+	}
+
+	&__card-image {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		display: flex;
+		flex-shrink: 0;
+		height: 100%;
+		width: inherit;
+		z-index: 0;
+		object-fit: cover;
+		transition: filter var(--transition-duration) ease-in-out;
+	}
+
+	&__card-content {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: flex-start;
+		padding: 15px;
+		width: 100%;
+		z-index: 1;
+		box-shadow: 0 -100px 25px -30px rgba(0, 0, 0, 0.2) inset;
+		transition: box-shadow var(--transition-duration) ease-in-out;
+	}
+
+	&__card-info {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 5px;
+	}
+
+	&__card-item {
+		display: flex;
+		align-items: center;
+		gap: 5px 10px;
+		border-radius: var(--border-radius);
+		background-color: hsla(0, 0%, 100%, 0.8);
+		transition: background-color var(--transition-duration) ease-in-out;
+	}
+
+	&__card-icon {
+		@include flex-center(true);
+
+		position: relative;
+		width: 32px;
+		height: 32px;
+		overflow: hidden;
+		border-radius: var(--border-radius);
+
+		&--year {
+			padding: 0px 5px;
+			width: auto;
+			min-width: 32px;
+			background: var(--gray-100);
+			user-select: auto;
+		}
+	}
+
+	&__card-description {
+		display: none;
+		padding-right: 10px;
+		opacity: 1;
+		overflow: hidden;
+		transition: padding var(--transition-duration) ease-in-out,
+			opacity var(--transition-duration) ease-in-out;
+
+		@starting-style {
+			padding: 0;
+			opacity: 0;
+		}
+	}
+
+	&__card-title {
+		@include fluid-text(20, 24);
+
+		font-family: var(--font-family-base);
+		font-weight: 700;
+		line-height: 1.35; 
+		color: var(--white);
+		transition: color var(--transition-duration) ease-in-out;
+	}
+}

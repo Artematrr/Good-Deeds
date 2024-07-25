@@ -22,6 +22,11 @@ a {
 	text-decoration: none;
 }
 
+img,
+svg {
+	user-select: none;
+}
+
 h1,
 .h1 {
 	@include fluid-text(24, 34);

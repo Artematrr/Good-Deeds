@@ -1,0 +1,67 @@
+.news {
+	&__swiper {
+	}
+
+	&__card {
+		position: relative;
+		display: flex;
+		height: 350px;
+		width: 100%;
+		overflow: hidden;
+
+		@include hover {
+			.news__card-image {
+				filter: brightness(0.8);
+			}
+		}
+	}
+
+	&__card-image {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		display: flex;
+		flex-shrink: 0;
+		height: 100%;
+		width: inherit;
+		z-index: 0;
+		object-fit: cover;
+		transition: filter var(--transition-duration) ease-in-out;
+	}
+
+	&__card-content {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: flex-start;
+		padding: 15px 15px 20px 15px;
+		width: 100%;
+		z-index: 1;
+		color: var(--white);
+		box-shadow: 0 -100px 25px -10px rgba(0, 0, 0, 0.4) inset;
+		transition: box-shadow var(--transition-duration) ease-in-out;
+	}
+
+	&__card-tags {
+		display: flex;
+		align-items: flex-start;
+		gap: 5px 10px;
+		margin-bottom: 3px;
+
+		li {
+			font-size: 12px;
+		}
+	}
+
+	&__card-date {
+		font-size: 16px;
+		margin-bottom: 10px;
+	}
+
+	&__card-title {
+		font-family: var(--font-family-base);
+		font-size: 20px;
+		line-height: 1.35;
+		color: var(--white);
+	}
+}

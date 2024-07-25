@@ -1,0 +1,147 @@
+.donation {
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 10px 30px;
+		padding: 60px 30px;
+		border: 1px solid var(--secondary-500);
+		border-radius: var(--border-radius);
+
+		@include mobile {
+			flex-direction: column;
+		}
+		@include mobile-s {
+			border: none;
+			padding: 15px 0 0 0;
+		}
+	}
+
+	&__text {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		row-gap: 5px;
+	}
+
+	&__title {
+		@include fluid-text(24, 34);
+
+		@include mobile {
+			text-align: center;
+		}
+	}
+
+	&__description {
+		text-align: center;
+
+		@include mobile-above {
+			display: none;
+		}
+	}
+
+	&__form {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		justify-items: center;
+		gap: 10px 30px;
+
+		@include tablet {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__form-col {
+		&--label {
+			align-self: center;
+		}
+
+		&--amount {
+			display: flex;
+			align-self: center;
+			flex-direction: column;
+			row-gap: 30px;
+		}
+
+		&--variation {
+			display: flex;
+			align-items: center;
+			column-gap: 10px;
+		}
+	}
+
+	&__form-label {
+		@include fluid-text(20, 24);
+
+		font-weight: 700;
+	}
+
+	&__form-button {
+		@include mobile {
+			padding: 10px 15px;
+		}
+	}
+
+	&__form-dropdown {
+		color: var(--primary-600);
+		font-family: var(--font-family-accent);
+		font-size: 20px;
+		line-height: 1.25;
+		
+		text-align: center;
+		// padding-inline: 30px;
+		width: 100%;
+		border: none;
+		border-bottom: 1px solid var(--gray-400);
+	}
+
+	&__form-input {
+		color: var(--secondary-500);
+		font-size: 70px;
+		font-weight: 700;
+
+		text-align: center;
+		// padding-inline: 30px;
+		width: 100%;
+		border: none;
+		border-bottom: 1px solid var(--gray-400);
+	}
+
+	// input[type='number'] {
+	// 	/*for absolutely positioning spinners*/
+	// 	position: relative;
+	// 	padding: 5px;
+	// 	padding-right: 25px;
+	// }
+
+	// input[type='number']::-webkit-outer-spin-button,
+	// input[type='number']::-webkit-inner-spin-button {
+	// 	-webkit-appearance: inner-spin-button !important;
+	// 	position: absolute;
+	// 	top: 0;
+	// 	right: 0;
+	// 	width: 250px;
+	// 	height: 100%;
+	// 	opacity: 1;
+	// }
+
+	&__form-scrollabe-select {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		max-height: 120px;
+		scroll-snap-type: proximity;
+		// overflow-y: scroll;
+	}
+
+	&__form-scrollable-item {
+		color: var(--gray-400);
+		font-size: 24px;
+		font-weight: 700;
+		white-space: nowrap;
+
+		&.is-active {
+			color: var(--primary-600);
+		}
+	}
+}

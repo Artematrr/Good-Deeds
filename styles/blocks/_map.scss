@@ -1,0 +1,17 @@
+.map {
+	&__header {
+		@include flex-center(true);
+
+		flex-direction: column;
+		gap: 10px;
+		text-align: center;
+
+		p {
+			@include fluid-text(16, 24);
+		}
+	}
+
+	&__container {
+		width: 100%;
+	}
+}

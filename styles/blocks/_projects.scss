@@ -145,9 +145,7 @@
 		}
 	}
 
-	&__item-button {
-		@include reset-button;
-
+	&__item-inner {
 		position: relative;
 		display: flex;
 		flex-direction: column;
@@ -209,41 +207,114 @@
 	}
 
 	&__swiper-wrapper {
-		// display: none;
-	}
-
-	&__swiper-container {
+		position: relative;
+		display: flex;
+		// align-items: center;
+		min-height: 700px;
+		background-color: var(--secondary-500);
+		overflow: hidden;
 	}
 
 	&__swiper {
+		.swiper-slide {
+			overflow: hidden;
+		}
+
+		.swiper-button-prev {
+			background-image: url('/images/icons/prev-white.svg') !important;
+		}
+		
+		.swiper-button-next {
+			background-image: url('/images/icons/next-white.svg') !important;
+		}
 	}
 
 	&__card {
+		display: flex;
+		align-items: center;
+		padding: 90px 120px;
+		height: 100%;
+		// overflow: hidden;
+		background-color: var(--secondary-500);
+	}
+
+	&__card-inner {
+		position: relative;
+		display: flex;
+		align-items: flex-start;
+		gap: 30px;
+		min-height: 345px;
+		z-index: 1;
 	}
 
 	&__card-content {
+		color: var(--white);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: flex-start;
+		row-gap: 40px;
 	}
 
 	&__card-title {
+		color: var(--white);
 	}
 
 	&__card-description {
+		@include fluid-text(16, 20);
+
+		font-family: var(--font-family-accent);
+		line-height: 1.25;
+		display: flex;
+		flex-direction: column;
+		row-gap: 30px;
 	}
 
 	&__card-link {
+		@include flex-center(true);
+
+		font-size: 14px;
+		gap: 8px;
 	}
 
 	&__card-image {
+		display: flex;
+		flex-shrink: 0;
 	}
-}
 
-.swiper {
-}
-.swiper-wrapper {
-}
-.swiper-slide {
-}
-.swiper-button-prev {
-}
-.swiper-button-next {
+	&__card-close-button-wrapper {
+		display: flex;
+		align-items: flex-start;
+		height: 100%;
+	}
+
+	&__card-close-button {
+		@include reset-button();
+		@include flex-center(true);
+		@include square(32px);
+
+		flex-shrink: 0;
+	}
+
+	&__card-background-image {
+		--iconScaleDefault: var(--iconScale, 2);
+		--iconPositionRightScaled: calc(
+			var(--iconPositionRight) * var(--iconScaleDefault)
+		);
+		--iconPositionBottomScaled: calc(
+			var(--iconPositionBottom) * var(--iconScaleDefault)
+		);
+
+		position: absolute;
+		right: var(--iconPositionRightScaled, 0);
+		bottom: var(--iconPositionBottomScaled, 0);
+		scale: var(--iconScaleDefault, 2);
+		transform-origin: right bottom;
+		z-index: 0;
+
+		svg * {
+			fill: var(--secondary-400);
+			stroke: var(--secondary-400);
+		}
+	}
 }

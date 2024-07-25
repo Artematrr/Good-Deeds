@@ -5,6 +5,7 @@
 	--primary-500: #0073b4;
 	--primary-600: #03486e;
 	--primary-900: #002032;
+	--secondary-400: #dd1700;
 	--secondary-500: #cb1517;
 
 	--gray-100: #f9f9f9;
@@ -49,9 +50,9 @@
 
 	--container-width: 1410px;
 	--container-padding-x: 17px;
-	
+
 	--transition-duration: 0.2s;
-	
+
 	--section-margin-bottom: 50px;
 	@include mobile {
 		--section-margin-bottom: 30px;
