@@ -58,4 +58,38 @@
 			}
 		}
 	}
+
+	&--icon-after {
+		&::before {
+			content: var(--buttonIcon);
+			width: 24px;
+			height: 11px;
+		}
+
+		&:hover {
+			&::before {
+				content: var(--buttonIconHover, var(--buttonIcon));
+			}
+		}
+	}
+}
+
+.button--more,
+.button--more-white {
+	@include flex-center(true);
+
+	&::after {
+		content: '';
+		width: 24px;
+		height: 11px;
+		background-image: url('/images/icons/arrow-more.svg');
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+}
+
+.button--more-white {
+	&::after {
+		background-image: url('/images/icons/arrow-more-white.svg');
+	}
 }

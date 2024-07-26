@@ -40,10 +40,6 @@ new Swiper('.animals__swiper', {
 		1920: {
 			slidesPerView: 5,
 		},
-		2560: {
-			slidesPerView: 5,
-			centeredSlides: true,
-		},
 	},
 })
 
@@ -81,7 +77,6 @@ new Swiper('.partners__swiper', {
 	},
 })
 
-
 new Swiper('.news__swiper', {
 	spaceBetween: 0,
 	breakpoints: {
@@ -97,13 +92,6 @@ new Swiper('.news__swiper', {
 		},
 		1240: {
 			slidesPerView: 4,
-		},
-		1920: {
-			slidesPerView: 5,
-		},
-		2560: {
-			slidesPerView: 5,
-			centeredSlides: true,
-		},
+		},		
 	},
 })

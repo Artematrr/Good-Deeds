@@ -61,7 +61,7 @@
 									class="header__nav-link">Контакты</a></li>
 						</ul>
 					</nav>
-					<button class="header__burger js-burger" type="button" title="Открыть меню">Меню</button>
+					<button class="header__burger js-burger" type="button" title="Открыть меню">=</button>
 				</div>
 			</div>
 		</div>
@@ -83,11 +83,55 @@
 	<main class="main">
 
 		<!-- Доделать -->
-		<section class="union container">
+		<!-- <section class="combined-section"> -->
+		<!-- <div class="combined-section__content">
+				<div class="combined-section__right"></div>
+				<div class="combined-section__left"></div>
+			</div> -->
+		<!-- </section> -->
+		<section class="combined-section combined-section--donation banner banner--reverse">
 			<h1 class="visually-hidden">Добрые дела</h1>
-			<div class="union__content">
-				<div class="union__right"></div>
-				<div class="union__left"></div>
+			<div class="combined-section__inner banner__inner container">
+				<div class="combined-section__content banner__content">
+					<div class="combined-section__text">
+						<h2 class="combined-section__title h2">Как помочь?</h2>
+						<div class="combined-section__description">
+							<p>Есть очень много способов. <br> Пожертвование один из них. <br> Выберите удобный Вам формат!</p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="combined-section__image banner__image">
+				<a href="#" class="combined-section__link button button--primary button--more-white">Счастливые истории</a>
+				<img src="/images/main-history.jpg" alt="Счастливые животные">
+			</div>
+		</section>
+
+		<section class="combined-section combined-section--purpose banner section--margin-bottom">
+			<div class="combined-section__inner banner__inner container">
+				<div class="combined-section__content banner__content">
+					<div class="combined-section__text">
+						<h2 class="combined-section__title h2">Цель и миссия фонда</h2>
+						<div class="combined-section__description">
+							<p>Защита и помощь животных, которые нуждаются в нашей помощи.</p>
+							<p>Бездомные животные не могут самостоятельно обратиться за помощью, сказать что они хотя есть или у них
+								что то болит.</p>
+						</div>
+					</div>
+					<div class="combined-section__buttons">
+						<button class="combined-section__button button button--primary button--icon" type="button"
+							style="--buttonIcon: url('/images/icons/heart-help.svg'); --buttonIconHover: url('/images/icons/heart-help-white.svg');">
+							Помочь фонду
+						</button>
+						<button class="combined-section__button button button--secondary button--icon" type="button"
+							style="--buttonIcon: url('/images/icons/paw.svg');">Получить помощь</button>
+					</div>
+				</div>
+			</div>
+			<div class="combined-section__image banner__image">
+				<a href="#" class="combined-section__link button button--primary button--more-white">Им нужна помощь</a>
+				<img src="/images/main-help.jpg" alt="Им нужна помощь">
 			</div>
 		</section>
 
@@ -347,9 +391,7 @@
 											<p>Карта дает постоянную скидку 20% на медицинские услуги, первичную консультация и осмотр
 												бесплатно + подробные рекомендации по уходу</p>
 										</div>
-										<a href="#" class="projects__card-link">Подробности
-											<span><img src="/images/icons/arrow-more-white.svg" alt=""></span>
-										</a>
+										<a href="#" class="projects__card-link button--more-white">Подробности</a>
 									</div>
 									<div class="projects__card-image">
 										<img src="/images/projects/project-1-preview.png" alt="Здоровый город" width="409" height="343">
@@ -397,9 +439,7 @@
 											<p>Карта дает постоянную скидку 20% на медицинские услуги, первичную консультация и осмотр
 												бесплатно + подробные рекомендации по уходу</p>
 										</div>
-										<a href="#" class="projects__card-link">Подробности
-											<span><img src="/images/icons/arrow-more-white.svg" alt=""></span>
-										</a>
+										<a href="#" class="projects__card-link button--more-white">Подробности</a>
 									</div>
 									<div class="projects__card-image">
 										<img src="/images/projects/project-1-preview.png" alt="Теплый дом" width="409" height="343">
@@ -441,9 +481,7 @@
 											<p>Карта дает постоянную скидку 20% на медицинские услуги, первичную консультация и осмотр
 												бесплатно + подробные рекомендации по уходу</p>
 										</div>
-										<a href="#" class="projects__card-link">Подробности
-											<span><img src="/images/icons/arrow-more-white.svg" alt=""></span>
-										</a>
+										<a href="#" class="projects__card-link button--more-white">Подробности</a>
 									</div>
 									<div class="projects__card-image">
 										<img src="/images/projects/project-1-preview.png" alt="Живой уголок" width="409" height="343">
@@ -500,9 +538,7 @@
 							</div>
 							<div class="help-now__card-actions">
 								<div class="help-now__card-tag button button--secondary">Пожертвовать</div>
-								<a href="#" class="help-now__card-link">Подробности
-									<span><img src="/images/icons/arrow-more.svg" alt=""></span>
-								</a>
+								<a href="#" class="help-now__card-link button--more">Подробности</a>
 							</div>
 						</div>
 					</article>
@@ -532,9 +568,7 @@
 							</div>
 							<div class="help-now__card-actions">
 								<div class="help-now__card-tag button button--secondary">Пожертвовать</div>
-								<a href="#" class="help-now__card-link">Подробности
-									<span><img src="/images/icons/arrow-more.svg" alt=""></span>
-								</a>
+								<a href="#" class="help-now__card-link button--more">Подробности</a>
 							</div>
 						</div>
 					</article>
@@ -564,9 +598,7 @@
 							</div>
 							<div class="help-now__card-actions">
 								<div class="help-now__card-tag button button--secondary">Пожертвовать</div>
-								<a href="#" class="help-now__card-link">Подробности
-									<span><img src="/images/icons/arrow-more.svg" alt=""></span>
-								</a>
+								<a href="#" class="help-now__card-link button--more">Подробности</a>
 							</div>
 						</div>
 					</article>
@@ -596,9 +628,7 @@
 							</div>
 							<div class="help-now__card-actions">
 								<div class="help-now__card-tag button button--secondary">Пожертвовать</div>
-								<a href="#" class="help-now__card-link">Подробности
-									<span><img src="/images/icons/arrow-more.svg" alt=""></span>
-								</a>
+								<a href="#" class="help-now__card-link button--more">Подробности</a>
 							</div>
 						</div>
 					</article>
@@ -772,8 +802,7 @@
 		<section class="cooperation">
 			<div class="cooperation__inner container">
 				<div class="cooperation__content">
-					<h2 class="visually-hidden">Сотрудничая с нами, вы помогаете животным, проявляете социальную ответсвенность
-					</h2>
+					<h2 class="visually-hidden">Сотрудничая с нами</h2>
 					<div class="cooperation__text">
 						<div class="cooperation__title">
 							<p>СОТРУДНИЧАЯ С нами,</p>
@@ -787,24 +816,23 @@
 			</div>
 		</section>
 
-		<!-- оч много подобных блоков. Мб объединить с хэдером -->
-		<!-- <section class="banner">
-				<div class="banner__inner container">
-					<div class="banner__content">
-						<h2 class="visually-hidden">Сотрудничая с нами, вы помогаете животным, проявляете социальную ответсвенность
-						</h2>
-						<div class="banner__text">
-							<div class="banner__title">
-								<p>СОТРУДНИЧАЯ С нами,</p>
-							</div>
-							<div class="banner__description">
-								<p>вы помогаете животным, проявляете социальную ответсвенность</p>
-							</div>
+		<section class="fund-friends banner banner--reverse">
+			<div class="fund-friends__inner banner__inner container">
+				<div class="fund-friends__content banner__content">
+					<div class="fund-friends__text">
+						<h2 class="fund-friends__title h2">Круг друзей фонда</h2>
+						<div class="fund-friends__description">
+							<p>День рождения, мастер-класс, рок-концерт, чаепитие с друзьями — любое событие можно превратить в
+								благотворительную акцию. Станьте другом фонда, соберите деньги на помощь животным!</p>
 						</div>
-						<a href="#" class="banner__button button button--primary">Узнать о возможностях</a>
 					</div>
+					<a href="#" class="fund-friends__button button button--primary button--more-white">Создать событие</a>
 				</div>
-			</section> -->
+			</div>
+			<div class=" fund-friends__image banner__image">
+				<img src="/images/fond-friends.jpg" alt="Счастливые животные">
+			</div>
+		</section>
 
 		<section class="partners section--flex-column section--bg">
 			<header class="container">
@@ -914,6 +942,32 @@
 			</div>
 		</section>
 
+		<section class="get-help banner section--margin-bottom">
+			<div class="get-help__inner banner__inner container">
+				<div class="get-help__content banner__content">
+					<div class="get-help__text">
+						<h2 class="get-help__title h2">Получить помощь –</h2>
+						<div class="get-help__description">
+							<p>если вы приют, то можете смело обращаться к нам за помощью.</p>
+						</div>
+					</div>
+					<a href="#" class="get-help__button button button--secondary button--icon"
+						style="--buttonIcon: url('/images/icons/paw.svg'); --buttonIconHover: url('/images/icons/paw-secondary.svg');">Получить
+						помощь</a>
+				</div>
+			</div>
+			<div class="get-help__image banner__image">
+				<img src="/images/get-help/1.jpg" alt="Кошка">
+				<img src="/images/get-help/2.jpg" alt="Собака">
+				<img src="/images/get-help/3.jpg" alt="Ёжик">
+				<img src="/images/get-help/4.jpg" alt="Пес">
+				<img src="/images/get-help/5.jpg" alt="Заяц">
+				<img src="/images/get-help/6.jpg" alt="Собачка">
+				<img src="/images/get-help/7.jpg" alt="Кот">
+				<img src="/images/get-help/8.jpg" alt="Морская свинка">
+			</div>
+		</section>
+
 		<section class="donation container section--margin-bottom">
 			<div class="donation__inner">
 				<div class="donation__text">
@@ -922,7 +976,6 @@
 						<p>Есть очень много способов. <br> Пожертвование один из них. <br> Выберите удобный Вам формат!</p>
 					</div>
 				</div>
-
 				<form class="donation__form" action="#">
 					<div class="donation__form-col donation__form-col--label">
 						<label class="donation__form-label" for="donation-amount">Пожертвовать:</label>
@@ -951,8 +1004,6 @@
 						</select> -->
 					</div>
 				</form>
-
-
 			</div>
 		</section>
 
