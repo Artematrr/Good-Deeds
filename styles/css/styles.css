@@ -406,30 +406,35 @@ h3,
   }
 }
 .button--icon::before {
-  content: var(--buttonIcon);
+  content: "";
   width: 20px;
   height: 18px;
+  background-image: var(--buttonIcon);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .button--icon:hover::before {
-  content: var(--buttonIconHover, var(--buttonIcon));
+  background-image: var(--buttonIconHover, var(--buttonIcon));
 }
 .button--icon-after::before {
-  content: var(--buttonIcon);
-  width: 24px;
-  height: 11px;
+  content: "";
+  width: 20px;
+  height: 18px;
+  background-image: var(--buttonIcon);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .button--icon-after:hover::before {
-  content: var(--buttonIconHover, var(--buttonIcon));
+  background-image: var(--buttonIconHover, var(--buttonIcon));
 }
-
-.button--more,
-.button--more-white {
+.button--more, .button--more-white {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
 }
-.button--more::after,
-.button--more-white::after {
+.button--more::after, .button--more-white::after {
   content: "";
   width: 24px;
   height: 11px;
@@ -437,7 +442,6 @@ h3,
   background-repeat: no-repeat;
   background-position: center;
 }
-
 .button--more-white::after {
   background-image: url("/images/icons/arrow-more-white.svg");
 }

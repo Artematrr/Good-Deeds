@@ -47,49 +47,57 @@
 
 	&--icon {
 		&::before {
-			content: var(--buttonIcon);
+			content: '';
 			width: 20px;
 			height: 18px;
+			background-image: var(--buttonIcon);
+			background-repeat: no-repeat;
+			background-position: center;
 		}
 
 		&:hover {
 			&::before {
-				content: var(--buttonIconHover, var(--buttonIcon));
+				background-image: var(--buttonIconHover, var(--buttonIcon));
 			}
 		}
 	}
 
 	&--icon-after {
 		&::before {
-			content: var(--buttonIcon);
-			width: 24px;
-			height: 11px;
+			content: '';
+			width: 20px;
+			height: 18px;
+			background-image: var(--buttonIcon);
+			background-repeat: no-repeat;
+			background-position: center;
 		}
 
 		&:hover {
 			&::before {
-				content: var(--buttonIconHover, var(--buttonIcon));
+				background-image: var(--buttonIconHover, var(--buttonIcon));
 			}
 		}
 	}
-}
 
-.button--more,
-.button--more-white {
-	@include flex-center(true);
+	&--more,
+	&--more-white {
+		@include flex-center(true);
 
-	&::after {
-		content: '';
-		width: 24px;
-		height: 11px;
-		background-image: url('/images/icons/arrow-more.svg');
-		background-repeat: no-repeat;
-		background-position: center;
+		column-gap: 8px;
+
+		&::after {
+			content: '';
+			width: 24px;
+			height: 11px;
+			background-image: url('/images/icons/arrow-more.svg');
+			background-repeat: no-repeat;
+			background-position: center;
+		}
 	}
-}
 
-.button--more-white {
-	&::after {
-		background-image: url('/images/icons/arrow-more-white.svg');
+	&--more-white {
+		&::after {
+			background-image: url('/images/icons/arrow-more-white.svg');
+		}
 	}
 }

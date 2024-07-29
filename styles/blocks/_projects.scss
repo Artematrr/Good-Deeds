@@ -271,10 +271,7 @@
 	}
 
 	&__card-link {
-		@include flex-center(true);
-
 		font-size: 14px;
-		gap: 8px;
 	}
 
 	&__card-image {

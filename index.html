@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 	<title>Добрые дела</title>
 	<link rel="stylesheet" href="/styles/css/swiper-bundle.min.css">
 	<link rel="stylesheet" href="/styles/css/styles.css">
@@ -27,10 +27,12 @@
 							+7 (495) 767-47-15
 						</a>
 						<div class="header__contacts-links">
-							<a href="#" class="header__contacts-link"><img src="/images/icons/whatsapp.svg" alt="Whatsapp"
-									loading="lazy"></a>
-							<a href="#" class="header__contacts-link"><img src="/images/icons/telegram.svg" alt="Telegram"
-									loading="lazy"></a>
+							<a href="#" class="header__contacts-link">
+								<img src="/images/icons/whatsapp.svg" alt="Whatsapp" width="24" height="24" loading="lazy">
+							</a>
+							<a href="#" class="header__contacts-link">
+								<img src="/images/icons/telegram.svg" alt="Telegram" width="24" height="24" loading="lazy">
+							</a>
 						</div>
 					</div>
 					<div class="header__buttons">
@@ -48,28 +50,83 @@
 						<ul class="header__nav-list">
 							<li style="--underlineImage: url(/images/icons/underline-28.svg); --underlineAspectRatio: 17/3;"
 								class="header__nav-item is-active"><a href="#" class="header__nav-link">Фонд</a></li>
-							<li style="--underlineOffset: 1px;" class="header__nav-item is-active"><a href="#"
-									class="header__nav-link">Ищу хозяина</a></li>
-							<li style="--underlineOffset: 5px;" class="header__nav-item is-active"><a href="#"
-									class="header__nav-link">Нужна помощь</a></li>
-							<li class="header__nav-item is-active"><a href="#" class="header__nav-link">Проекты и программы</a></li>
-							<li style="--underlineOffset: -5px; --underlineWidth: 130%;" class="header__nav-item is-active"><a
-									href="#" class="header__nav-link">Отчет</a></li>
-							<li style="--underlineOffset: 3px;" class="header__nav-item is-active"><a href="#"
+							<li style="--underlineOffset: 1px;" class="header__nav-item"><a href="#" class="header__nav-link">Ищу
+									хозяина</a></li>
+							<li style="--underlineOffset: 5px;" class="header__nav-item"><a href="#" class="header__nav-link">Нужна
+									помощь</a></li>
+							<li class="header__nav-item"><a href="#" class="header__nav-link">Проекты и программы</a></li>
+							<li style="--underlineOffset: -5px; --underlineWidth: 130%;" class="header__nav-item"><a href="#"
+									class="header__nav-link">Отчет</a></li>
+							<li style="--underlineOffset: 3px;" class="header__nav-item"><a href="#"
 									class="header__nav-link">Новости</a></li>
-							<li style="--underlineOffset: 5px;" class="header__nav-item is-active"><a href="#"
+							<li style="--underlineOffset: 5px;" class="header__nav-item"><a href="#"
 									class="header__nav-link">Контакты</a></li>
 						</ul>
 					</nav>
-					<button class="header__burger js-burger" type="button" title="Открыть меню">=</button>
+					<button class="header__burger js-aside-menu-open" type="button" title="Открыть меню">=</button>
 				</div>
 			</div>
 		</div>
 	</header>
 
-	<!-- <aside class="aside">
-			<button class="aside__close js-close" type="button" title="Закрыть меню">Закрыть</button>
-		</aside> -->
+	<aside class="aside-menu is-open">
+		<div class="aside-menu__backdrop">
+			<div class="aside-menu__inner">
+				<button class="aside-menu__close-button js-aside-menu-close" type="button" title="Закрыть меню">Закрыть</button>
+				<nav class="aside-menu__nav">
+					<ol class="aside-menu__nav-list">
+						<li class="aside-menu__nav-item is-active"><a href="#" class="aside-menu__nav-link">Фонд</a></li>
+						<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Ищу хозяина</a></li>
+						<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Нужна помощь</a></li>
+						<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Проекты и программы</a></li>
+						<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Отчет</a></li>
+						<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Новости</a></li>
+						<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Контакты</a></li>
+					</ol>
+				</nav>
+				<div class="aside-menu__contacts">
+					<dl class="aside-menu__contacts-list">
+						<dt class="aside-menu__contacts-list-title">Телефон</dt>
+						<dd class="aside-menu__contacts-list-item"><a href="tel:+74957674715">+7 (495) 767-47-15</a></dd>
+					</dl>
+					<dl class="aside-menu__contacts-list">
+						<dt class="aside-menu__contacts-list-title">Электронная почта</dt>
+						<dd class="aside-menu__contacts-list-item"><a href="mailto:info@sitename.ru">info@sitename.ru</a></dd>
+					</dl>
+					<ul class="aside-menu__contacts-links">
+						<li class="aside-menu__contacts-links-item">
+							<a href="#" class="aside-menu__contacts-link">
+								<img src="/images/icons/odnoklassniki.svg" alt="Одноклассники" width="32" height="32" loading="lazy">
+							</a>
+						</li>
+						<li class="aside-menu__contacts-links-item">
+							<a href="#" class="aside-menu__contacts-link">
+								<img src="/images/icons/vkontakte.svg" alt="Вконтакте" width="32" height="32" loading="lazy">
+							</a>
+						</li>
+						<li class="aside-menu__contacts-links-item">
+							<a href="#" class="aside-menu__contacts-link">
+								<img src="/images/icons/youtube.svg" alt="Ютуб" width="32" height="32" loading="lazy">
+							</a>
+						</li>
+					</ul>
+					<button class="aside-menu__button button button--primary button--icon" type="button"
+						style="--buttonIcon: url('/images/icons/heart-help.svg'); --buttonIconHover: url('/images/icons/heart-help-white.svg');">
+						Помочь фонду
+					</button>
+					<button class="aside-menu__button button button--secondary button--icon" type="button"
+						style="--buttonIcon: url('/images/icons/paw.svg');">
+						Получить помощь
+					</button>
+					<button class="button button--primary button--icon"
+						style="--buttonIcon: url('/images/icons/heart-partner.svg');">
+						Стать партнером
+					</button>
+				</div>
+
+			</div>
+		</div>
+	</aside>
 
 	<nav class="breadcrumbs container">
 		<ul class="breadcrumbs-list">
@@ -89,7 +146,7 @@
 				<div class="combined-section__left"></div>
 			</div> -->
 		<!-- </section> -->
-		<section class="combined-section combined-section--donation banner banner--reverse">
+		<section class="combined-section combined-section--donation banner banner--reverse" style="display: none;">
 			<h1 class="visually-hidden">Добрые дела</h1>
 			<div class="combined-section__inner banner__inner container">
 				<div class="combined-section__content banner__content">
@@ -104,11 +161,10 @@
 			</div>
 			<div class="combined-section__image banner__image">
 				<a href="#" class="combined-section__link button button--primary button--more-white">Счастливые истории</a>
-				<img src="/images/main-history.jpg" alt="Счастливые животные">
+				<img src="/images/main-history.jpg" alt="Счастливые животные" width="1000" height="345" loading="lazy">
 			</div>
 		</section>
-
-		<section class="combined-section combined-section--purpose banner section--margin-bottom">
+		<section class="combined-section combined-section--purpose banner section--margin-bottom" style="display: none;">
 			<div class="combined-section__inner banner__inner container">
 				<div class="combined-section__content banner__content">
 					<div class="combined-section__text">
@@ -131,7 +187,7 @@
 			</div>
 			<div class="combined-section__image banner__image">
 				<a href="#" class="combined-section__link button button--primary button--more-white">Им нужна помощь</a>
-				<img src="/images/main-help.jpg" alt="Им нужна помощь">
+				<img src="/images/main-help.jpg" alt="Им нужна помощь" width="985" height="345" loading="lazy">
 			</div>
 		</section>
 
@@ -139,7 +195,8 @@
 			<h2 class="h2">Наша задача</h2>
 			<ul class="our-purpose__list">
 				<li class="our-purpose__item">
-					<img class="our-purpose__icon" src="/images/icons/heart-help.svg" alt="" loading="lazy">
+					<img src="/images/icons/heart-help.svg" alt="" class="our-purpose__icon" width="50" height="45"
+						loading="lazy">
 					<div class="our-purpose__description">
 						<p>сократить численность бездомных животных на улицах, найти для них дом или приют. Там где им будет
 							тепло,
@@ -147,33 +204,38 @@
 					</div>
 				</li>
 				<li class="our-purpose__item">
-					<img class="our-purpose__icon" src="/images/icons/heart-help.svg" alt="" loading="lazy">
+					<img src="/images/icons/heart-help.svg" alt="" class="our-purpose__icon" width="50" height="45"
+						loading="lazy">
 					<div class="our-purpose__description">
 						<p>оказать помощь и поддержку приютам для животных: найти теплый дом хвостатым, оказать квалифицированную
 							медицинскую помощь, собрать средства на корма и другие необходимые вещи</p>
 					</div>
 				</li>
 				<li class="our-purpose__item">
-					<img class="our-purpose__icon" src="/images/icons/heart-help.svg" alt="" loading="lazy">
+					<img src="/images/icons/heart-help.svg" alt="" class="our-purpose__icon" width="50" height="45"
+						loading="lazy">
 					<div class="our-purpose__description">
 						<p>помочь пенсионерам и инвалидам у которых есть животные, но у них не хватает средств на качественную
 							медицинскую помощь</p>
 					</div>
 				</li>
 				<li class="our-purpose__item">
-					<img class="our-purpose__icon" src="/images/icons/heart-help.svg" alt="" loading="lazy">
+					<img src="/images/icons/heart-help.svg" alt="" class="our-purpose__icon" width="50" height="45"
+						loading="lazy">
 					<div class="our-purpose__description">
 						<p>сбор средств на лечение и реабилитацию больных животных</p>
 					</div>
 				</li>
 				<li class="our-purpose__item">
-					<img class="our-purpose__icon" src="/images/icons/heart-help.svg" alt="" loading="lazy">
+					<img src="/images/icons/heart-help.svg" alt="" class="our-purpose__icon" width="50" height="45"
+						loading="lazy">
 					<div class="our-purpose__description">
 						<p>привлечение общественного внимания к проблемам бездомных животных</p>
 					</div>
 				</li>
 				<li class="our-purpose__item">
-					<img class="our-purpose__icon" src="/images/icons/heart-help.svg" alt="" loading="lazy">
+					<img src="/images/icons/heart-help.svg" alt="" class="our-purpose__icon" width="50" height="45"
+						loading="lazy">
 					<div class="our-purpose__description">
 						<p>содействие работе волонтерских</p>
 					</div>
@@ -225,7 +287,8 @@
 								</svg>
 							</div>
 							<h3 class="projects__item-title">Здоровый город</h3>
-							<img src="/images/icons/down-circle.svg" alt="" class="projects__item-icon" width="26" height="26">
+							<img src="/images/icons/down-circle.svg" alt="" class="projects__item-icon" width="26" height="26"
+								loading="lazy">
 						</div>
 					</li>
 					<li class="projects__item">
@@ -248,7 +311,8 @@
 								</svg>
 							</div>
 							<h3 class="projects__item-title">Теплый дом</h3>
-							<img src="/images/icons/down-circle.svg" alt="" class="projects__item-icon" width="26" height="26">
+							<img src="/images/icons/down-circle.svg" alt="" class="projects__item-icon" width="26" height="26"
+								loading="lazy">
 						</div>
 					</li>
 					<li class="projects__item">
@@ -262,7 +326,8 @@
 								</svg>
 							</div>
 							<h3 class="projects__item-title">Живой уголок</h3>
-							<img src="/images/icons/down-circle.svg" alt="" class="projects__item-icon" width="26" height="26">
+							<img src="/images/icons/down-circle.svg" alt="" class="projects__item-icon" width="26" height="26"
+								loading="lazy">
 						</div>
 					</li>
 					<li class="projects__item">
@@ -291,7 +356,8 @@
 								</svg>
 							</div>
 							<h3 class="projects__item-title">Добрый Доктор</h3>
-							<img src="/images/icons/down-circle.svg" alt="" class="projects__item-icon" width="26" height="26">
+							<img src="/images/icons/down-circle.svg" alt="" class="projects__item-icon" width="26" height="26"
+								loading="lazy">
 						</div>
 					</li>
 					<li class="projects__item">
@@ -317,7 +383,8 @@
 								</svg>
 							</div>
 							<h3 class="projects__item-title">Десант добра</h3>
-							<img src="/images/icons/down-circle.svg" alt="" class="projects__item-icon" width="26" height="26">
+							<img src="/images/icons/down-circle.svg" alt="" class="projects__item-icon" width="26" height="26"
+								loading="lazy">
 						</div>
 					</li>
 					<li class="projects__item">
@@ -331,7 +398,8 @@
 								</svg>
 							</div>
 							<h3 class="projects__item-title">Верный Друг</h3>
-							<img src="/images/icons/down-circle.svg" alt="" class="projects__item-icon" width="26" height="26">
+							<img src="/images/icons/down-circle.svg" alt="" class="projects__item-icon" width="26" height="26"
+								loading="lazy">
 						</div>
 					</li>
 					<li class="projects__item">
@@ -345,7 +413,8 @@
 								</svg>
 							</div>
 							<h3 class="projects__item-title">Шкаф ДоброДел </h3>
-							<img src="/images/icons/down-circle.svg" alt="" class="projects__item-icon" width="26" height="26">
+							<img src="/images/icons/down-circle.svg" alt="" class="projects__item-icon" width="26" height="26"
+								loading="lazy">
 						</div>
 					</li>
 
@@ -394,12 +463,14 @@
 										<a href="#" class="projects__card-link button--more-white">Подробности</a>
 									</div>
 									<div class="projects__card-image">
-										<img src="/images/projects/project-1-preview.png" alt="Здоровый город" width="409" height="343">
+										<img src="/images/projects/project-1-preview.png" alt="Здоровый город" width="409" height="343"
+											loading="lazy">
 									</div>
 									<div class="projects__card-close-button-wrapper">
-										<button class="projects__card-close-button" type="button" title="Закрыть карточку">
-											<span class="visually-hidden">Закрыть карточку</span>
-											<img src="/images/icons/close-circle.svg" alt="Закрыть карточку" width="32" height="32">
+										<button class="projects__card-close-button" type="button" title="Закрыть карточку проекта">
+											<span class="visually-hidden">Закрыть карточку проекта</span>
+											<img src="/images/icons/close-circle.svg" alt="Закрыть карточку проекта" width="32" height="32"
+												loading="lazy">
 										</button>
 									</div>
 								</div>
@@ -442,12 +513,14 @@
 										<a href="#" class="projects__card-link button--more-white">Подробности</a>
 									</div>
 									<div class="projects__card-image">
-										<img src="/images/projects/project-1-preview.png" alt="Теплый дом" width="409" height="343">
+										<img src="/images/projects/project-1-preview.png" alt="Теплый дом" width="409" height="343"
+											loading="lazy">
 									</div>
 									<div class="projects__card-close-button-wrapper">
-										<button class="projects__card-close-button" type="button" title="Закрыть карточку">
-											<span class="visually-hidden">Закрыть карточку</span>
-											<img src="/images/icons/close-circle.svg" alt="Закрыть карточку" width="32" height="32">
+										<button class="projects__card-close-button" type="button" title="Закрыть карточку проекта">
+											<span class="visually-hidden">Закрыть карточку проекта</span>
+											<img src="/images/icons/close-circle.svg" alt="Закрыть карточку проекта" width="32" height="32"
+												loading="lazy">
 										</button>
 									</div>
 
@@ -484,12 +557,14 @@
 										<a href="#" class="projects__card-link button--more-white">Подробности</a>
 									</div>
 									<div class="projects__card-image">
-										<img src="/images/projects/project-1-preview.png" alt="Живой уголок" width="409" height="343">
+										<img src="/images/projects/project-1-preview.png" alt="Живой уголок" width="409" height="343"
+											loading="lazy">
 									</div>
 									<div class="projects__card-close-button-wrapper">
-										<button class="projects__card-close-button" type="button" title="Закрыть карточку">
-											<span class="visually-hidden">Закрыть карточку</span>
-											<img src="/images/icons/close-circle.svg" alt="Закрыть карточку" width="32" height="32">
+										<button class="projects__card-close-button" type="button" title="Закрыть карточку проекта">
+											<span class="visually-hidden">Закрыть карточку проекта</span>
+											<img src="/images/icons/close-circle.svg" alt="Закрыть карточку проекта" width="32" height="32"
+												loading="lazy">
 										</button>
 									</div>
 								</div>
@@ -517,7 +592,8 @@
 					<article class="help-now__card">
 						<div class="help-now__card-image-wrapper">
 							<a href="#">
-								<img src="/images/help-now/1.jpg" alt="Кот" class="help-now__card-image"></a>
+								<img src="/images/help-now/1.jpg" alt="Кот" class="help-now__card-image" width="340" height="320"
+									loading="lazy"></a>
 						</div>
 						<div class="help-now__card-content">
 							<h3 class="help-now__card-title"><a href="#">Кошки реновации – СПАСАЕМ КОТИКОВ ОТ ПОГРЕБЕНИЯ ЗАЖИВО</a>
@@ -547,7 +623,8 @@
 					<article class="help-now__card">
 						<div class="help-now__card-image-wrapper">
 							<a href="#">
-								<img src="/images/help-now/2.jpg" alt="Кот" class="help-now__card-image"></a>
+								<img src="/images/help-now/2.jpg" alt="Кот" class="help-now__card-image" width="340" height="320"
+									loading="lazy"></a>
 						</div>
 						<div class="help-now__card-content">
 							<h3 class="help-now__card-title"><a href="#">Спасем котиков из квартиры</a>
@@ -577,7 +654,8 @@
 					<article class="help-now__card">
 						<div class="help-now__card-image-wrapper">
 							<a href="#">
-								<img src="/images/help-now/1.jpg" alt="Кот" class="help-now__card-image"></a>
+								<img src="/images/help-now/1.jpg" alt="Кот" class="help-now__card-image" width="340" height="320"
+									loading="lazy"></a>
 						</div>
 						<div class="help-now__card-content">
 							<h3 class="help-now__card-title"><a href="#">Кошки реновации – СПАСАЕМ КОТИКОВ ОТ ПОГРЕБЕНИЯ ЗАЖИВО</a>
@@ -607,7 +685,8 @@
 					<article class="help-now__card">
 						<div class="help-now__card-image-wrapper">
 							<a href="#">
-								<img src="/images/help-now/2.jpg" alt="Кот" class="help-now__card-image"></a>
+								<img src="/images/help-now/2.jpg" alt="Кот" class="help-now__card-image" width="340" height="320"
+									loading="lazy"></a>
 						</div>
 						<div class="help-now__card-content">
 							<h3 class="help-now__card-title"><a href="#">Спасем котиков из квартиры</a>
@@ -657,13 +736,13 @@
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
 						<a href="#" class="animals__card animals__card--girl">
-							<img src="/images/animals/1.jpg" alt="Мусена" class="animals__card-image" loading="lazy" width="400"
-								height="350">
+							<img src="/images/animals/1.jpg" alt="Мусена" class="animals__card-image" width="400" height="350"
+								loading="lazy">
 							<div class="animals__card-content">
 								<ul class="animals__card-info">
 									<li class="animals__card-item">
 										<div class="animals__card-icon">
-											<img src="/images/icons/girl.svg" alt="">
+											<img src="/images/icons/girl.svg" alt="" width="32" height="32" loading="lazy">
 										</div>
 										<p class="animals__card-description">Девочка</p>
 									</li>
@@ -675,13 +754,13 @@
 									</li>
 									<li class="animals__card-item">
 										<div class="animals__card-icon">
-											<img src="/images/icons/no-girl.svg" alt="">
+											<img src="/images/icons/no-girl.svg" alt="" width="32" height="32" loading="lazy">
 										</div>
 										<p class="animals__card-description">Стерилизованная</p>
 									</li>
 									<li class="animals__card-item">
 										<div class="animals__card-icon">
-											<img src="/images/icons/vaccinated.svg" alt="">
+											<img src="/images/icons/vaccinated.svg" alt="" width="32" height="32" loading="lazy">
 										</div>
 										<p class="animals__card-description">Вакцинированная</p>
 									</li>
@@ -692,13 +771,13 @@
 					</div>
 					<div class="swiper-slide">
 						<a href="#" class="animals__card animals__card--boy">
-							<img src="/images/animals/2.jpg" alt="Рыжик" class="animals__card-image" loading="lazy" width="400"
-								height="350">
+							<img src="/images/animals/2.jpg" alt="Рыжик" class="animals__card-image" width="400" height="350"
+								loading="lazy">
 							<div class="animals__card-content">
 								<ul class="animals__card-info">
 									<li class="animals__card-item">
 										<div class="animals__card-icon">
-											<img src="/images/icons/boy.svg" alt="">
+											<img src="/images/icons/boy.svg" alt="" width="32" height="32" loading="lazy">
 										</div>
 										<p class="animals__card-description">Мальчик</p>
 									</li>
@@ -715,13 +794,13 @@
 					</div>
 					<div class="swiper-slide">
 						<a href="#" class="animals__card animals__card--girl">
-							<img src="/images/animals/3.jpg" alt="Альфа" class="animals__card-image" loading="lazy" width="400"
-								height="350">
+							<img src="/images/animals/3.jpg" alt="Альфа" class="animals__card-image" width="400" height="350"
+								loading="lazy">
 							<div class="animals__card-content">
 								<ul class="animals__card-info">
 									<li class="animals__card-item">
 										<div class="animals__card-icon">
-											<img src="/images/icons/girl.svg" alt="">
+											<img src="/images/icons/girl.svg" alt="" width="32" height="32" loading="lazy">
 										</div>
 										<p class="animals__card-description">Девочка</p>
 									</li>
@@ -733,7 +812,7 @@
 									</li>
 									<li class="animals__card-item">
 										<div class="animals__card-icon">
-											<img src="/images/icons/vaccinated.svg" alt="">
+											<img src="/images/icons/vaccinated.svg" alt="" width="32" height="32" loading="lazy">
 										</div>
 										<p class="animals__card-description">Вакцинированная</p>
 									</li>
@@ -744,13 +823,13 @@
 					</div>
 					<div class="swiper-slide">
 						<a href="#" class="animals__card animals__card--boy">
-							<img src="/images/animals/4.jpg" alt="Черныш" class="animals__card-image" loading="lazy" width="400"
-								height="350">
+							<img src="/images/animals/4.jpg" alt="Черныш" class="animals__card-image" width="400" height="350"
+								loading="lazy">
 							<div class="animals__card-content">
 								<ul class="animals__card-info">
 									<li class="animals__card-item">
 										<div class="animals__card-icon">
-											<img src="/images/icons/boy.svg" alt="">
+											<img src="/images/icons/boy.svg" alt="" width="32" height="32" loading="lazy">
 										</div>
 										<p class="animals__card-description">Мальчик</p>
 									</li>
@@ -762,7 +841,7 @@
 									</li>
 									<li class="animals__card-item">
 										<div class="animals__card-icon">
-											<img src="/images/icons/no-girl.svg" alt="">
+											<img src="/images/icons/no-girl.svg" alt="" width="32" height="32" loading="lazy">
 										</div>
 										<p class="animals__card-description">Стерилизованный</p>
 									</li>
@@ -773,13 +852,13 @@
 					</div>
 					<div class="swiper-slide">
 						<a href="#" class="animals__card animals__card--girl">
-							<img src="/images/animals/5.jpg" alt="Снежа" class="animals__card-image" loading="lazy" width="400"
-								height="350">
+							<img src="/images/animals/5.jpg" alt="Снежа" class="animals__card-image" width="400" height="350"
+								loading="lazy">
 							<div class="animals__card-content">
 								<ul class="animals__card-info">
 									<li class="animals__card-item">
 										<div class="animals__card-icon">
-											<img src="/images/icons/girl.svg" alt="">
+											<img src="/images/icons/girl.svg" alt="" width="32" height="32" loading="lazy">
 										</div>
 										<p class="animals__card-description">Девочка</p>
 									</li>
@@ -830,7 +909,7 @@
 				</div>
 			</div>
 			<div class=" fund-friends__image banner__image">
-				<img src="/images/fond-friends.jpg" alt="Счастливые животные">
+				<img src="/images/fond-friends.jpg" alt="Счастливые животные" width="1000" height="480" loading="lazy">
 			</div>
 		</section>
 
@@ -843,77 +922,77 @@
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
 							<div class="partners__card">
-								<img src="/images/partners/welytics.svg" alt="Welytics">
+								<img src="/images/partners/welytics.svg" alt="Welytics" width="200" height="50" loading="lazy">
 							</div>
 						</div>
 						<div class="swiper-slide">
 							<div class="partners__card">
-								<img src="/images/partners/jiggle.svg" alt="Jiggle">
+								<img src="/images/partners/jiggle.svg" alt="Jiggle" width="200" height="50" loading="lazy">
 							</div>
 						</div>
 						<div class="swiper-slide">
 							<div class="partners__card">
-								<img src="/images/partners/resecurb.svg" alt="Resecurb">
+								<img src="/images/partners/resecurb.svg" alt="Resecurb" width="200" height="50" loading="lazy">
 							</div>
 						</div>
 						<div class="swiper-slide">
 							<div class="partners__card">
-								<img src="/images/partners/wishelp.svg" alt="Wishelp">
+								<img src="/images/partners/wishelp.svg" alt="Wishelp" width="200" height="50" loading="lazy">
 							</div>
 						</div>
 						<div class="swiper-slide">
 							<div class="partners__card">
-								<img src="/images/partners/symtric.svg" alt="Symtric">
+								<img src="/images/partners/symtric.svg" alt="Symtric" width="200" height="50" loading="lazy">
 							</div>
 						</div>
 						<div class="swiper-slide">
 							<div class="partners__card">
-								<img src="/images/partners/jiggle.svg" alt="Jiggle">
+								<img src="/images/partners/jiggle.svg" alt="Jiggle" width="200" height="50" loading="lazy">
 							</div>
 						</div>
 						<div class="swiper-slide">
 							<div class="partners__card">
-								<img src="/images/partners/welytics.svg" alt="Welytics">
+								<img src="/images/partners/welytics.svg" alt="Welytics" width="200" height="50" loading="lazy">
 							</div>
 						</div>
 						<div class="swiper-slide">
 							<div class="partners__card">
-								<img src="/images/partners/symtric.svg" alt="Symtric">
+								<img src="/images/partners/symtric.svg" alt="Symtric" width="200" height="50" loading="lazy">
 							</div>
 						</div>
 						<div class="swiper-slide">
 							<div class="partners__card">
-								<img src="/images/partners/wishelp.svg" alt="Wishelp">
+								<img src="/images/partners/wishelp.svg" alt="Wishelp" width="200" height="50" loading="lazy">
 							</div>
 						</div>
 						<div class="swiper-slide">
 							<div class="partners__card">
-								<img src="/images/partners/resecurb.svg" alt="Resecurb">
+								<img src="/images/partners/resecurb.svg" alt="Resecurb" width="200" height="50" loading="lazy">
 							</div>
 						</div>
 						<div class="swiper-slide">
 							<div class="partners__card">
-								<img src="/images/partners/welytics.svg" alt="Welytics">
+								<img src="/images/partners/welytics.svg" alt="Welytics" width="200" height="50" loading="lazy">
 							</div>
 						</div>
 						<div class="swiper-slide">
 							<div class="partners__card">
-								<img src="/images/partners/jiggle.svg" alt="Jiggle">
+								<img src="/images/partners/jiggle.svg" alt="Jiggle" width="200" height="50" loading="lazy">
 							</div>
 						</div>
 						<div class="swiper-slide">
 							<div class="partners__card">
-								<img src="/images/partners/resecurb.svg" alt="Resecurb">
+								<img src="/images/partners/resecurb.svg" alt="Resecurb" width="200" height="50" loading="lazy">
 							</div>
 						</div>
 						<div class="swiper-slide">
 							<div class="partners__card">
-								<img src="/images/partners/wishelp.svg" alt="Wishelp">
+								<img src="/images/partners/wishelp.svg" alt="Wishelp" width="200" height="50" loading="lazy">
 							</div>
 						</div>
 						<div class="swiper-slide">
 							<div class="partners__card">
-								<img src="/images/partners/symtric.svg" alt="Symtric">
+								<img src="/images/partners/symtric.svg" alt="Symtric" width="200" height="50" loading="lazy">
 							</div>
 						</div>
 					</div>
@@ -957,14 +1036,14 @@
 				</div>
 			</div>
 			<div class="get-help__image banner__image">
-				<img src="/images/get-help/1.jpg" alt="Кошка">
-				<img src="/images/get-help/2.jpg" alt="Собака">
-				<img src="/images/get-help/3.jpg" alt="Ёжик">
-				<img src="/images/get-help/4.jpg" alt="Пес">
-				<img src="/images/get-help/5.jpg" alt="Заяц">
-				<img src="/images/get-help/6.jpg" alt="Собачка">
-				<img src="/images/get-help/7.jpg" alt="Кот">
-				<img src="/images/get-help/8.jpg" alt="Морская свинка">
+				<img src="/images/get-help/1.jpg" alt="Кошка" width="250" height="210" loading="lazy">
+				<img src="/images/get-help/2.jpg" alt="Собака" width="250" height="210" loading="lazy">
+				<img src="/images/get-help/3.jpg" alt="Ёжик" width="250" height="210" loading="lazy">
+				<img src="/images/get-help/4.jpg" alt="Пес" width="250" height="210" loading="lazy">
+				<img src="/images/get-help/5.jpg" alt="Заяц" width="250" height="210" loading="lazy">
+				<img src="/images/get-help/6.jpg" alt="Собачка" width="250" height="210" loading="lazy">
+				<img src="/images/get-help/7.jpg" alt="Кот" width="250" height="210" loading="lazy">
+				<img src="/images/get-help/8.jpg" alt="Морская свинка" width="250" height="210" loading="lazy">
 			</div>
 		</section>
 
@@ -986,8 +1065,8 @@
 							<option value="каждую неделю">каждую неделю</option>
 							<option value="каждый месяц">каждый месяц</option>
 						</select>
-						<input class="donation__form-input" type="number" name="donation-amount" id="amount" min="100" step="50"
-							value="600">
+						<input class="donation__form-input" type="number" name="donation-amount" id="donation-amount" min="100"
+							step="50" value="600">
 						<button class="button button--secondary donation__form-button" type="submit">Пожертвовать</button>
 					</div>
 					<div class="donation__form-col donation__form-col--variation">
@@ -1013,8 +1092,8 @@
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
 						<a href="#" class="news__card">
-							<img src="/images/news/1.jpg" alt="Мусена" class="news__card-image" loading="lazy" width="350"
-								height="350">
+							<img src="/images/news/1.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
+								loading="lazy">
 							<div class="news__card-content">
 								<ul class="news__card-tags">
 									<li>#благотворительность</li>
@@ -1027,8 +1106,8 @@
 					</div>
 					<div class="swiper-slide">
 						<a href="#" class="news__card">
-							<img src="/images/news/2.jpg" alt="Мусена" class="news__card-image" loading="lazy" width="350"
-								height="350">
+							<img src="/images/news/2.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
+								loading="lazy">
 							<div class="news__card-content">
 								<ul class="news__card-tags">
 									<li>#благотворительность</li>
@@ -1041,8 +1120,8 @@
 					</div>
 					<div class="swiper-slide">
 						<a href="#" class="news__card">
-							<img src="/images/news/3.jpg" alt="Мусена" class="news__card-image" loading="lazy" width="350"
-								height="350">
+							<img src="/images/news/3.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
+								loading="lazy">
 							<div class="news__card-content">
 								<ul class="news__card-tags">
 									<li>#благотворительность</li>
@@ -1055,8 +1134,8 @@
 					</div>
 					<div class="swiper-slide">
 						<a href="#" class="news__card">
-							<img src="/images/news/4.jpg" alt="Мусена" class="news__card-image" loading="lazy" width="350"
-								height="350">
+							<img src="/images/news/4.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
+								loading="lazy">
 							<div class="news__card-content">
 								<ul class="news__card-tags">
 									<li>#благотворительность</li>
@@ -1069,8 +1148,8 @@
 					</div>
 					<div class="swiper-slide">
 						<a href="#" class="news__card">
-							<img src="/images/news/1.jpg" alt="Мусена" class="news__card-image" loading="lazy" width="350"
-								height="350">
+							<img src="/images/news/1.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
+								loading="lazy">
 							<div class="news__card-content">
 								<ul class="news__card-tags">
 									<li>#благотворительность</li>
@@ -1119,16 +1198,22 @@
 						</dl>
 					</address>
 					<ul class="footer__contacts-links">
-						<li class="footer__contacts-links-item" data-item="odnoklassniki"><a href="#" class="footer__contacts-link"
-								title="Одноклассники"><img src="/images/icons/odnoklassniki-white.svg" alt="Одноклассники" width="24"
-									height="24" loading="lazy"></a></li>
-						<li class="footer__contacts-links-item" data-item="vkontakte"><a href="#" class="footer__contacts-link"
-								title="Вконтакте"><img src="/images/icons/vkontakte-white.svg" alt="Вконтакте" width="24" height="24"
-									loading="lazy"></a>
+						<li class="footer__contacts-links-item" data-item="odnoklassniki">
+							<a href="#" class="footer__contacts-link">
+								<img src="/images/icons/odnoklassniki-white.svg" alt="Одноклассники" width="24" height="24"
+									loading="lazy">
+							</a>
 						</li>
-						<li class="footer__contacts-links-item" data-item="youtube"><a href="#" class="footer__contacts-link"
-								title="Ютуб"><img src="/images/icons/youtube-white.svg" alt="Ютуб" width="24" height="24"
-									loading="lazy"></a></li>
+						<li class="footer__contacts-links-item" data-item="vkontakte">
+							<a href="#" class="footer__contacts-link">
+								<img src="/images/icons/vkontakte-white.svg" alt="Вконтакте" width="24" height="24" loading="lazy">
+							</a>
+						</li>
+						<li class="footer__contacts-links-item" data-item="youtube">
+							<a href="#" class="footer__contacts-link">
+								<img src="/images/icons/youtube-white.svg" alt="Ютуб" width="24" height="24" loading="lazy">
+							</a>
+						</li>
 					</ul>
 				</div>
 				<div class="footer__column footer__qr">
@@ -1232,7 +1317,7 @@
 				</div>
 				<div class="footer__develop-by">Разработано
 					<a href="#" class="footer__develop-by-link">
-						<img class="footer__develop-by-image" src="/images/icons/agelar.svg" alt="Агелар" width="85" height="30"
+						<img src="/images/icons/agelar.svg" alt="Агелар" class="footer__develop-by-image" width="85" height="30"
 							loading="lazy">
 					</a>
 				</div>
