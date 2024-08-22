@@ -45,6 +45,29 @@
 		}
 	}
 
+	&--back {
+		padding: 5px 15px;
+		font-family: var(--font-family-base);
+		text-transform: capitalize;
+		gap: 5px;
+		border-radius: 0;
+		color: var(--primary-600);
+		background-color: var(--gray-100);
+
+		&::before {
+			content: '';
+			width: 24px;
+			height: 12px;
+			background-image: url('/images/icons/arrow-back.svg');
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+
+		@include hover {
+			color: var(--primary-500);
+		}
+	}
+
 	&--icon {
 		&::before {
 			content: '';

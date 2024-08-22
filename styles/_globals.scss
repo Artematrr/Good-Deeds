@@ -8,6 +8,10 @@ body {
 	background-color: var(--white);
 }
 
+html {
+	scroll-padding-top: var(--header-height);
+}
+
 a,
 button,
 input,

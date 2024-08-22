@@ -9,6 +9,10 @@
 		padding-bottom: 60px;
 	}
 
+	&--no-padding {
+		padding-bottom: 0 !important;
+	}
+
 	@include mobile {
 		gap: 15px;
 	}

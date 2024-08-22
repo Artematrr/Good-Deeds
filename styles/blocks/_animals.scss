@@ -1,54 +1,27 @@
 .animals {
 	&__filter {
-		display: flex;
-		justify-content: center;
-		flex-wrap: wrap;
-		gap: 15px 10px;
-		width: 100%;
 	}
 
 	&__tabs {
-		max-width: fit-content;
-		margin-inline: unset;
-
-		.swiper-scrollbar {
-			opacity: 0;
-		}
-
-		.swiper-slide {
-			max-width: fit-content;
-		}
-
-		@include mobile {
-			padding-left: var(--container-padding-x);
-		}
 	}
 
 	&__tab {
-		@include fluid-text(14, 20);
-
-		padding: 8px 30px;
-		font-family: var(--font-family-base);
-		text-transform: capitalize;
-
-		&:focus-visible {
-			outline-color: var(--primary-600);
-			color: var(--primary-600);
-
-			&.is-active {
-				color: inherit;
-				border-color: inherit;
-			}
-		}
-
-		&.is-active {
-			color: var(--secondary-500);
-			border: 1px solid var(--secondary-500);
-		}
 	}
 
 	&__swiper {
 		max-width: 2560px;
+	}
+
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+		gap: 30px;
+		width: 100%;
+
+		@include mobile {
+			grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+			gap: 15px;
+		}
 	}
 
 	&__card {
@@ -56,7 +29,7 @@
 		display: flex;
 		min-height: 350px;
 		width: 100%;
-		// max-width: 500px;
+		min-width: 200px;
 		overflow: hidden;
 
 		@include hover {

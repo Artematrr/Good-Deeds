@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<title>Нужна помощь</title>
+	<link rel="stylesheet" href="/styles/css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="/styles/css/styles.css">
+</head>
+
+<body>
+	<header class="header">
+		<div class="header__inner container">
+			<div class="header__logo">
+				<a href="#" class="header__logo-link">
+					<img src="/images/logo.svg" alt="Добрые дела" class="header__logo-image" width="210" height="65"
+						loading="lazy">
+				</a>
+				<div class="header__logo-description">Международный фонд социальной поддержки и защиты животных «Добрые дела»
+				</div>
+			</div>
+			<div class="header__content">
+				<div class="header__content-top">
+					<div class="header__contacts">
+						<a href="tel:+74957674715" class="header__contacts-tel">
+							+7 (495) 767-47-15
+						</a>
+						<div class="header__contacts-links">
+							<a href="#" class="header__contacts-link">
+								<img src="/images/icons/whatsapp.svg" alt="Whatsapp" width="24" height="24" loading="lazy">
+							</a>
+							<a href="#" class="header__contacts-link">
+								<img src="/images/icons/telegram.svg" alt="Telegram" width="24" height="24" loading="lazy">
+							</a>
+						</div>
+					</div>
+					<div class="header__buttons">
+						<button type="button"
+							style="--buttonIcon: url('/images/icons/heart-help.svg'); --buttonIconHover: url('/images/icons/heart-help-white.svg');"
+							class="header__button button button--primary button--icon">
+							Помочь фонду
+						</button>
+						<button type="button" style="--buttonIcon: url('/images/icons/paw.svg');"
+							class="header__button button button--secondary button--icon">Получить помощь</button>
+					</div>
+				</div>
+				<div class="header__content-bottom">
+					<nav class="header__nav">
+						<ul class="header__nav-list">
+							<li class="header__nav-item"
+								style="--underlineImage: url(/images/icons/underline-28.svg); --underlineAspectRatio: 17/3;">
+								<a href="#" class="header__nav-link">Фонд</a>
+							</li>
+							<li class="header__nav-item" style="--underlineOffset: 1px;">
+								<a href="#" class="header__nav-link">Ищу
+									хозяина</a>
+							</li>
+							<li class="header__nav-item is-active" style="--underlineOffset: 5px;">
+								<a href="#" class="header__nav-link">Нужна помощь</a>
+							</li>
+							<li class="header__nav-item">
+								<a href="#" class="header__nav-link">Проекты и программы</a>
+							</li>
+							<li class="header__nav-item" style="--underlineOffset: -5px; --underlineWidth: 130%;">
+								<a href="#" class="header__nav-link">Отчет</a>
+							</li>
+							<li class="header__nav-item" style="--underlineOffset: 3px;">
+								<a href="#" class="header__nav-link">Новости</a>
+							</li>
+							<li class="header__nav-item" style="--underlineOffset: 5px;">
+								<a href="#" class="header__nav-link">Контакты</a>
+							</li>
+						</ul>
+					</nav>
+					<button class="header__burger js-aside-menu-open" type="button" title="Открыть меню"></button>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<aside class="aside-menu">
+		<div class="aside-menu__backdrop js-aside-menu-close">
+		</div>
+		<div class="aside-menu__inner">
+			<button class="aside-menu__close-button js-aside-menu-close" type="button" title="Закрыть меню"
+				data-label="Закрыть"></button>
+			<nav class="aside-menu__nav">
+				<ol class="aside-menu__nav-list">
+					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Фонд</a></li>
+					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Ищу хозяина</a></li>
+					<li class="aside-menu__nav-item is-active"><a href="#" class="aside-menu__nav-link">Нужна помощь</a></li>
+					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Проекты и программы</a></li>
+					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Отчет</a></li>
+					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Новости</a></li>
+					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Контакты</a></li>
+					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Партнеры</a></li>
+					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Приюты</a></li>
+					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Счастливые истории</a></li>
+					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Приюты</a></li>
+				</ol>
+			</nav>
+			<div class="aside-menu__contacts">
+				<dl class="aside-menu__contacts-list">
+					<dt class="aside-menu__contacts-list-title">Телефон</dt>
+					<dd class="aside-menu__contacts-list-item"><a href="tel:+74957674715">+7 (495) 767-47-15</a></dd>
+				</dl>
+				<dl class="aside-menu__contacts-list">
+					<dt class="aside-menu__contacts-list-title">Электронная почта</dt>
+					<dd class="aside-menu__contacts-list-item"><a href="mailto:info@sitename.ru">info@sitename.ru</a></dd>
+				</dl>
+				<ul class="aside-menu__contacts-links">
+					<li class="aside-menu__contacts-links-item">
+						<a href="#" class="aside-menu__contacts-link">
+							<img src="/images/icons/odnoklassniki.svg" alt="Одноклассники" width="32" height="32" loading="lazy">
+						</a>
+					</li>
+					<li class="aside-menu__contacts-links-item">
+						<a href="#" class="aside-menu__contacts-link">
+							<img src="/images/icons/vkontakte.svg" alt="Вконтакте" width="32" height="32" loading="lazy">
+						</a>
+					</li>
+					<li class="aside-menu__contacts-links-item">
+						<a href="#" class="aside-menu__contacts-link">
+							<img src="/images/icons/youtube.svg" alt="Ютуб" width="32" height="32" loading="lazy">
+						</a>
+					</li>
+				</ul>
+				<button class="aside-menu__button button button--primary button--icon" type="button"
+					style="--buttonIcon: url('/images/icons/heart-help.svg'); --buttonIconHover: url('/images/icons/heart-help-white.svg');">
+					Помочь фонду
+				</button>
+				<button class="aside-menu__button button button--secondary button--icon" type="button"
+					style="--buttonIcon: url('/images/icons/paw.svg');">
+					Получить помощь
+				</button>
+				<button class="aside-menu__button button button--primary button--icon"
+					style="--buttonIcon: url('/images/icons/heart-partner.svg');">
+					Стать партнером
+				</button>
+			</div>
+
+		</div>
+	</aside>
+
+	<nav class="breadcrumbs container">
+		<ul class="breadcrumbs-list">
+			<li class="breadcrumbs-item"><a href="#" class="breadcrumbs-link">Главная</a></li>
+			<li class="breadcrumbs-item"><a href="#" class="breadcrumbs-link">Нужна помощь</a></li>
+		</ul>
+	</nav>
+
+	<main class="main">
+
+		<section class="hero banner section--margin-bottom">
+			<div class="hero__inner banner__inner container">
+				<div class="hero__content banner__content">
+					<div class="hero__text">
+						<h1 class="hero__title h1">Нужна помощь</h1>
+						<div class="hero__description">
+							<p>Защита и помощь животных, которые нуждаются в нашей помощи.</p>
+							<p>Бездомные животные не могут самостоятельно обратиться за помощью, сказать что они хотя есть или у них
+								что то болит.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class=" hero__image banner__image">
+				<img src="/images/help-now-hero.jpg" alt="Счастливые животные" width="1000" height="480" loading="lazy">
+			</div>
+		</section>
+
+		<section class="help-now container section--flex-column section--margin-bottom">
+			<div class="help-now__filter filter filter--start">
+				<div class="help-now__tabs filter__tabs swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><a href="#" class="help-now__tab filter__tab button button--outline is-active">Все</a></div>
+						<div class="swiper-slide"><a href="#" class="help-now__tab filter__tab button button--outline">Помочь</a></div>
+						<div class="swiper-slide"><a href="#" class="help-now__tab filter__tab button button--outline">Пожертвовать</a></div>
+					</div>
+				</div>
+			</div>
+			<ul class="help-now__list">
+				<li class="help-now__item">
+					<article class="help-now__card">
+						<div class="help-now__card-image-wrapper">
+							<a href="#">
+								<img src="/images/help-now/1.jpg" alt="Кот" class="help-now__card-image" width="340" height="320"
+									loading="lazy"></a>
+						</div>
+						<div class="help-now__card-content">
+							<h3 class="help-now__card-title"><a href="#">Кошки реновации – СПАСАЕМ КОТИКОВ ОТ ПОГРЕБЕНИЯ ЗАЖИВО</a>
+							</h3>
+							<div class="help-now__card-need">
+								<p class="help-now__card-need-title">Необходимо собрать</p>
+								<p class="help-now__card-need-accent">413 600 ₽</p>
+							</div>
+							<div class="help-now__card-goal">
+								<label class="help-now__card-goal-title" for="help-now-1">Уже собрано</label>
+								<p class="help-now__card-goal-amount">
+									<span class="help-now__card-goal-collected">328 113</span>
+									<span class="help-now__card-goal-total">413 600</span>
+									<span class="help-now__card-goal-currency">₽</span>
+								</p>
+								<meter class="help-now__card-goal-progress" id="help-now-1" min="0" value="328113" max="413600">328 113
+									₽</meter>
+							</div>
+							<div class="help-now__card-actions">
+								<div class="help-now__card-tag button button--secondary">Пожертвовать</div>
+								<a href="#" class="help-now__card-link button--more">Подробности</a>
+							</div>
+						</div>
+					</article>
+				</li>
+				<li class="help-now__item">
+					<article class="help-now__card">
+						<div class="help-now__card-image-wrapper">
+							<a href="#">
+								<img src="/images/help-now/2.jpg" alt="Кот" class="help-now__card-image" width="340" height="320"
+									loading="lazy"></a>
+						</div>
+						<div class="help-now__card-content">
+							<h3 class="help-now__card-title"><a href="#">Спасем котиков из квартиры</a>
+							</h3>
+							<div class="help-now__card-need">
+								<p class="help-now__card-need-title">Необходимо собрать</p>
+								<p class="help-now__card-need-accent">413 600 ₽</p>
+							</div>
+							<div class="help-now__card-goal">
+								<label class="help-now__card-goal-title" for="help-now-2">Уже собрано</label>
+								<p class="help-now__card-goal-amount">
+									<span class="help-now__card-goal-collected">328 113</span>
+									<span class="help-now__card-goal-total">413 600</span>
+									<span class="help-now__card-goal-currency">₽</span>
+								</p>
+								<meter class="help-now__card-goal-progress" id="help-now-2" min="0" value="328113" max="413600">328 113
+									₽</meter>
+							</div>
+							<div class="help-now__card-actions">
+								<div class="help-now__card-tag button button--secondary">Пожертвовать</div>
+								<a href="#" class="help-now__card-link button--more">Подробности</a>
+							</div>
+						</div>
+					</article>
+
+				</li>
+				<li class="help-now__item">
+					<article class="help-now__card">
+						<div class="help-now__card-image-wrapper">
+							<a href="#">
+								<img src="/images/help-now/3.jpg" alt="Собачки" class="help-now__card-image" width="340" height="320"
+									loading="lazy"></a>
+						</div>
+						<div class="help-now__card-content">
+							<h3 class="help-now__card-title"><a href="#">Привезти и и помочь с установкой забора вокруг приюта</a>
+							</h3>
+							<div class="help-now__card-need">
+								<p class="help-now__card-need-title">Помощь нужна </p>
+								<p class="help-now__card-need-accent">Приют “Лапы”</p>
+							</div>
+							<div class="help-now__card-actions">
+								<div class="help-now__card-tag button button--primary">Хочу помочь</div>
+								<a href="#" class="help-now__card-link button--more">Подробности</a>
+							</div>
+						</div>
+					</article>
+				</li>
+				<li class="help-now__item">
+					<article class="help-now__card">
+						<div class="help-now__card-image-wrapper">
+							<a href="#">
+								<img src="/images/help-now/4.jpg" alt="Собачка" class="help-now__card-image" width="340" height="320"
+									loading="lazy"></a>
+						</div>
+						<div class="help-now__card-content">
+							<h3 class="help-now__card-title"><a href="#">Необходимо помочь с выгулом животных в приюте “Лапы”</a>
+							</h3>
+							<div class="help-now__card-need">
+								<p class="help-now__card-need-title">Помощь нужна </p>
+								<p class="help-now__card-need-accent">Приют “Лапы”</p>
+							</div>
+							<div class="help-now__card-actions">
+								<div class="help-now__card-tag button button--primary">Хочу помочь</div>
+								<a href="#" class="help-now__card-link button--more">Подробности</a>
+							</div>
+						</div>
+					</article>
+				</li>
+				<li class="help-now__item">
+					<article class="help-now__card">
+						<div class="help-now__card-image-wrapper">
+							<a href="#">
+								<img src="/images/help-now/1.jpg" alt="Кот" class="help-now__card-image" width="340" height="320"
+									loading="lazy"></a>
+						</div>
+						<div class="help-now__card-content">
+							<h3 class="help-now__card-title"><a href="#">Кошки реновации – СПАСАЕМ КОТИКОВ ОТ ПОГРЕБЕНИЯ ЗАЖИВО</a>
+							</h3>
+							<div class="help-now__card-need">
+								<p class="help-now__card-need-title">Необходимо собрать</p>
+								<p class="help-now__card-need-accent">413 600 ₽</p>
+							</div>
+							<div class="help-now__card-goal">
+								<label class="help-now__card-goal-title" for="help-now-1">Уже собрано</label>
+								<p class="help-now__card-goal-amount">
+									<span class="help-now__card-goal-collected">328 113</span>
+									<span class="help-now__card-goal-total">413 600</span>
+									<span class="help-now__card-goal-currency">₽</span>
+								</p>
+								<meter class="help-now__card-goal-progress" id="help-now-1" min="0" value="328113" max="413600">328 113
+									₽</meter>
+							</div>
+							<div class="help-now__card-actions">
+								<div class="help-now__card-tag button button--secondary">Пожертвовать</div>
+								<a href="#" class="help-now__card-link button--more">Подробности</a>
+							</div>
+						</div>
+					</article>
+				</li>
+				<li class="help-now__item">
+					<article class="help-now__card">
+						<div class="help-now__card-image-wrapper">
+							<a href="#">
+								<img src="/images/help-now/2.jpg" alt="Кот" class="help-now__card-image" width="340" height="320"
+									loading="lazy"></a>
+						</div>
+						<div class="help-now__card-content">
+							<h3 class="help-now__card-title"><a href="#">Спасем котиков из квартиры</a>
+							</h3>
+							<div class="help-now__card-need">
+								<p class="help-now__card-need-title">Необходимо собрать</p>
+								<p class="help-now__card-need-accent">413 600 ₽</p>
+							</div>
+							<div class="help-now__card-goal">
+								<label class="help-now__card-goal-title" for="help-now-2">Уже собрано</label>
+								<p class="help-now__card-goal-amount">
+									<span class="help-now__card-goal-collected">328 113</span>
+									<span class="help-now__card-goal-total">413 600</span>
+									<span class="help-now__card-goal-currency">₽</span>
+								</p>
+								<meter class="help-now__card-goal-progress" id="help-now-2" min="0" value="328113" max="413600">328 113
+									₽</meter>
+							</div>
+							<div class="help-now__card-actions">
+								<div class="help-now__card-tag button button--secondary">Пожертвовать</div>
+								<a href="#" class="help-now__card-link button--more">Подробности</a>
+							</div>
+						</div>
+					</article>
+
+				</li>
+				<li class="help-now__item">
+					<article class="help-now__card">
+						<div class="help-now__card-image-wrapper">
+							<a href="#">
+								<img src="/images/help-now/3.jpg" alt="Собачки" class="help-now__card-image" width="340" height="320"
+									loading="lazy"></a>
+						</div>
+						<div class="help-now__card-content">
+							<h3 class="help-now__card-title"><a href="#">Привезти и и помочь с установкой забора вокруг приюта</a>
+							</h3>
+							<div class="help-now__card-need">
+								<p class="help-now__card-need-title">Помощь нужна </p>
+								<p class="help-now__card-need-accent">Приют “Лапы”</p>
+							</div>
+							<div class="help-now__card-actions">
+								<div class="help-now__card-tag button button--primary">Хочу помочь</div>
+								<a href="#" class="help-now__card-link button--more">Подробности</a>
+							</div>
+						</div>
+					</article>
+				</li>
+				<li class="help-now__item">
+					<article class="help-now__card">
+						<div class="help-now__card-image-wrapper">
+							<a href="#">
+								<img src="/images/help-now/4.jpg" alt="Собачка" class="help-now__card-image" width="340" height="320"
+									loading="lazy"></a>
+						</div>
+						<div class="help-now__card-content">
+							<h3 class="help-now__card-title"><a href="#">Необходимо помочь с выгулом животных в приюте “Лапы”</a>
+							</h3>
+							<div class="help-now__card-need">
+								<p class="help-now__card-need-title">Помощь нужна </p>
+								<p class="help-now__card-need-accent">Приют “Лапы”</p>
+							</div>
+							<div class="help-now__card-actions">
+								<div class="help-now__card-tag button button--primary">Хочу помочь</div>
+								<a href="#" class="help-now__card-link button--more">Подробности</a>
+							</div>
+						</div>
+					</article>
+				</li>
+			</ul>			
+			<div class="help-now__pagination pagination">
+				<a href="#" class="pagination-item pagination-prev">
+					<svg xmlns="http://www.w3.org/2000/svg" width="6" height="11" viewBox="0 0 6 11" fill="none">
+						<g clip-path="url(#clip0_91_216)">
+							<path
+								d="M5.97656 1.70762L2.40513 5.27905L5.97656 8.85048L5.26228 10.2791L0.262278 5.27905L5.26228 0.279052L5.97656 1.70762Z"
+								fill="#0073B4" />
+						</g>
+						<defs>
+							<clipPath id="clip0_91_216">
+								<rect width="5.71428" height="10" fill="white" transform="matrix(-1 0 0 -1 5.97656 10.2791)" />
+							</clipPath>
+						</defs>
+					</svg>
+				</a>
+				<a href="#" class="pagination-item is-active">1</a>
+				<a href="#" class="pagination-item">2</a>
+				<a href="#" class="pagination-item">...</a>
+				<a href="#" class="pagination-item">14</a>
+				<a href="#" class="pagination-item">15</a>
+				<a href="#" class="pagination-item pagination-next">
+					<svg xmlns="http://www.w3.org/2000/svg" width="6" height="11" viewBox="0 0 6 11" fill="none">
+						<g clip-path="url(#clip0_91_219)">
+							<path
+								d="M0.176758 8.85048L3.74819 5.27905L0.176758 1.70762L0.891043 0.279053L5.89104 5.27905L0.891043 10.2791L0.176758 8.85048Z"
+								fill="#0073B4" />
+						</g>
+						<defs>
+							<clipPath id="clip0_91_219">
+								<rect width="5.71428" height="10" fill="white" transform="translate(0.176758 0.279053)" />
+							</clipPath>
+						</defs>
+					</svg>
+				</a>
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="footer">
+		<div class="footer__inner container">
+			<div class="footer__top">
+				<div class="footer__column footer__logo">
+					<a href="#" class="footer__logo-link">
+						<img src="/images/logo.svg" alt="Добрые дела" class="footer__logo-image" width="210" height="65"
+							loading="lazy">
+					</a>
+					<div class="footer__logo-description">
+						<p>Международный благотворительный фонд социальной поддержки и защиты
+							животных «Добрые дела»</p>
+					</div>
+					<div class="footer__logo-info">
+						<p>ИНН: 1234567890</p>
+						<p>ОГРН: 12345678901234567890</p>
+					</div>
+				</div>
+				<div class="footer__column footer__contacts">
+					<address>
+						<dl class="footer__contacts-list">
+							<dt class="footer__contacts-title">Телефон</dt>
+							<dd class="footer__contacts-item"><a href="tel:+74957674715">+7 (495) 767-47-15</a></dd>
+							<dt class="footer__contacts-title">Электронная почта</dt>
+							<dd class="footer__contacts-item"><a href="mailto:info@sitename.ru">info@sitename.ru</a></dd>
+							<dt class="footer__contacts-title">Адрес</dt>
+							<dd class="footer__contacts-item">
+								г. Реутов, ул. Октября, д.30
+							</dd>
+						</dl>
+					</address>
+					<ul class="footer__contacts-links">
+						<li class="footer__contacts-links-item" data-item="odnoklassniki">
+							<a href="#" class="footer__contacts-link">
+								<img src="/images/icons/odnoklassniki-white.svg" alt="Одноклассники" width="24" height="24"
+									loading="lazy">
+							</a>
+						</li>
+						<li class="footer__contacts-links-item" data-item="vkontakte">
+							<a href="#" class="footer__contacts-link">
+								<img src="/images/icons/vkontakte-white.svg" alt="Вконтакте" width="24" height="24" loading="lazy">
+							</a>
+						</li>
+						<li class="footer__contacts-links-item" data-item="youtube">
+							<a href="#" class="footer__contacts-link">
+								<img src="/images/icons/youtube-white.svg" alt="Ютуб" width="24" height="24" loading="lazy">
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__column footer__qr">
+					<div class="footer__qr-description">
+						<p>Отсканируйте QR-код, чтобы сделать любое пожертвование.
+						</p>
+						<p>Помогите животным прямо сейчас.</p>
+					</div>
+					<div class="footer__qr-links">
+						<ul class="footer__qr-list">
+							<li class="footer__qr-item"><a href="#" title="Сбербанк">
+									<svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<mask id="mask0_2053_2392" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="33"
+											height="33">
+											<path
+												d="M29.0152 16.3106C28.9869 23.0844 23.4878 28.567 16.7075 28.567C9.90998 28.567 4.39983 23.0566 4.39983 16.2593C4.39983 9.46192 9.90998 3.95159 16.7075 3.95159C19.2072 3.95159 21.5334 4.69712 23.4755 5.97802L26.486 3.59451C23.782 1.5035 20.39 0.259277 16.7075 0.259277C7.8706 0.259277 0.70752 7.42272 0.70752 16.2593C0.70752 25.0958 7.8706 32.2593 16.7075 32.2593C25.5444 32.2593 32.7075 25.0958 32.7075 16.2593C32.7075 15.3415 32.63 14.4417 32.4823 13.5661L29.0152 16.3106Z"
+												fill="#1D9E3B" />
+										</mask>
+										<g mask="url(#mask0_2053_2392)">
+											<path
+												d="M29.0142 16.3106C28.9859 23.0844 23.4869 28.567 16.7065 28.567C9.90901 28.567 4.39885 23.0566 4.39885 16.2593C4.39885 9.46192 9.90901 3.95159 16.7065 3.95159C19.2062 3.95159 21.5324 4.69712 23.4746 5.97802L26.485 3.59451C23.781 1.5035 20.389 0.259277 16.7065 0.259277C7.86962 0.259277 0.706543 7.42272 0.706543 16.2593C0.706543 25.0958 7.86962 32.2593 16.7065 32.2593C25.5435 32.2593 32.7065 25.0958 32.7065 16.2593C32.7065 15.3415 32.629 14.4417 32.4813 13.5661L29.0142 16.3106Z"
+												fill="#24A236" />
+											<path
+												d="M14.8604 13.7979C22.6773 13.7979 29.0142 7.46103 29.0142 -0.355921C29.0142 -8.17287 22.6773 -14.5098 14.8604 -14.5098C7.04344 -14.5098 0.706543 -8.17287 0.706543 -0.355921C0.706543 7.46103 7.04344 13.7979 14.8604 13.7979Z"
+												fill="#008ACB" />
+											<g filter="url(#filter0_f_2053_2392)">
+												<path
+													d="M13.0142 45.798C19.8116 45.798 25.3219 40.2877 25.3219 33.4903C25.3219 26.693 19.8116 21.1826 13.0142 21.1826C6.21688 21.1826 0.706543 26.693 0.706543 33.4903C0.706543 40.2877 6.21688 45.798 13.0142 45.798Z"
+													fill="#77F628" />
+											</g>
+											<g filter="url(#filter1_f_2053_2392)">
+												<path
+													d="M1.9366 22.4132C8.73395 22.4132 14.2443 16.9029 14.2443 10.1055C14.2443 3.30819 8.73395 -2.20215 1.9366 -2.20215C-4.86075 -2.20215 -10.3711 3.30819 -10.3711 10.1055C-10.3711 16.9029 -4.86075 22.4132 1.9366 22.4132Z"
+													fill="#19E7E8" />
+											</g>
+											<g filter="url(#filter2_f_2053_2392)">
+												<path
+													d="M0.706017 32.2597C6.1439 32.2597 10.5522 27.8514 10.5522 22.4135C10.5522 16.9757 6.1439 12.5674 0.706017 12.5674C-4.73186 12.5674 -9.14014 16.9757 -9.14014 22.4135C-9.14014 27.8514 -4.73186 32.2597 0.706017 32.2597Z"
+													fill="#DEFA1B" />
+											</g>
+										</g>
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M29.2527 6.32764C30.0564 7.34106 30.7395 8.4541 31.2811 9.64521L16.7075 21.1824V16.2593L29.2527 6.32764Z"
+											fill="#24A236" />
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M10.5537 17.3362L16.7076 21.1823V16.2592L10.5537 12.4131V17.3362Z" fill="#24A236" />
+										<defs>
+											<filter id="filter0_f_2053_2392" x="-9.13961" y="11.3365" width="44.3075" height="44.3075"
+												filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+												<feFlood flood-opacity="0" result="BackgroundImageFix" />
+												<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+												<feGaussianBlur stdDeviation="4.92308" result="effect1_foregroundBlur_2053_2392" />
+											</filter>
+											<filter id="filter1_f_2053_2392" x="-20.2172" y="-12.0483" width="44.3075" height="44.3075"
+												filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+												<feFlood flood-opacity="0" result="BackgroundImageFix" />
+												<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+												<feGaussianBlur stdDeviation="4.92308" result="effect1_foregroundBlur_2053_2392" />
+											</filter>
+											<filter id="filter2_f_2053_2392" x="-16.5248" y="5.18277" width="34.4616" height="34.4616"
+												filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+												<feFlood flood-opacity="0" result="BackgroundImageFix" />
+												<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+												<feGaussianBlur stdDeviation="3.69231" result="effect1_foregroundBlur_2053_2392" />
+											</filter>
+										</defs>
+									</svg>
+								</a></li>
+							<li class="footer__qr-item"><a href="#" title="Тинькофф">
+									<svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M0.815125 0.544434H32.7998V16.6365C32.7998 20.763 30.6061 24.5674 27.0318 26.6384L16.8151 32.5444L6.59844 26.6384C3.02414 24.5828 0.830465 20.763 0.830465 16.6365V0.544434H0.815125Z"
+											fill="#FFDD2D" />
+										<path class="no-recolor" fill-rule="evenodd" clip-rule="evenodd"
+											d="M9.59021 9.01221V14.0132C10.2805 13.2461 11.5231 12.7246 12.9344 12.7246H14.4838V18.5386C14.4838 20.088 14.0696 21.4379 13.4406 22.1896H20.1597C19.5308 21.4379 19.1166 20.088 19.1166 18.5386V12.7246H20.666C22.0926 12.7246 23.3352 13.2461 24.0102 14.0132V9.01221H9.59021Z"
+											fill="#333333" />
+									</svg>
+
+								</a></li>
+							<li class="footer__qr-item"><a href="#" title="Альфабанк">
+									<svg width="26" height="33" viewBox="0 0 26 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M23.8778 23.4897L20.1824 24.8734C20.0634 24.9148 19.9328 24.9073 19.8189 24.8526C19.705 24.798 19.6166 24.7006 19.5744 24.5815L17.6544 19.7175H8.69432L6.79993 24.6199C6.75769 24.7386 6.67065 24.8357 6.55673 24.8901C6.44281 24.9447 6.31225 24.9519 6.19321 24.9105L2.50554 23.5268C2.44666 23.5068 2.39162 23.4755 2.34554 23.4345C2.29818 23.3934 2.25976 23.3435 2.23288 23.2876C2.20472 23.2316 2.18938 23.1708 2.18554 23.1086C2.18042 23.0464 2.18935 22.9841 2.20983 22.9252L9.66588 2.8982C9.95261 2.20182 10.439 1.60631 11.0649 1.18724C11.6908 0.768166 12.4269 0.544434 13.1795 0.544434C13.9334 0.544434 14.6694 0.768166 15.2954 1.18724C15.9213 1.60631 16.4076 2.20182 16.6944 2.8982L24.1696 22.8881C24.1901 22.9467 24.1991 23.0088 24.1953 23.0709C24.1914 23.1328 24.176 23.1935 24.1478 23.2494C24.1209 23.3052 24.0839 23.3553 24.0365 23.3965C23.9904 23.4377 23.9366 23.4693 23.8778 23.4897ZM13.7657 7.98238L13.1782 6.28637V6.27357L9.80409 15.8736H16.5562L13.7657 7.98238ZM1.65944 28.7044H24.7405C25.0746 28.7048 25.3946 28.8375 25.6301 29.0737C25.8669 29.3099 26 29.63 26 29.9639V31.2849C26 31.6189 25.8669 31.939 25.6301 32.1752C25.3946 32.4113 25.0746 32.5441 24.7405 32.5444H1.65944C1.32536 32.5441 1.00535 32.4113 0.769826 32.1752C0.533025 31.939 0.399902 31.6189 0.399902 31.2849V29.9639C0.399902 29.63 0.533025 29.3099 0.769826 29.0737C1.00535 28.8375 1.32536 28.7048 1.65944 28.7044Z"
+											fill="#FC0018" />
+									</svg>
+								</a></li>
+						</ul>
+						<a href="#">
+							<img src="/images/qr-code-white.svg" alt="QR-код" class="footer__qr-image" width="165" height="165"
+								loading="lazy">
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer__bottom">
+				<div class="footer__copyright">
+					<span>© 2024, Все права защищены</span>
+					<a href="#">Политика конфиденциальности</a>
+					<a href="#">Договор-оферта</a>
+				</div>
+				<div class="footer__develop-by">Разработано
+					<a href="#" class="footer__develop-by-link">
+						<img src="/images/icons/agelar.svg" alt="Агелар" class="footer__develop-by-image" width="85" height="30"
+							loading="lazy">
+					</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="/scripts/jquery-3.7.1.min.js"></script>
+	<script src="/scripts/swiper-bundle.min.js"></script>
+	<script src="/scripts/main.js"></script>
+</body>
+
+</html>

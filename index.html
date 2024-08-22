@@ -49,82 +49,92 @@
 					<nav class="header__nav">
 						<ul class="header__nav-list">
 							<li style="--underlineImage: url(/images/icons/underline-28.svg); --underlineAspectRatio: 17/3;"
-								class="header__nav-item is-active"><a href="#" class="header__nav-link">Фонд</a></li>
-							<li style="--underlineOffset: 1px;" class="header__nav-item"><a href="#" class="header__nav-link">Ищу
-									хозяина</a></li>
-							<li style="--underlineOffset: 5px;" class="header__nav-item"><a href="#" class="header__nav-link">Нужна
-									помощь</a></li>
-							<li class="header__nav-item"><a href="#" class="header__nav-link">Проекты и программы</a></li>
-							<li style="--underlineOffset: -5px; --underlineWidth: 130%;" class="header__nav-item"><a href="#"
-									class="header__nav-link">Отчет</a></li>
-							<li style="--underlineOffset: 3px;" class="header__nav-item"><a href="#"
-									class="header__nav-link">Новости</a></li>
-							<li style="--underlineOffset: 5px;" class="header__nav-item"><a href="#"
-									class="header__nav-link">Контакты</a></li>
+								class="header__nav-item">
+								<a href="#" class="header__nav-link">Фонд</a>
+							</li>
+							<li style="--underlineOffset: 1px;" class="header__nav-item">
+								<a href="#" class="header__nav-link">Ищу хозяина</a>
+							</li>
+							<li style="--underlineOffset: 5px;" class="header__nav-item">
+								<a href="#" class="header__nav-link">Нужна помощь</a>
+							</li>
+							<li class="header__nav-item">
+								<a href="#" class="header__nav-link">Проекты и программы</a>
+							</li>
+							<li style="--underlineOffset: -5px; --underlineWidth: 130%;" class="header__nav-item">
+								<a href="#" class="header__nav-link">Отчет</a>
+							</li>
+							<li style="--underlineOffset: 3px;" class="header__nav-item">
+								<a href="#" class="header__nav-link">Новости</a>
+							</li>
+							<li style="--underlineOffset: 5px;" class="header__nav-item">
+								<a href="#" class="header__nav-link">Контакты</a>
+							</li>
 						</ul>
 					</nav>
-					<button class="header__burger js-aside-menu-open" type="button" title="Открыть меню">=</button>
+					<button class="header__burger js-aside-menu-open" type="button" title="Открыть меню"></button>
 				</div>
 			</div>
 		</div>
 	</header>
 
-	<aside class="aside-menu is-open">
-		<div class="aside-menu__backdrop">
-			<div class="aside-menu__inner">
-				<button class="aside-menu__close-button js-aside-menu-close" type="button" title="Закрыть меню">Закрыть</button>
-				<nav class="aside-menu__nav">
-					<ol class="aside-menu__nav-list">
-						<li class="aside-menu__nav-item is-active"><a href="#" class="aside-menu__nav-link">Фонд</a></li>
-						<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Ищу хозяина</a></li>
-						<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Нужна помощь</a></li>
-						<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Проекты и программы</a></li>
-						<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Отчет</a></li>
-						<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Новости</a></li>
-						<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Контакты</a></li>
-					</ol>
-				</nav>
-				<div class="aside-menu__contacts">
-					<dl class="aside-menu__contacts-list">
-						<dt class="aside-menu__contacts-list-title">Телефон</dt>
-						<dd class="aside-menu__contacts-list-item"><a href="tel:+74957674715">+7 (495) 767-47-15</a></dd>
-					</dl>
-					<dl class="aside-menu__contacts-list">
-						<dt class="aside-menu__contacts-list-title">Электронная почта</dt>
-						<dd class="aside-menu__contacts-list-item"><a href="mailto:info@sitename.ru">info@sitename.ru</a></dd>
-					</dl>
-					<ul class="aside-menu__contacts-links">
-						<li class="aside-menu__contacts-links-item">
-							<a href="#" class="aside-menu__contacts-link">
-								<img src="/images/icons/odnoklassniki.svg" alt="Одноклассники" width="32" height="32" loading="lazy">
-							</a>
-						</li>
-						<li class="aside-menu__contacts-links-item">
-							<a href="#" class="aside-menu__contacts-link">
-								<img src="/images/icons/vkontakte.svg" alt="Вконтакте" width="32" height="32" loading="lazy">
-							</a>
-						</li>
-						<li class="aside-menu__contacts-links-item">
-							<a href="#" class="aside-menu__contacts-link">
-								<img src="/images/icons/youtube.svg" alt="Ютуб" width="32" height="32" loading="lazy">
-							</a>
-						</li>
-					</ul>
-					<button class="aside-menu__button button button--primary button--icon" type="button"
-						style="--buttonIcon: url('/images/icons/heart-help.svg'); --buttonIconHover: url('/images/icons/heart-help-white.svg');">
-						Помочь фонду
-					</button>
-					<button class="aside-menu__button button button--secondary button--icon" type="button"
-						style="--buttonIcon: url('/images/icons/paw.svg');">
-						Получить помощь
-					</button>
-					<button class="button button--primary button--icon"
-						style="--buttonIcon: url('/images/icons/heart-partner.svg');">
-						Стать партнером
-					</button>
-				</div>
-
+	<aside class="aside-menu">
+		<div class="aside-menu__backdrop js-aside-menu-close">
+		</div>
+		<div class="aside-menu__inner">
+			<button class="aside-menu__close-button js-aside-menu-close" type="button" title="Закрыть меню"
+				data-label="Закрыть"></button>
+			<nav class="aside-menu__nav">
+				<ol class="aside-menu__nav-list">
+					<li class="aside-menu__nav-item is-active"><a href="#" class="aside-menu__nav-link">Фонд</a></li>
+					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Ищу хозяина</a></li>
+					<li class="aside-menu__nav-item is-active"><a href="#" class="aside-menu__nav-link">Нужна помощь</a></li>
+					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Проекты и программы</a></li>
+					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Отчет</a></li>
+					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Новости</a></li>
+					<li class="aside-menu__nav-item is-active"><a href="#" class="aside-menu__nav-link">Контакты</a></li>
+				</ol>
+			</nav>
+			<div class="aside-menu__contacts">
+				<dl class="aside-menu__contacts-list">
+					<dt class="aside-menu__contacts-list-title">Телефон</dt>
+					<dd class="aside-menu__contacts-list-item"><a href="tel:+74957674715">+7 (495) 767-47-15</a></dd>
+				</dl>
+				<dl class="aside-menu__contacts-list">
+					<dt class="aside-menu__contacts-list-title">Электронная почта</dt>
+					<dd class="aside-menu__contacts-list-item"><a href="mailto:info@sitename.ru">info@sitename.ru</a></dd>
+				</dl>
+				<ul class="aside-menu__contacts-links">
+					<li class="aside-menu__contacts-links-item">
+						<a href="#" class="aside-menu__contacts-link">
+							<img src="/images/icons/odnoklassniki.svg" alt="Одноклассники" width="32" height="32" loading="lazy">
+						</a>
+					</li>
+					<li class="aside-menu__contacts-links-item">
+						<a href="#" class="aside-menu__contacts-link">
+							<img src="/images/icons/vkontakte.svg" alt="Вконтакте" width="32" height="32" loading="lazy">
+						</a>
+					</li>
+					<li class="aside-menu__contacts-links-item">
+						<a href="#" class="aside-menu__contacts-link">
+							<img src="/images/icons/youtube.svg" alt="Ютуб" width="32" height="32" loading="lazy">
+						</a>
+					</li>
+				</ul>
+				<button class="aside-menu__button button button--primary button--icon" type="button"
+					style="--buttonIcon: url('/images/icons/heart-help.svg'); --buttonIconHover: url('/images/icons/heart-help-white.svg');">
+					Помочь фонду
+				</button>
+				<button class="aside-menu__button button button--secondary button--icon" type="button"
+					style="--buttonIcon: url('/images/icons/paw.svg');">
+					Получить помощь
+				</button>
+				<button class="aside-menu__button button button--primary button--icon"
+					style="--buttonIcon: url('/images/icons/heart-partner.svg');">
+					Стать партнером
+				</button>
 			</div>
+
 		</div>
 	</aside>
 
@@ -258,10 +268,11 @@
 			<header class="projects__header">
 				<h2 class="h2">Проекты и программы</h2>
 			</header>
-			<div class="projects__container">
+			<div class="projects__wrapper">
 				<ul class="projects__list container">
 					<li class="projects__item">
-						<div class="projects__item-inner" title="Нажмите, чтобы посмотреть проект" tabindex="0">
+						<a class="projects__item-inner" href="#project-swiper" id="project-1"
+							title="Нажмите, чтобы посмотреть проект">
 							<p class="visually-hidden">Нажмите, чтобы посмотреть проект</p>
 							<div class="projects__item-image" style="--iconPositionRight: -35px; --iconPositionBottom: -10px;">
 								<svg width="287" height="290" viewBox="0 0 287 290" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -289,10 +300,11 @@
 							<h3 class="projects__item-title">Здоровый город</h3>
 							<img src="/images/icons/down-circle.svg" alt="" class="projects__item-icon" width="26" height="26"
 								loading="lazy">
-						</div>
+						</a>
 					</li>
 					<li class="projects__item">
-						<div class="projects__item-inner" title="Нажмите, чтобы посмотреть проект" tabindex="0">
+						<a class="projects__item-inner" href="#project-swiper" id="project-2"
+							title="Нажмите, чтобы посмотреть проект">
 							<p class="visually-hidden">Нажмите, чтобы посмотреть проект</p>
 							<div class="projects__item-image" style="--iconPositionRight: -65px; --iconPositionBottom: -15px;">
 								<svg width="263" height="351" viewBox="0 0 263 351" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -313,10 +325,11 @@
 							<h3 class="projects__item-title">Теплый дом</h3>
 							<img src="/images/icons/down-circle.svg" alt="" class="projects__item-icon" width="26" height="26"
 								loading="lazy">
-						</div>
+						</a>
 					</li>
 					<li class="projects__item">
-						<div class="projects__item-inner" title="Нажмите, чтобы посмотреть проект" tabindex="0">
+						<a class="projects__item-inner" href="#project-swiper" id="project-3"
+							title="Нажмите, чтобы посмотреть проект">
 							<p class="visually-hidden">Нажмите, чтобы посмотреть проект</p>
 							<div class="projects__item-image" style="--iconPositionRight: 5px; --iconPositionBottom: 5px;">
 								<svg width="227" height="224" viewBox="0 0 227 224" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -328,10 +341,11 @@
 							<h3 class="projects__item-title">Живой уголок</h3>
 							<img src="/images/icons/down-circle.svg" alt="" class="projects__item-icon" width="26" height="26"
 								loading="lazy">
-						</div>
+						</a>
 					</li>
 					<li class="projects__item">
-						<div class="projects__item-inner" title="Нажмите, чтобы посмотреть проект" tabindex="0">
+						<a class="projects__item-inner" href="#project-swiper" id="project-4"
+							title="Нажмите, чтобы посмотреть проект">
 							<p class="visually-hidden">Нажмите, чтобы посмотреть проект</p>
 							<div class="projects__item-image" style="--iconPositionRight: -50px; --iconPositionBottom: -30px;">
 								<svg width="250" height="272" viewBox="0 0 250 272" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -358,10 +372,11 @@
 							<h3 class="projects__item-title">Добрый Доктор</h3>
 							<img src="/images/icons/down-circle.svg" alt="" class="projects__item-icon" width="26" height="26"
 								loading="lazy">
-						</div>
+						</a>
 					</li>
 					<li class="projects__item">
-						<div class="projects__item-inner" title="Нажмите, чтобы посмотреть проект" tabindex="0">
+						<a class="projects__item-inner" href="#project-swiper" id="project-5"
+							title="Нажмите, чтобы посмотреть проект">
 							<p class="visually-hidden">Нажмите, чтобы посмотреть проект</p>
 							<div class="projects__item-image" style="--iconPositionRight: 5px; --iconPositionBottom: -80px;">
 								<svg width="194" height="396" viewBox="0 0 194 396" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -385,10 +400,11 @@
 							<h3 class="projects__item-title">Десант добра</h3>
 							<img src="/images/icons/down-circle.svg" alt="" class="projects__item-icon" width="26" height="26"
 								loading="lazy">
-						</div>
+						</a>
 					</li>
 					<li class="projects__item">
-						<div class="projects__item-inner" title="Нажмите, чтобы посмотреть проект" tabindex="0">
+						<a class="projects__item-inner" href="#project-swiper" id="project-6"
+							title="Нажмите, чтобы посмотреть проект">
 							<p class="visually-hidden">Нажмите, чтобы посмотреть проект</p>
 							<div class="projects__item-image" style="--iconPositionRight: -50px; --iconPositionBottom: -100px;">
 								<svg width="282" height="374" viewBox="0 0 282 374" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -400,10 +416,11 @@
 							<h3 class="projects__item-title">Верный Друг</h3>
 							<img src="/images/icons/down-circle.svg" alt="" class="projects__item-icon" width="26" height="26"
 								loading="lazy">
-						</div>
+						</a>
 					</li>
 					<li class="projects__item">
-						<div class="projects__item-inner" title="Нажмите, чтобы посмотреть проект" tabindex="0">
+						<a class="projects__item-inner" href="#project-swiper" id="project-7"
+							title="Нажмите, чтобы посмотреть проект">
 							<p class="visually-hidden">Нажмите, чтобы посмотреть проект</p>
 							<div class="projects__item-image" style="--iconPositionRight: -60px; --iconPositionBottom: 5px;">
 								<svg width="312" height="278" viewBox="0 0 312 278" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -415,10 +432,8 @@
 							<h3 class="projects__item-title">Шкаф ДоброДел </h3>
 							<img src="/images/icons/down-circle.svg" alt="" class="projects__item-icon" width="26" height="26"
 								loading="lazy">
-						</div>
+						</a>
 					</li>
-
-
 					<li class="projects__item projects__item--last">
 						<div class="projects__item-image" style="--iconPositionRight: 10px; --iconPositionBottom: 60px;">
 							<svg width="308" height="217" viewBox="0 0 308 217" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -442,12 +457,11 @@
 									</clipPath>
 								</defs>
 							</svg>
-
 						</div>
 					</li>
 				</ul>
 			</div>
-			<div class="projects__swiper-wrapper">
+			<div class="projects__swiper-wrapper is-hidden" id="project-swiper">
 				<div class="projects__swiper swiper container">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
@@ -578,6 +592,169 @@
 								</div>
 							</div>
 						</div>
+						<div class="swiper-slide">
+							<div class="projects__card">
+								<div class="projects__card-inner">
+									<div class="projects__card-content">
+										<h3 class="projects__card-title h3">Добрый Доктор</h3>
+										<div class="projects__card-description">
+											<p>Карта лояльности на медицинскую помощь для тех кто взял животное из приюта или с улицы.</p>
+											<p>Карта дает постоянную скидку 20% на медицинские услуги, первичную консультация и осмотр
+												бесплатно + подробные рекомендации по уходу</p>
+										</div>
+										<a href="#" class="projects__card-link button--more-white">Подробности</a>
+									</div>
+									<div class="projects__card-image">
+										<img src="/images/projects/project-1-preview.png" alt="Добрый Доктор" width="409" height="343"
+											loading="lazy">
+									</div>
+									<div class="projects__card-close-button-wrapper">
+										<button class="projects__card-close-button" type="button" title="Закрыть карточку проекта">
+											<span class="visually-hidden">Закрыть карточку проекта</span>
+											<img src="/images/icons/close-circle.svg" alt="Закрыть карточку проекта" width="32" height="32"
+												loading="lazy">
+										</button>
+									</div>
+								</div>
+								<div class="projects__card-background-image"
+									style="--iconPositionRight: -50px; --iconPositionBottom: -30px;">
+									<svg width="250" height="272" viewBox="0 0 250 272" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M126.065 0.119446C125.526 0.176216 123.482 0.374908 121.524 0.545219C114.484 1.1413 103.896 3.27019 97.4814 5.39907C88.824 8.23758 79.9962 13.7159 75.8236 18.8252L74.1205 20.8973V45.2801C74.1205 61.0906 74.234 70.0036 74.4043 70.6848C74.9437 72.615 76.8455 73.4098 78.6053 72.5015C79.0311 72.2744 80.7058 70.9403 82.3522 69.4926C92.1734 60.9487 103.045 56.5206 119.111 54.5337C124.447 53.8808 142.018 53.7957 147.496 54.3918C164.413 56.2368 175.739 60.6933 185.475 69.3223C187.15 70.8267 188.91 72.246 189.364 72.4731C191.209 73.4098 193.082 72.6434 193.622 70.6848C193.792 70.0036 193.906 61.0906 193.906 45.2801V20.9257L192.316 18.9955C189.591 15.6745 184.113 11.5303 179.145 9.03237C170.034 4.46236 157.005 1.28323 142.812 0.232986C139.321 -0.0224838 128.45 -0.0792542 126.065 0.119446ZM140.428 6.59125C145.623 8.26597 150.76 13.0063 153.4 18.5981L154.308 20.5283V26.3473V32.1662L153.4 34.068C149.625 42.0726 142.16 47.0684 134.013 47.0684C130.862 47.0684 127.797 46.302 124.646 44.7408C122.687 43.7757 121.722 43.0377 119.537 40.8237C117.237 38.5529 116.613 37.7013 115.478 35.4305C113.916 32.3082 113.576 30.6902 113.576 26.035C113.576 21.8624 113.888 20.1877 115.165 17.6047C117.919 11.956 123.17 7.69827 129.301 6.13708C132.282 5.39907 137.334 5.59777 140.428 6.59125Z"
+											fill="#0073B4" />
+										<path
+											d="M132.338 10.111C130.891 10.8206 130.664 11.8141 130.635 17.4343L130.607 22.2882L125.725 22.4301C119.054 22.6288 118.032 23.0546 117.635 25.9215C117.408 27.6246 117.919 28.7316 119.196 29.3561C120.048 29.7818 121.211 29.8954 125.441 29.9805L130.607 30.0941V35.4021C130.607 39.745 130.692 40.8237 131.061 41.3346C132.14 42.8958 134.808 43.3215 136.114 42.101C136.511 41.732 136.994 41.0791 137.136 40.6817C137.306 40.256 137.419 37.7013 137.419 34.9763V30.0373H141.819C146.531 30.0373 148.688 29.7251 149.682 28.9019C150.221 28.4761 150.335 28.1071 150.335 26.6879C150.335 23.1681 149.341 22.6288 142.33 22.4301L137.476 22.3166L137.363 16.9802C137.277 11.7573 137.249 11.6154 136.596 10.9058C136 10.2529 134.467 9.60004 133.587 9.60004C133.445 9.60004 132.878 9.82712 132.338 10.111Z"
+											fill="#0073B4" />
+										<path
+											d="M123.369 58.4508C113.86 59.1037 104.266 61.5732 96.4029 65.4051C91.3503 67.8463 87.4899 70.5712 83.7431 74.2897C80.0247 78.0081 79.2299 79.2571 79.2299 81.4711C79.2299 83.7419 78.8041 84.8489 77.4132 86.183C74.9437 88.5674 74.0354 91.9736 74.0354 98.7293C74.0354 109.629 77.8958 119.848 85.4178 128.903C88.3131 132.366 88.824 133.274 90.3284 137.333C94.4443 148.602 101.313 157.685 110.17 163.618C118.401 169.096 126.803 171.168 137.845 170.515C143.692 170.146 147.553 169.153 152.889 166.598C164.357 161.12 172.702 151.44 177.896 137.475C179.316 133.643 180.252 132.11 183.205 128.619C187.831 123.197 192.316 114.341 193.48 108.21C194.076 105.229 194.331 96.572 193.934 93.3361C193.537 90.1002 192.77 88.3403 190.954 86.325C189.449 84.6786 189.08 83.6852 189.08 81.4711C189.08 79.4274 188.456 78.3204 185.617 75.4251C176.25 65.8593 165.322 61.0055 148.206 58.7914C144.26 58.3089 128.733 58.0818 123.369 58.4508Z"
+											fill="#0073B4" />
+										<path
+											d="M85.9004 153.172C85.2759 153.399 79.6557 155.727 73.4109 158.281C34.6937 174.177 26.0362 179.74 15.846 195.239C10.3676 203.584 5.45701 215.108 2.70366 225.951C0.88701 233.246 0.0354573 239.463 0.00707219 246.076C-0.049698 252.321 0.0638422 252.463 7.1885 255.103C30.8049 263.845 62.0285 268.728 107.615 270.8C117.692 271.254 150.789 271.254 160.695 270.771C192.969 269.295 217.238 266.485 237.704 261.944C245.85 260.127 255.87 257.118 262.456 254.507C267.962 252.321 268.019 252.208 268.019 245.736C267.934 227.711 259.56 203.697 248.547 189.845C244.261 184.481 237.307 178.435 231.516 175.085C223.909 170.686 209.745 164.327 189.903 156.379C181.615 153.087 179.798 152.462 179.458 152.803C179.316 152.973 178.01 157.486 176.591 162.88C168.416 193.791 162.313 210.737 151.896 231.43C143.465 248.148 137.135 259.02 134.978 260.439C134.297 260.893 134.183 260.865 133.332 260.411C131.714 259.559 129.67 256.494 124.731 247.609C113.207 226.888 106.139 211.106 99.8659 191.974C96.9138 183.005 92.0883 165.832 89.8743 156.436C89.4769 154.762 89.0228 153.257 88.8524 153.03C88.4267 152.547 87.3196 152.604 85.9004 153.172Z"
+											fill="#0073B4" />
+										<path
+											d="M123.397 180.478C121.694 180.706 121.24 181.018 121.24 182.096C121.24 182.863 122.347 189.278 123.596 195.665L124.532 200.49H134.013H143.494L144.572 194.955C146.19 186.666 146.871 182.267 146.673 181.529C146.588 181.131 146.219 180.734 145.878 180.62C144.97 180.308 125.441 180.195 123.397 180.478Z"
+											fill="#0073B4" />
+										<path
+											d="M126.832 205.429C126.236 205.542 125.64 205.77 125.498 205.911C125.1 206.309 124.022 210.34 122.233 217.862L120.615 224.731L123.454 230.351C126.009 235.432 129.642 242.102 132.509 247.041C133.105 248.063 133.729 248.886 133.9 248.886C134.467 248.886 141.45 236.539 145.623 228.222L147.383 224.731L145.765 217.862C143.437 207.813 142.813 205.911 141.876 205.599C140.996 205.287 128.137 205.173 126.832 205.429Z"
+											fill="#0073B4" />
+									</svg>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="projects__card">
+								<div class="projects__card-inner">
+									<div class="projects__card-content">
+										<h3 class="projects__card-title h3">Десант добра</h3>
+										<div class="projects__card-description">
+											<p>Карта лояльности на медицинскую помощь для тех кто взял животное из приюта или с улицы.</p>
+											<p>Карта дает постоянную скидку 20% на медицинские услуги, первичную консультация и осмотр
+												бесплатно + подробные рекомендации по уходу</p>
+										</div>
+										<a href="#" class="projects__card-link button--more-white">Подробности</a>
+									</div>
+									<div class="projects__card-image">
+										<img src="/images/projects/project-1-preview.png" alt="Десант добра" width="409" height="343"
+											loading="lazy">
+									</div>
+									<div class="projects__card-close-button-wrapper">
+										<button class="projects__card-close-button" type="button" title="Закрыть карточку проекта">
+											<span class="visually-hidden">Закрыть карточку проекта</span>
+											<img src="/images/icons/close-circle.svg" alt="Закрыть карточку проекта" width="32" height="32"
+												loading="lazy">
+										</button>
+									</div>
+								</div>
+								<div class="projects__card-background-image"
+									style="--iconPositionRight: 5px; --iconPositionBottom: -80px;">
+									<svg width="194" height="396" viewBox="0 0 194 396" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M130.081 174.492C143.581 176.998 154.687 185.524 160.708 198.014C163.887 204.633 165.27 212.711 164.485 220.115C164.036 224.416 162.428 231.147 160.82 235.448C154.388 252.687 137.111 270.787 110.223 288.438C100.388 294.908 85.0932 303.696 83.6348 303.696C83.373 303.696 80.7927 302.387 77.8758 300.816C43.3966 281.969 18.1542 259.905 8.91733 240.496C6.67356 235.747 5.51429 232.381 4.16803 226.473C2.89656 220.863 2.74698 213.422 3.83146 208.336C7.27191 191.657 20.7719 178.456 37.4132 175.577C42.1251 174.754 50.8384 175.016 55.0267 176.138C66.5821 179.204 76.3799 187.207 81.952 198.052L83.2234 200.52L84.3827 197.977C89.0198 188.104 98.2941 179.765 108.69 176.1C114.636 174.006 123.761 173.333 130.081 174.492Z"
+											fill="#0073B4" />
+										<path d="M85.2244 25L61.2244 123M61.2244 123L4.22437 32M61.2244 123L43.2244 64" stroke="#0073B4"
+											stroke-width="4" />
+										<path d="M92.6642 76.2964L121.734 195M121.734 195L190.776 84.7752M121.734 195L143.537 123.536"
+											stroke="#0073B4" stroke-width="4" />
+										<path d="M8.90892 231L81.9747 391M81.9747 391L156.631 236.429M81.9747 391L84.0241 286.245"
+											stroke="#0073B4" stroke-width="4" />
+										<path
+											d="M171.182 48.7614C179.849 50.37 186.979 55.8439 190.845 63.8627C192.885 68.1122 193.774 73.298 193.269 78.0517C192.981 80.8126 191.949 85.1341 190.917 87.8951C186.787 98.963 175.695 110.583 158.433 121.915C152.119 126.068 142.3 131.71 141.363 131.71C141.195 131.71 139.539 130.87 137.666 129.862C115.53 117.762 99.3246 103.597 93.3945 91.1362C91.954 88.0872 91.2098 85.9264 90.3454 82.1331C89.5292 78.5318 89.4331 73.7542 90.1294 70.489C92.3381 59.7813 101.005 51.3063 111.689 49.4577C114.714 48.9295 120.308 49.0975 122.997 49.8178C130.415 51.7865 136.706 56.9243 140.283 63.8867L141.099 65.4713L141.843 63.8387C144.821 57.5005 150.775 52.1466 157.449 49.7938C161.266 48.4493 167.124 48.0172 171.182 48.7614Z"
+											fill="#0073B4" />
+										<path
+											d="M68.7754 0.305443C76.0877 1.66257 82.1036 6.28084 85.3648 13.0462C87.0865 16.6315 87.8359 21.0067 87.4106 25.0173C87.1675 27.3467 86.2965 30.9927 85.4255 33.3221C81.9416 42.6599 72.5835 52.4636 58.0197 62.0243C52.6924 65.5285 44.4079 70.2886 43.6179 70.2886C43.4762 70.2886 42.0785 69.5796 40.4986 68.7289C21.8229 58.5201 8.15037 46.5693 3.14723 36.0566C1.9319 33.4841 1.30398 31.6611 0.574774 28.4607C-0.113916 25.4224 -0.194938 21.3915 0.392475 18.6368C2.25599 9.60276 9.56826 2.45254 18.582 0.892853C21.1342 0.447227 25.8538 0.58902 28.1224 1.19669C34.3814 2.85764 39.6884 7.19235 42.7064 13.0665L43.3951 14.4033L44.0231 13.026C46.5348 7.67848 51.5581 3.16148 57.1892 1.17644C60.4098 0.0421219 65.3522 -0.322479 68.7754 0.305443Z"
+											fill="#0073B4" />
+									</svg>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="projects__card">
+								<div class="projects__card-inner">
+									<div class="projects__card-content">
+										<h3 class="projects__card-title h3">Верный Друг</h3>
+										<div class="projects__card-description">
+											<p>Карта лояльности на медицинскую помощь для тех кто взял животное из приюта или с улицы.</p>
+											<p>Карта дает постоянную скидку 20% на медицинские услуги, первичную консультация и осмотр
+												бесплатно + подробные рекомендации по уходу</p>
+										</div>
+										<a href="#" class="projects__card-link button--more-white">Подробности</a>
+									</div>
+									<div class="projects__card-image">
+										<img src="/images/projects/project-1-preview.png" alt="Верный Друг" width="409" height="343"
+											loading="lazy">
+									</div>
+									<div class="projects__card-close-button-wrapper">
+										<button class="projects__card-close-button" type="button" title="Закрыть карточку проекта">
+											<span class="visually-hidden">Закрыть карточку проекта</span>
+											<img src="/images/icons/close-circle.svg" alt="Закрыть карточку проекта" width="32" height="32"
+												loading="lazy">
+										</button>
+									</div>
+								</div>
+								<div class="projects__card-background-image"
+								style="--iconPositionRight: -50px; --iconPositionBottom: -100px;">
+								<svg width="282" height="374" viewBox="0 0 282 374" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M102.878 44.6708C101.469 50.0793 102.693 55.5824 108.309 68.3448C118.285 91.1262 132.071 125.987 132.436 129.512C133.309 137.779 123.938 137.771 119.596 129.356C118.478 127.188 112.73 119.176 106.985 111.485C101.241 103.794 93.0044 91.8995 88.6831 85.0886C84.3617 78.2776 79.0777 71.479 76.8114 69.9037C73.4429 67.4442 72.0936 67.3332 68.0118 69.439C55.9154 75.6797 66.9317 93.0612 71.2261 100.714C83.0382 121.418 106.558 154.486 108.727 153.367C109.62 152.906 110.439 151.677 110.427 150.714C110.766 146.988 115.852 143.072 120.661 142.69C125.853 142.11 128.626 143.101 134.651 147.58C138.085 150.167 138.875 151.697 140.099 157.2C141.388 162.831 142.309 164.616 146.92 168.856C153.348 174.742 154.099 178.39 151.192 187.154C148.461 194.697 143.042 197.655 134.486 196.096C129.339 195.199 126.842 195.681 120.975 198.708C114.469 202.064 113.124 202.274 106.937 200.3C97.9779 197.334 93.8459 190.264 96.2472 182.083C97.6641 177.317 97.4628 176.613 94.485 174.598C86.8431 169.177 78.2128 166.849 67.4341 167.244C55.9478 167.52 50.0682 169.585 45.4464 174.713C43.3557 176.922 43.1824 178.464 44.761 181.524C46.4055 184.712 49.3135 186.279 58.466 189.306C64.8461 191.342 70.395 193.645 70.7897 194.41C71.1186 195.048 73.644 196.812 76.4204 198.124C81.9734 200.748 90.5063 210.714 95.4397 220.276C98.2024 225.631 100.214 227.338 109.522 232.545C115.597 235.868 121.223 239.261 122.26 240.018C123.296 240.775 128.467 243.596 133.826 246.158C139.186 248.721 146.881 253.307 150.834 256.272C158.677 262.396 180.197 350.112 196.967 346.303C206.697 344.189 247.136 308.317 251.251 303.772C252.897 301.954 225.754 231.503 224.929 227.086C224.309 223.693 224.298 217.725 225.024 214.122C225.622 210.585 225.898 207.052 225.504 206.287C225.109 205.522 224.67 201.228 224.421 196.675C224.172 192.122 221.638 179.385 218.869 168.383C213.61 148.172 212.398 133.299 214.919 124.411C218.219 112.837 220.182 99.3044 221.259 87.2387C222.094 76.9605 221.667 73.6291 219.102 68.6566C216.602 63.8116 215.303 62.5448 212.608 62.6435C206.894 62.5243 203.992 66.6043 202.392 77.2774C200.965 86.4081 197.249 102.37 192.647 119.435C191.42 123.943 189.971 126.143 187.605 126.879C183.26 128.475 180.645 124.658 180.673 116.572C180.629 113.043 179.57 105.356 178.342 99.5325C177.048 93.5811 175.266 84.4916 174.367 79.3052C173.595 74.053 172.375 68.8708 171.718 67.5958C171.126 66.4483 170.037 61.521 169.335 56.7171C167.718 45.4436 165.354 41.1744 160.2 39.6362C155.498 38.3489 151.54 40.0681 149.601 44.1358C148.098 47.1712 149.135 58.2596 151.372 62.5946C152.095 63.9971 152.801 69.1218 153.116 73.8023C153.304 78.5486 154.185 87.4572 155.162 93.7335C156.011 100.076 156.597 105.908 156.288 106.874C156.045 107.968 156.325 109.761 156.982 111.036C158.232 113.459 156.608 122.207 154.822 123.128C153.419 123.852 149.534 116.009 146.399 106.488C144.997 102.206 138.503 85.8615 131.951 70.0309C120.639 43.0955 119.586 41.0554 115.967 39.0483C111.442 36.5395 104.225 39.4556 102.878 44.6708ZM165.951 145.638C177.12 145.688 184.252 151.372 181.641 158.207C178.162 167.429 162.992 170.896 151.817 165.2L145.161 161.691L147.463 155.822C150.259 148.407 155.168 145.713 165.951 145.638ZM178.883 173.836C190.41 176.769 196.714 183.041 194.939 189.93C192.978 197.399 179.006 199.119 168.406 193.287C161.554 189.396 159.597 186.854 159.598 181.849C159.632 179.41 161.027 178.044 166.002 175.478C171.232 172.78 173.346 172.496 178.883 173.836ZM132.068 202.993C138.44 204.388 142.335 207.867 146.479 215.9C149.965 222.657 150.376 224.705 149.013 228.637C147.16 234.436 143.72 236.534 138.306 234.807C129.993 232.154 122.11 222.822 122.145 215.377C122.227 206.456 125.955 201.788 132.068 202.993ZM163.591 198.354C165.59 199.098 168.301 200.283 169.527 200.78C170.753 201.278 173.866 203.869 176.465 206.403C180.882 210.581 181.343 211.474 181.534 216.541C181.726 221.608 181.096 222.579 176.887 224.75C172.805 226.856 171.007 226.815 165.841 224.314C157.19 220.383 151.071 213.53 150.029 207.127C148.846 199.826 156.233 195.047 163.591 198.354Z"
+										fill="#03486E" />
+								</svg>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="projects__card">
+								<div class="projects__card-inner">
+									<div class="projects__card-content">
+										<h3 class="projects__card-title h3">Шкаф ДоброДел</h3>
+										<div class="projects__card-description">
+											<p>Карта лояльности на медицинскую помощь для тех кто взял животное из приюта или с улицы.</p>
+											<p>Карта дает постоянную скидку 20% на медицинские услуги, первичную консультация и осмотр
+												бесплатно + подробные рекомендации по уходу</p>
+										</div>
+										<a href="#" class="projects__card-link button--more-white">Подробности</a>
+									</div>
+									<div class="projects__card-image">
+										<img src="/images/projects/project-1-preview.png" alt="Шкаф ДоброДел" width="409" height="343"
+											loading="lazy">
+									</div>
+									<div class="projects__card-close-button-wrapper">
+										<button class="projects__card-close-button" type="button" title="Закрыть карточку проекта">
+											<span class="visually-hidden">Закрыть карточку проекта</span>
+											<img src="/images/icons/close-circle.svg" alt="Закрыть карточку проекта" width="32" height="32"
+												loading="lazy">
+										</button>
+									</div>
+								</div>
+								<div class="projects__card-background-image"
+								style="--iconPositionRight: -60px; --iconPositionBottom: 5px;">
+								<svg width="312" height="278" viewBox="0 0 312 278" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M85.2331 0.247223C86.689 0.168518 87.8524 0.105591 88.3733 0.0740356C92.1257 -0.14859 120.587 0.169434 125.421 0.519226C163.39 3.03146 184.156 8.50107 188.798 17.1826C189.466 18.4546 189.498 18.8998 189.593 30.2524C189.689 42.6545 189.625 43.4177 188.258 45.453C187.654 46.3434 187.399 47.3292 187.081 50.1912C186.541 54.7386 186.541 69.2713 187.049 74.7728C188.226 87.3021 190.675 101.39 194.999 120.883L195.572 123.395L204.476 123.332C237.23 122.982 267.917 129.596 281.591 139.995C285.566 143.016 288.301 146.514 289.319 149.853C289.529 150.546 291.847 157.59 295.109 167.506L295.119 167.537L295.12 167.54C296.796 172.632 298.72 178.479 300.735 184.611L311.579 217.46L311.229 219.146C309.957 225.092 303.438 231.421 293.23 236.604C291.386 237.558 289.701 238.385 289.478 238.449C289.16 238.544 289.383 239.307 290.273 241.247C292.213 245.508 292.785 248.338 292.594 252.663C292.404 257.211 291.863 259.214 289.764 263.507C288.333 266.496 287.793 267.196 284.931 270.058C282.068 272.92 281.337 273.461 278.38 274.892C273.61 277.245 271.829 277.658 266.455 277.658C262.607 277.658 261.589 277.531 258.918 276.8C257.233 276.323 254.911 275.528 253.766 274.987C247.82 272.316 240.696 266.337 233.541 258.133L229.948 253.967H168.478H107.04L104.242 257.211C96.5777 266.083 88.6277 272.697 82.5856 275.241C77.911 277.213 75.7486 277.658 70.5651 277.658C66.4311 277.658 65.4771 277.563 63.4101 276.927C51.803 273.27 44.33 263.38 44.33 251.614C44.33 247.098 45.0296 244.745 48.4004 237.972C48.464 237.844 47.5418 237.749 46.3334 237.749C38.9239 237.749 29.9245 235.364 23.0238 231.643C14.6604 227.096 7.6643 220.386 4.03908 213.39C0.795452 207.157 0.000446282 202.164 0.000446282 187.664C-0.0313539 169.442 1.62226 158.121 9.47691 122.473C14.9784 97.4145 16.9818 85.4576 17.9358 72.0697C18.3174 66.3139 18.3492 57.7914 17.9358 52.9896C17.8629 52.0716 17.7901 51.1068 17.7264 50.2636C17.6511 49.2666 17.5886 48.4396 17.5542 48.0606C17.5224 47.2656 17.1408 46.3116 16.632 45.5802C15.1692 43.545 15.0102 42.0503 15.1374 29.9344L15.1381 29.8499C15.2328 18.994 15.2347 18.7688 15.996 17.3098C20.3208 8.5647 43.2806 2.58624 80.2642 0.519226C81.9527 0.42453 83.7038 0.329865 85.1678 0.250702L85.2008 0.248962L85.2331 0.247223ZM163.263 13.9389C152.037 11.5857 138.49 9.9957 122.241 9.10529C117.089 8.81909 89.2319 8.75549 84.8753 8.97809C68.2119 9.9321 59.6895 10.7907 49.736 12.4761C37.2703 14.6067 27.603 17.5005 24.9318 19.9492C23.8824 20.935 23.8824 20.9668 24.4866 21.412C24.8046 21.6982 26.1084 22.366 27.3486 22.9702L29.6065 24.0196L35.1397 22.1434C44.5208 18.9316 52.4708 17.119 62.4561 15.8788C66.2403 15.4017 69.3885 15.3063 80.2642 15.3063C95.3057 15.3381 104.019 15.7833 105.482 16.6737C108.598 18.4864 108.535 22.366 105.355 24.2104C104.178 24.91 103.892 24.91 93.7793 24.3694C85.9883 23.956 72.2824 23.956 67.3851 24.3694C60.5799 24.9418 53.1068 26.1502 48.1778 27.5176L46.1108 28.09L49.1 28.5988C66.0813 31.5244 89.8361 32.8919 113.082 32.3195C134.897 31.7471 153.182 29.68 166.793 26.2774C173.153 24.6874 178.909 22.366 180.276 20.8714L180.912 20.1718L179.958 19.4086C177.986 17.8185 171.149 15.5926 163.263 13.9389ZM97.1183 62.1163C68.8479 61.6711 43.8212 58.6182 30.3379 53.9754C28.8433 53.4666 27.4122 52.9578 27.1578 52.8624C26.7444 52.7034 26.6808 53.88 26.6808 62.4343C26.6808 80.5604 24.9 93.2487 17.904 125.335C10.3673 159.807 8.93631 169.665 8.90451 187.028C8.87271 203.468 9.69952 207.221 14.883 213.803C19.3668 219.464 27.2214 224.615 35.1079 227.064C38.0971 227.986 42.9944 228.845 45.4112 228.845C46.7468 228.845 46.9058 228.781 46.715 228.272C44.7752 223.407 44.5208 222.04 44.5208 217.715C44.5208 212.881 44.9342 210.846 46.7468 206.966C49.577 200.797 54.9512 195.773 61.1841 193.451C65.0319 191.988 67.8939 191.543 71.9326 191.734C81.4408 192.147 88.6595 196.122 99.0582 206.68L102.461 210.146L106.945 196.663C109.425 189.254 111.428 183.116 111.428 183.021C111.428 182.894 110.824 182.576 110.093 182.258C108.376 181.59 104.878 179.268 103.733 178.06L102.842 177.138L100.871 179.014C94.0337 185.406 83.2852 186.328 75.4624 181.208C71.074 178.346 67.5759 173.481 66.4311 168.711C65.2863 163.813 66.2085 157.263 68.8161 151.666C74.254 139.995 88.0871 130.232 101.125 128.833C108.058 128.07 119.061 132.427 126.724 138.946L128.855 140.726L130.254 139.677C139.508 132.586 160.051 126.575 182.152 124.477C184.601 124.222 186.286 123.936 186.382 123.713C186.445 123.523 185.873 120.342 185.078 116.717C179.958 93.0261 178.082 78.3026 178.114 61.8301V52.7034L176.492 53.3394C161.609 58.9998 129.078 62.5933 97.1183 62.1163ZM270.589 143.334C260.222 138.246 246.007 134.812 227.499 132.935C221.871 132.363 199.547 132.077 191.724 132.49C167.937 133.699 145.614 139.391 135.66 146.768C130.063 150.902 129.173 153.892 132.289 157.74L132.989 158.566L135.946 156.34C145.741 148.963 162.849 143.97 185.364 141.871C192.678 141.203 205.716 140.758 207.115 141.14C209.278 141.744 210.741 144.193 210.2 146.323C210.073 146.768 209.532 147.659 208.928 148.295C207.91 149.408 207.815 149.44 204.73 149.694C203.013 149.821 199.928 149.949 197.893 149.98C181.802 150.044 160.051 154.083 148.19 159.234C145.518 160.411 140.907 163.05 140.526 163.654C140.43 163.782 142.116 164.64 144.246 165.562L148.126 167.184L151.942 165.912C161.482 162.732 174.711 160.284 188.226 159.202C194.999 158.63 205.939 158.344 207.115 158.662C209.278 159.234 210.741 161.683 210.2 163.782C209.946 164.831 208.483 166.516 207.529 166.866C207.115 167.025 203.236 167.311 198.943 167.47C190.77 167.82 183.551 168.393 177.668 169.219C172.485 169.919 165.171 171.382 165.171 171.668C165.171 171.795 165.298 171.922 165.457 171.922C165.616 171.922 167.874 172.272 170.45 172.717C181.103 174.466 189.275 175.102 203.967 175.325C217.196 175.516 224.923 175.102 235.767 173.64C260.254 170.364 278.984 162.7 281.273 155.068C282.355 151.411 278.507 147.214 270.589 143.334ZM84.6208 205.408C81.2818 203.055 79.2784 202.037 76.2892 201.179C72.9502 200.193 69.1659 200.066 66.3357 200.861C63.1875 201.719 61.1205 202.864 58.5765 205.281C56.1278 207.57 54.188 210.973 53.552 214.121C52.9796 216.856 53.2976 220.958 54.2516 223.343C55.619 226.746 58.6719 230.626 62.4243 233.71L63.5373 234.632L62.1063 235.777C61.3431 236.413 59.7531 237.844 58.5765 238.957C50.0222 247.13 51.9302 261.313 62.3289 266.751C69.3885 270.471 77.0524 269.358 85.0979 263.475C88.3733 261.058 96.7367 252.663 100.139 248.338L102.683 245.095H168.51L234.336 245.063L236.626 247.861C244.099 256.924 251.604 263.889 256.819 266.56C259.459 267.896 263.561 268.913 266.423 268.913C271.479 268.913 275.104 267.419 278.729 263.825C283.595 258.991 285.153 252.886 283.118 246.717C282.068 243.537 279.143 239.403 276.185 236.89L273.61 234.728L275.136 233.456C280.033 229.354 281.846 227 283.181 223.121C284.104 220.45 284.167 215.87 283.34 213.104C281.083 205.44 274.532 200.511 266.614 200.447C259.458 200.384 253.83 203.436 245.276 211.959C242.541 214.694 238.916 218.605 237.23 220.64L234.146 224.393H168.573H103.001L100.139 220.799C96.1961 215.902 88.0553 207.825 84.6208 205.408ZM99.2808 82.532C96.9912 83.4542 95.7192 84.3446 93.9383 86.2844C92.0621 88.3196 90.8219 90.641 89.7407 94.0119C89.1047 96.0789 89.0093 97.0329 89.0411 100.849C89.0411 104.76 89.1683 105.619 89.8997 107.845C91.5215 112.774 94.4154 116.463 98.0724 118.275C99.885 119.166 100.426 119.293 102.842 119.293C105.259 119.293 105.8 119.198 107.676 118.244C111.428 116.399 114.672 111.947 116.071 106.732C116.835 103.87 116.835 97.4781 116.071 94.6479C114.672 89.4326 111.428 84.9806 107.74 83.168C105.068 81.8324 101.602 81.578 99.2808 82.532ZM51.2624 103.807C52.598 99.9269 55.0149 97.1603 58.1313 95.9201C59.4351 95.4113 60.3255 95.2841 62.6469 95.3795C65.2863 95.4749 65.7951 95.5703 68.0211 96.6833C74.4448 99.8633 79.342 107.718 79.819 115.7C80.2642 122.569 77.4976 128.261 72.6958 130.519C71.1376 131.25 70.4698 131.377 68.0211 131.377C65.3817 131.377 64.9683 131.282 62.7741 130.233C58.4493 128.166 55.4283 125.049 53.075 120.247C51.0716 116.24 50.5628 114.014 50.531 109.594C50.531 106.605 50.6582 105.556 51.2624 103.807ZM139.54 95.8563C131.717 98.623 125.739 107.781 125.739 117.003C125.739 125.208 130.063 130.996 136.551 131.473C144.978 132.077 153.532 123.236 154.995 112.424C155.981 105.333 153.15 98.6866 148.094 96.2061C145.995 95.1885 141.861 95.0295 139.54 95.8563ZM220.079 194.374C218.78 191.678 216.382 189.838 213.469 189.297C212.105 189.047 210.135 189.192 208.852 189.644C206.608 190.435 204.606 192.235 203.606 194.366L203.355 194.915L203.081 194.382C201.878 192.041 199.764 190.314 197.27 189.652C196.366 189.41 194.485 189.353 193.468 189.531C189.876 190.152 186.963 193.002 186.22 196.601C185.986 197.699 186.018 199.305 186.293 200.516C186.583 201.791 186.834 202.518 187.318 203.543C189.311 207.732 194.76 212.494 202.201 216.562C202.831 216.901 203.388 217.183 203.444 217.183C203.759 217.183 207.06 215.286 209.183 213.89C214.986 210.08 218.715 206.174 220.103 202.453C220.45 201.525 220.797 200.072 220.894 199.144C221.064 197.546 220.765 195.802 220.079 194.374Z"
+										fill="#0073B4" />
+								</svg>
+								</div>
+							</div>
+						</div>
 					</div>
 					<div class="swiper-button-prev projects__swiper-prev"></div>
 					<div class="swiper-button-next projects__swiper-next"></div>
@@ -586,7 +763,7 @@
 		</section>
 
 		<section class="help-now container section--flex-column section--margin-bottom">
-			<h2 class="h2">Им нужна помощь прямо сейчас</h2>
+			<h2 class="help-now__title h2">Им нужна помощь прямо сейчас</h2>
 			<ul class="help-now__list">
 				<li class="help-now__item">
 					<article class="help-now__card">
@@ -720,15 +897,21 @@
 			<header class="container">
 				<h2 class="h2">Ищу хозяина</h2>
 			</header>
-			<div class="animals__filter">
-				<div class="animals__tabs swiper">
+			<div class="animals__filter filter filter--without-container">
+				<div class="animals__tabs filter__tabs swiper">
 					<div class="swiper-wrapper">
-						<div class="swiper-slide"><a href="#" class="animals__tab button button--outline is-active">Все</a></div>
-						<div class="swiper-slide"><a href="#" class="animals__tab button button--outline">Кошечки</a></div>
-						<div class="swiper-slide"><a href="#" class="animals__tab button button--outline">Собачки</a></div>
-						<div class="swiper-slide"><a href="#" class="animals__tab button button--outline">Котята</a></div>
-						<div class="swiper-slide"><a href="#" class="animals__tab button button--outline">Щенки</a></div>
-						<div class="swiper-slide"><a href="#" class="animals__tab button button--outline">Другие</a></div>
+						<div class="swiper-slide"><a href="#"
+								class="animals__tab filter__tab button button--outline is-active">Все</a></div>
+						<div class="swiper-slide"><a href="#" class="animals__tab filter__tab button button--outline">Кошечки</a>
+						</div>
+						<div class="swiper-slide"><a href="#" class="animals__tab filter__tab button button--outline">Собачки</a>
+						</div>
+						<div class="swiper-slide"><a href="#" class="animals__tab filter__tab button button--outline">Котята</a>
+						</div>
+						<div class="swiper-slide"><a href="#" class="animals__tab filter__tab button button--outline">Щенки</a>
+						</div>
+						<div class="swiper-slide"><a href="#" class="animals__tab filter__tab button button--outline">Другие</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -1047,6 +1230,7 @@
 			</div>
 		</section>
 
+		<!-- Доделка -->
 		<section class="donation container section--margin-bottom">
 			<div class="donation__inner">
 				<div class="donation__text">
@@ -1076,11 +1260,12 @@
 							<div class="donation__form-scrollable-item is-active">стать волонтером</div>
 							<div class="donation__form-scrollable-item">помочь по другому</div>
 						</div>
-						<!-- <select class="donation__form-select" name="donation-variation" id="donation-variation">
+						<!-- Заменить -->
+						<select class="donation__form-select" name="donation-variation" id="donation-variation" hidden>
 							<option value="помогать покупая">помогать покупая</option>
 							<option value="стать волонтером">стать волонтером</option>
 							<option value="помочь по другому">помочь по другому</option>
-						</select> -->
+						</select>
 					</div>
 				</form>
 			</div>

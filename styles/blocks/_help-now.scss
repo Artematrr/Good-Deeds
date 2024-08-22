@@ -1,6 +1,15 @@
 .help-now {
-	.h2 {
+	&__title {
 		text-align: center;
+	}
+
+	&__filter {
+	}
+
+	&__tabs {
+	}
+
+	&__tab {
 	}
 
 	&__list {
@@ -186,8 +195,16 @@
 			filter: none;
 		}
 
-		@include hover {
-			background-color: var(--secondary-500);
+		&.button--primary {
+			@include hover {
+				background-color: var(--primary-500);
+			}
+		}
+
+		&.button--secondary {
+			@include hover {
+				background-color: var(--secondary-500);
+			}
 		}
 	}
 

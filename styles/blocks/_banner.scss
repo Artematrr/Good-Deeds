@@ -93,32 +93,4 @@
 		width: 100%;
 	}
 }
-.banner {
-	// &::after {
-	// 	content: '';
-	// 	background-color: var(--primary-500);
-	// 	background-image: url('/images/cooperation-frame.svg');
-	// 	background-repeat: repeat-x;
 
-	// 	@include mobile {
-	// 		top: calc(100% - 210px);
-	// 		left: 0;
-	// 		background-image: url('/images/cooperation-frame-mobile.svg');
-	// 	}
-	// }
-
-	// &__title {
-	// 	@include fluid-text(24, 48);
-
-	// 	font-weight: 700;
-	// 	text-transform: lowercase;
-
-	// 	&::first-letter {
-	// 		text-transform: uppercase;
-	// 	}
-
-	// 	@include mobile {
-	// 		text-transform: uppercase;
-	// 	}
-	// }
-}

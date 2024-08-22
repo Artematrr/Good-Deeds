@@ -44,18 +44,21 @@
 
 	--input-height: 52px;
 	--button-height: 48px;
-
+	
 	--font-family-base: 'Geometria', sans-serif;
 	--font-family-accent: 'Unbounded', sans-serif;
-
+	
 	--container-width: 1410px;
 	--container-padding-x: 17px;
-
+	
 	--transition-duration: 0.2s;
-
+	
 	--section-margin-bottom: 50px;
+	--header-height: 120px;
+	
 	@include mobile {
 		--section-margin-bottom: 30px;
+		--header-height: 65px;
 	}
 	// --section-padding-y: 70px;
 	// @include desktop {

@@ -1,0 +1,44 @@
+.pagination {
+	display: flex;
+	column-gap: 15px;
+	width: fit-content;
+
+	@include mobile {
+		column-gap: 10px;
+	}
+
+	&-item {
+		@include flex-center(true);
+		@include square(32px);
+
+		position: relative;
+		color: var(--primary-600);
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 0;
+		border-radius: 50%;
+		transition: background var(--transition-duration) ease-in-out,
+			color var(--transition-duration) ease-in-out;
+
+		&:hover {
+			color: var(--primary-500);
+		}
+
+		&.is-active {
+			color: var(--white);
+			background: var(--primary-500);
+		}
+	}
+
+	&-prev,
+	&-next {
+		border: 1px solid var(--primary-500);
+
+		@include hover {
+			* {
+				fill: var(--white);
+			}
+			background-color: var(--primary-500);
+		}
+	}
+}

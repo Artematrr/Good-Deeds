@@ -29,6 +29,7 @@
 		display: flex;
 		position: relative;
 		z-index: 3;
+		min-height: var(--header-height);
 
 		@include mobile {
 			justify-content: space-between;
@@ -248,5 +249,23 @@
 
 	&__burger {
 		@include reset-button;
+
+		padding-bottom: 10px;
+
+		@include mobile {
+			padding-bottom: 0;
+		}
+
+		&::before {
+			@include square(20px);
+
+			content: '';
+			position: relative;
+			display: block;
+			background-image: url('/images/icons/burger.svg');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+		}
 	}
 }
