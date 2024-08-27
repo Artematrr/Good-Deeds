@@ -1,0 +1,69 @@
+.checkbox {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	user-select: none;
+}
+
+.checkbox-controll {
+	@include visually-hidden;
+}
+
+.checkbox-controll:not(:checked) + .checkbox-emulator::after {
+	display: none;
+}
+
+.checkbox-emulator {
+	@include square(20px);
+
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid var(--gray-500);
+	border-radius: var(--border-radius-small);
+}
+
+.checkbox-emulator::after {
+	content: '';
+	width: 16px;
+	height: 12px;
+	background-image: url('/images/icons/cheked.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.checkbox-label {
+	color: var(--gray-800);
+	font-family: Roboto;
+	font-size: 14px;
+
+	a {
+		text-decoration-line: underline;
+	}
+}
+
+input,
+textarea {
+	caret-color: var(--black);
+
+	&:focus-visible {
+		outline-color: var(--primary-500);
+	}
+	&::placeholder,
+	&::-moz-placeholder {
+		color: var(--gray-900);
+	}
+}
+
+input:user-invalid {
+	border-color: var(--secondary-500);
+	outline-color: var(--secondary-500);
+}
+
+.form-select:focus,
+.form-select:focus-visible {
+	border-color: var(--primary-500);
+	outline: 1px solid var(--primary-500);
+	box-shadow: none;
+}

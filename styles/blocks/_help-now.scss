@@ -37,6 +37,7 @@
 
 	&__card-image-wrapper {
 		width: 50%;
+		height: 100%;
 
 		@include tablet {
 			width: 100%;
@@ -45,7 +46,7 @@
 
 	&__card-image {
 		@include square(100%);
-
+		height: 100%;
 		object-fit: cover;
 
 		@include tablet {

@@ -1,7 +1,8 @@
 .container {
 	max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+	width: auto;
 	margin-inline: auto;
-	padding-inline: var(--container-padding-x);	
+	padding-inline: var(--container-padding-x);
 }
 
 .section--margin-bottom {
@@ -37,5 +38,15 @@
 .visible-mobile {
 	@include mobile-above {
 		display: none !important;
+	}
+}
+
+.full-width {
+	@include full-width;
+}
+
+.full-width-mobile {
+	@include mobile {
+		@include full-width;
 	}
 }

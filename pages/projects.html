@@ -4,8 +4,10 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-	<title>Ищу хозяина</title>
+	<title>Проекты и программы фонда</title>
+
 	<link rel="stylesheet" href="/styles/css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="/styles/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/styles/css/styles.css">
 </head>
 
@@ -38,11 +40,13 @@
 					<div class="header__buttons">
 						<button type="button"
 							style="--buttonIcon: url('/images/icons/heart-help.svg'); --buttonIconHover: url('/images/icons/heart-help-white.svg');"
-							class="header__button button button--primary button--icon">
+							class="header__button button button--primary button--icon" data-bs-toggle="modal"
+							data-bs-target="#fund-help">
 							Помочь фонду
 						</button>
 						<button type="button" style="--buttonIcon: url('/images/icons/paw.svg');"
-							class="header__button button button--secondary button--icon">Получить помощь</button>
+							class="header__button button button--secondary button--icon" data-bs-toggle="modal"
+							data-bs-target="#get-help">Получить помощь</button>
 					</div>
 				</div>
 				<div class="header__content-bottom">
@@ -52,14 +56,14 @@
 								style="--underlineImage: url(/images/icons/underline-28.svg); --underlineAspectRatio: 17/3;">
 								<a href="#" class="header__nav-link">Фонд</a>
 							</li>
-							<li class="header__nav-item is-active" style="--underlineOffset: 1px;">
+							<li class="header__nav-item" style="--underlineOffset: 1px;">
 								<a href="#" class="header__nav-link">Ищу
 									хозяина</a>
 							</li>
 							<li class="header__nav-item" style="--underlineOffset: 5px;">
 								<a href="#" class="header__nav-link">Нужна помощь</a>
 							</li>
-							<li class="header__nav-item">
+							<li class="header__nav-item is-active">
 								<a href="#" class="header__nav-link">Проекты и программы</a>
 							</li>
 							<li class="header__nav-item" style="--underlineOffset: -5px; --underlineWidth: 130%;">
@@ -88,9 +92,10 @@
 			<nav class="aside-menu__nav">
 				<ol class="aside-menu__nav-list">
 					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Фонд</a></li>
-					<li class="aside-menu__nav-item is-active"><a href="#" class="aside-menu__nav-link">Ищу хозяина</a></li>
+					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Ищу хозяина</a></li>
 					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Нужна помощь</a></li>
-					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Проекты и программы</a></li>
+					<li class="aside-menu__nav-item is-active"><a href="#" class="aside-menu__nav-link">Проекты и программы</a>
+					</li>
 					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Отчет</a></li>
 					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Новости</a></li>
 					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Контакты</a></li>
@@ -127,15 +132,17 @@
 					</li>
 				</ul>
 				<button class="aside-menu__button button button--primary button--icon" type="button"
-					style="--buttonIcon: url('/images/icons/heart-help.svg'); --buttonIconHover: url('/images/icons/heart-help-white.svg');">
+					style="--buttonIcon: url('/images/icons/heart-help.svg'); --buttonIconHover: url('/images/icons/heart-help-white.svg');"
+					data-bs-toggle="modal" data-bs-target="#fund-help">
 					Помочь фонду
 				</button>
 				<button class="aside-menu__button button button--secondary button--icon" type="button"
-					style="--buttonIcon: url('/images/icons/paw.svg');">
+					style="--buttonIcon: url('/images/icons/paw.svg');" data-bs-toggle="modal" data-bs-target="#get-help">
 					Получить помощь
 				</button>
 				<button class="aside-menu__button button button--primary button--icon"
-					style="--buttonIcon: url('/images/icons/heart-partner.svg');">
+					style="--buttonIcon: url('/images/icons/heart-partner.svg');" data-bs-toggle="modal"
+					data-bs-target="#partnership">
 					Стать партнером
 				</button>
 			</div>
@@ -146,7 +153,7 @@
 	<nav class="breadcrumbs container">
 		<ul class="breadcrumbs-list">
 			<li class="breadcrumbs-item"><a href="#" class="breadcrumbs-link">Главная</a></li>
-			<li class="breadcrumbs-item"><a href="#" class="breadcrumbs-link">Ищу хозяина</a></li>
+			<li class="breadcrumbs-item"><a href="#" class="breadcrumbs-link">Проекты и программы</a></li>
 		</ul>
 	</nav>
 
@@ -156,7 +163,7 @@
 			<div class="hero__inner banner__inner container">
 				<div class="hero__content banner__content">
 					<div class="hero__text">
-						<h1 class="hero__title h1">Ищу хозяина</h1>
+						<h1 class="hero__title h1">Проекты и программы фонда</h1>
 						<div class="hero__description">
 							<p>Защита и помощь животных, которые нуждаются в нашей помощи.</p>
 							<p>Бездомные животные не могут самостоятельно обратиться за помощью, сказать что они хотя есть или у них
@@ -166,413 +173,160 @@
 				</div>
 			</div>
 			<div class=" hero__image banner__image">
-				<img src="/images/animals-hero.jpg" alt="Счастливые животные" width="1000" height="480" loading="lazy">
+				<img src="/images/projects-hero.jpg" alt="Счастливые животные" width="1000" height="480" loading="lazy">
 			</div>
 		</section>
 
-		<section class="animals container section--flex-column section--margin-bottom">
-			<div class="animals__filter filter filter--start">
-				<div class="animals__tabs filter__tabs swiper">
+		<section class="projects-tile container section--flex-column section--margin-bottom">
+			<div class="projects-tile__filter filter filter--start">
+				<div class="projects-tile__tabs filter__tabs swiper">
 					<div class="swiper-wrapper">
-						<div class="swiper-slide"><a href="#" class="animals__tab filter__tab button button--outline is-active">Все</a></div>
-						<div class="swiper-slide"><a href="#" class="animals__tab filter__tab button button--outline">Кошечки</a></div>
-						<div class="swiper-slide"><a href="#" class="animals__tab filter__tab button button--outline">Собачки</a></div>
-						<div class="swiper-slide"><a href="#" class="animals__tab filter__tab button button--outline">Котята</a></div>
-						<div class="swiper-slide"><a href="#" class="animals__tab filter__tab button button--outline">Щенки</a></div>
-						<div class="swiper-slide"><a href="#" class="animals__tab filter__tab button button--outline">Другие</a></div>
+						<div class="swiper-slide"><a href="#"
+								class="projects-tile__tab filter__tab button button--outline is-active">Все</a></div>
+						<div class="swiper-slide"><a href="#"
+								class="projects-tile__tab filter__tab button button--outline">Активные</a>
+						</div>
+						<div class="swiper-slide"><a href="#"
+								class="projects-tile__tab filter__tab button button--outline">Завершенные</a></div>
 					</div>
 				</div>
 			</div>
-			<div class="animals__grid">
-				<a href="#" class="animals__card animals__card--girl">
-					<img src="/images/animals/1.jpg" alt="Мусена" class="animals__card-image" width="400" height="350"
-						loading="lazy">
-					<div class="animals__card-content">
-						<ul class="animals__card-info">
-							<li class="animals__card-item">
-								<div class="animals__card-icon">
-									<img src="/images/icons/girl.svg" alt="" width="32" height="32" loading="lazy">
-								</div>
-								<p class="animals__card-description">Девочка</p>
-							</li>
-							<li class="animals__card-item">
-								<div class="animals__card-icon animals__card-icon--year">
-									<p>1 г.</p>
-								</div>
-								<p class="animals__card-description">Возраст</p>
-							</li>
-							<li class="animals__card-item">
-								<div class="animals__card-icon">
-									<img src="/images/icons/no-girl.svg" alt="" width="32" height="32" loading="lazy">
-								</div>
-								<p class="animals__card-description">Стерилизованная</p>
-							</li>
-							<li class="animals__card-item">
-								<div class="animals__card-icon">
-									<img src="/images/icons/vaccinated.svg" alt="" width="32" height="32" loading="lazy">
-								</div>
-								<p class="animals__card-description">Вакцинированная</p>
-							</li>
-						</ul>
-						<h3 class="animals__card-title">Мусена</h3>
-					</div>
-				</a>
-				<a href="#" class="animals__card animals__card--boy">
-					<img src="/images/animals/2.jpg" alt="Рыжик" class="animals__card-image" width="400" height="350"
-						loading="lazy">
-					<div class="animals__card-content">
-						<ul class="animals__card-info">
-							<li class="animals__card-item">
-								<div class="animals__card-icon">
-									<img src="/images/icons/boy.svg" alt="" width="32" height="32" loading="lazy">
-								</div>
-								<p class="animals__card-description">Мальчик</p>
-							</li>
-							<li class="animals__card-item">
-								<div class="animals__card-icon animals__card-icon--year">
-									<p>1 г. 7м.</p>
-								</div>
-								<p class="animals__card-description">Возраст</p>
-							</li>
-						</ul>
-						<h3 class="animals__card-title">Рыжик</h3>
-					</div>
-				</a>
-				<a href="#" class="animals__card animals__card--girl">
-					<img src="/images/animals/3.jpg" alt="Альфа" class="animals__card-image" width="400" height="350"
-						loading="lazy">
-					<div class="animals__card-content">
-						<ul class="animals__card-info">
-							<li class="animals__card-item">
-								<div class="animals__card-icon">
-									<img src="/images/icons/girl.svg" alt="" width="32" height="32" loading="lazy">
-								</div>
-								<p class="animals__card-description">Девочка</p>
-							</li>
-							<li class="animals__card-item">
-								<div class="animals__card-icon animals__card-icon--year">
-									<p>10 м.</p>
-								</div>
-								<p class="animals__card-description">Возраст</p>
-							</li>
-							<li class="animals__card-item">
-								<div class="animals__card-icon">
-									<img src="/images/icons/vaccinated.svg" alt="" width="32" height="32" loading="lazy">
-								</div>
-								<p class="animals__card-description">Вакцинированная</p>
-							</li>
-						</ul>
-						<h3 class="animals__card-title">Альфа</h3>
-					</div>
-				</a>
-				<a href="#" class="animals__card animals__card--boy">
-					<img src="/images/animals/4.jpg" alt="Черныш" class="animals__card-image" width="400" height="350"
-						loading="lazy">
-					<div class="animals__card-content">
-						<ul class="animals__card-info">
-							<li class="animals__card-item">
-								<div class="animals__card-icon">
-									<img src="/images/icons/boy.svg" alt="" width="32" height="32" loading="lazy">
-								</div>
-								<p class="animals__card-description">Мальчик</p>
-							</li>
-							<li class="animals__card-item">
-								<div class="animals__card-icon animals__card-icon--year">
-									<p>5 л.</p>
-								</div>
-								<p class="animals__card-description">Возраст</p>
-							</li>
-							<li class="animals__card-item">
-								<div class="animals__card-icon">
-									<img src="/images/icons/no-girl.svg" alt="" width="32" height="32" loading="lazy">
-								</div>
-								<p class="animals__card-description">Стерилизованный</p>
-							</li>
-						</ul>
-						<h3 class="animals__card-title">Черныш</h3>
-					</div>
-				</a>
-				<a href="#" class="animals__card animals__card--girl">
-					<img src="/images/animals/5.jpg" alt="Снежа" class="animals__card-image" width="400" height="350"
-						loading="lazy">
-					<div class="animals__card-content">
-						<ul class="animals__card-info">
-							<li class="animals__card-item">
-								<div class="animals__card-icon">
-									<img src="/images/icons/girl.svg" alt="" width="32" height="32" loading="lazy">
-								</div>
-								<p class="animals__card-description">Девочка</p>
-							</li>
-							<li class="animals__card-item">
-								<div class="animals__card-icon animals__card-icon--year">
-									<p>3 г.</p>
-								</div>
-								<p class="animals__card-description">Возраст</p>
-							</li>
-						</ul>
-						<h3 class="animals__card-title">Снежа</h3>
-					</div>
-				</a>
-				<a href="#" class="animals__card animals__card--girl">
-					<img src="/images/animals/1.jpg" alt="Мусена" class="animals__card-image" width="400" height="350"
-						loading="lazy">
-					<div class="animals__card-content">
-						<ul class="animals__card-info">
-							<li class="animals__card-item">
-								<div class="animals__card-icon">
-									<img src="/images/icons/girl.svg" alt="" width="32" height="32" loading="lazy">
-								</div>
-								<p class="animals__card-description">Девочка</p>
-							</li>
-							<li class="animals__card-item">
-								<div class="animals__card-icon animals__card-icon--year">
-									<p>1 г.</p>
-								</div>
-								<p class="animals__card-description">Возраст</p>
-							</li>
-							<li class="animals__card-item">
-								<div class="animals__card-icon">
-									<img src="/images/icons/no-girl.svg" alt="" width="32" height="32" loading="lazy">
-								</div>
-								<p class="animals__card-description">Стерилизованная</p>
-							</li>
-							<li class="animals__card-item">
-								<div class="animals__card-icon">
-									<img src="/images/icons/vaccinated.svg" alt="" width="32" height="32" loading="lazy">
-								</div>
-								<p class="animals__card-description">Вакцинированная</p>
-							</li>
-						</ul>
-						<h3 class="animals__card-title">Мусена</h3>
-					</div>
-				</a>
-				<a href="#" class="animals__card animals__card--boy">
-					<img src="/images/animals/2.jpg" alt="Рыжик" class="animals__card-image" width="400" height="350"
-						loading="lazy">
-					<div class="animals__card-content">
-						<ul class="animals__card-info">
-							<li class="animals__card-item">
-								<div class="animals__card-icon">
-									<img src="/images/icons/boy.svg" alt="" width="32" height="32" loading="lazy">
-								</div>
-								<p class="animals__card-description">Мальчик</p>
-							</li>
-							<li class="animals__card-item">
-								<div class="animals__card-icon animals__card-icon--year">
-									<p>1 г. 7м.</p>
-								</div>
-								<p class="animals__card-description">Возраст</p>
-							</li>
-						</ul>
-						<h3 class="animals__card-title">Рыжик</h3>
-					</div>
-				</a>
-				<a href="#" class="animals__card animals__card--girl">
-					<img src="/images/animals/3.jpg" alt="Альфа" class="animals__card-image" width="400" height="350"
-						loading="lazy">
-					<div class="animals__card-content">
-						<ul class="animals__card-info">
-							<li class="animals__card-item">
-								<div class="animals__card-icon">
-									<img src="/images/icons/girl.svg" alt="" width="32" height="32" loading="lazy">
-								</div>
-								<p class="animals__card-description">Девочка</p>
-							</li>
-							<li class="animals__card-item">
-								<div class="animals__card-icon animals__card-icon--year">
-									<p>10 м.</p>
-								</div>
-								<p class="animals__card-description">Возраст</p>
-							</li>
-							<li class="animals__card-item">
-								<div class="animals__card-icon">
-									<img src="/images/icons/vaccinated.svg" alt="" width="32" height="32" loading="lazy">
-								</div>
-								<p class="animals__card-description">Вакцинированная</p>
-							</li>
-						</ul>
-						<h3 class="animals__card-title">Альфа</h3>
-					</div>
-				</a>
-				<a href="#" class="animals__card animals__card--boy">
-					<img src="/images/animals/4.jpg" alt="Черныш" class="animals__card-image" width="400" height="350"
-						loading="lazy">
-					<div class="animals__card-content">
-						<ul class="animals__card-info">
-							<li class="animals__card-item">
-								<div class="animals__card-icon">
-									<img src="/images/icons/boy.svg" alt="" width="32" height="32" loading="lazy">
-								</div>
-								<p class="animals__card-description">Мальчик</p>
-							</li>
-							<li class="animals__card-item">
-								<div class="animals__card-icon animals__card-icon--year">
-									<p>5 л.</p>
-								</div>
-								<p class="animals__card-description">Возраст</p>
-							</li>
-							<li class="animals__card-item">
-								<div class="animals__card-icon">
-									<img src="/images/icons/no-girl.svg" alt="" width="32" height="32" loading="lazy">
-								</div>
-								<p class="animals__card-description">Стерилизованный</p>
-							</li>
-						</ul>
-						<h3 class="animals__card-title">Черныш</h3>
-					</div>
-				</a>
-				<a href="#" class="animals__card animals__card--girl">
-					<img src="/images/animals/5.jpg" alt="Снежа" class="animals__card-image" width="400" height="350"
-						loading="lazy">
-					<div class="animals__card-content">
-						<ul class="animals__card-info">
-							<li class="animals__card-item">
-								<div class="animals__card-icon">
-									<img src="/images/icons/girl.svg" alt="" width="32" height="32" loading="lazy">
-								</div>
-								<p class="animals__card-description">Девочка</p>
-							</li>
-							<li class="animals__card-item">
-								<div class="animals__card-icon animals__card-icon--year">
-									<p>3 г.</p>
-								</div>
-								<p class="animals__card-description">Возраст</p>
-							</li>
-						</ul>
-						<h3 class="animals__card-title">Снежа</h3>
-					</div>
-				</a>
-				<a href="#" class="animals__card animals__card--girl">
-					<img src="/images/animals/1.jpg" alt="Мусена" class="animals__card-image" width="400" height="350"
-						loading="lazy">
-					<div class="animals__card-content">
-						<ul class="animals__card-info">
-							<li class="animals__card-item">
-								<div class="animals__card-icon">
-									<img src="/images/icons/girl.svg" alt="" width="32" height="32" loading="lazy">
-								</div>
-								<p class="animals__card-description">Девочка</p>
-							</li>
-							<li class="animals__card-item">
-								<div class="animals__card-icon animals__card-icon--year">
-									<p>1 г.</p>
-								</div>
-								<p class="animals__card-description">Возраст</p>
-							</li>
-							<li class="animals__card-item">
-								<div class="animals__card-icon">
-									<img src="/images/icons/no-girl.svg" alt="" width="32" height="32" loading="lazy">
-								</div>
-								<p class="animals__card-description">Стерилизованная</p>
-							</li>
-							<li class="animals__card-item">
-								<div class="animals__card-icon">
-									<img src="/images/icons/vaccinated.svg" alt="" width="32" height="32" loading="lazy">
-								</div>
-								<p class="animals__card-description">Вакцинированная</p>
-							</li>
-						</ul>
-						<h3 class="animals__card-title">Мусена</h3>
-					</div>
-				</a>
-				<a href="#" class="animals__card animals__card--boy">
-					<img src="/images/animals/2.jpg" alt="Рыжик" class="animals__card-image" width="400" height="350"
-						loading="lazy">
-					<div class="animals__card-content">
-						<ul class="animals__card-info">
-							<li class="animals__card-item">
-								<div class="animals__card-icon">
-									<img src="/images/icons/boy.svg" alt="" width="32" height="32" loading="lazy">
-								</div>
-								<p class="animals__card-description">Мальчик</p>
-							</li>
-							<li class="animals__card-item">
-								<div class="animals__card-icon animals__card-icon--year">
-									<p>1 г. 7м.</p>
-								</div>
-								<p class="animals__card-description">Возраст</p>
-							</li>
-						</ul>
-						<h3 class="animals__card-title">Рыжик</h3>
-					</div>
-				</a>
-				<a href="#" class="animals__card animals__card--girl">
-					<img src="/images/animals/3.jpg" alt="Альфа" class="animals__card-image" width="400" height="350"
-						loading="lazy">
-					<div class="animals__card-content">
-						<ul class="animals__card-info">
-							<li class="animals__card-item">
-								<div class="animals__card-icon">
-									<img src="/images/icons/girl.svg" alt="" width="32" height="32" loading="lazy">
-								</div>
-								<p class="animals__card-description">Девочка</p>
-							</li>
-							<li class="animals__card-item">
-								<div class="animals__card-icon animals__card-icon--year">
-									<p>10 м.</p>
-								</div>
-								<p class="animals__card-description">Возраст</p>
-							</li>
-							<li class="animals__card-item">
-								<div class="animals__card-icon">
-									<img src="/images/icons/vaccinated.svg" alt="" width="32" height="32" loading="lazy">
-								</div>
-								<p class="animals__card-description">Вакцинированная</p>
-							</li>
-						</ul>
-						<h3 class="animals__card-title">Альфа</h3>
-					</div>
-				</a>
-				<a href="#" class="animals__card animals__card--boy">
-					<img src="/images/animals/4.jpg" alt="Черныш" class="animals__card-image" width="400" height="350"
-						loading="lazy">
-					<div class="animals__card-content">
-						<ul class="animals__card-info">
-							<li class="animals__card-item">
-								<div class="animals__card-icon">
-									<img src="/images/icons/boy.svg" alt="" width="32" height="32" loading="lazy">
-								</div>
-								<p class="animals__card-description">Мальчик</p>
-							</li>
-							<li class="animals__card-item">
-								<div class="animals__card-icon animals__card-icon--year">
-									<p>5 л.</p>
-								</div>
-								<p class="animals__card-description">Возраст</p>
-							</li>
-							<li class="animals__card-item">
-								<div class="animals__card-icon">
-									<img src="/images/icons/no-girl.svg" alt="" width="32" height="32" loading="lazy">
-								</div>
-								<p class="animals__card-description">Стерилизованный</p>
-							</li>
-						</ul>
-						<h3 class="animals__card-title">Черныш</h3>
-					</div>
-				</a>
-				<a href="#" class="animals__card animals__card--girl">
-					<img src="/images/animals/5.jpg" alt="Снежа" class="animals__card-image" width="400" height="350"
-						loading="lazy">
-					<div class="animals__card-content">
-						<ul class="animals__card-info">
-							<li class="animals__card-item">
-								<div class="animals__card-icon">
-									<img src="/images/icons/girl.svg" alt="" width="32" height="32" loading="lazy">
-								</div>
-								<p class="animals__card-description">Девочка</p>
-							</li>
-							<li class="animals__card-item">
-								<div class="animals__card-icon animals__card-icon--year">
-									<p>3 г.</p>
-								</div>
-								<p class="animals__card-description">Возраст</p>
-							</li>
-						</ul>
-						<h3 class="animals__card-title">Снежа</h3>
-					</div>
-				</a>
-			</div>
-			<div class="animals__pagination pagination">
+
+			<dl class="projects-tile__container full-width-mobile">
+				<div class="projects-tile__item">
+					<dt class="projects-tile__item-header">
+						<div class="projects-tile__item-header-inner">
+							<h2 class="projects-tile__item-title h1">Здоровый город</h2>
+							<figure class="projects-tile__item-image"
+								style="--iconPositionBottom: -4px; --iconMobilePositionRight: -8px; --iconMobilePositionBottom: -30px;">
+								<img src="/images/projects/tile/projects-1.svg" alt="">
+							</figure>
+						</div>
+					</dt>
+					<dd class="projects-tile__content">
+						<p class="projects-tile__status projects-tile__status--active">Активная программа</p>
+						<div class="projects-tile__description">
+							<p>Помогите стерилизовать котиков из душных квартир, где у пожилых людей бесконтрольно плодятся, умирая от
+								скученности и болезней, десятки кошек.</p>
+						</div>
+						<a href="#" class="projects-tile__link button--more">Подробности</a>
+					</dd>
+				</div>
+				<div class="projects-tile__item">
+					<dt class="projects-tile__item-header">
+						<div class="projects-tile__item-header-inner">
+							<h2 class="projects-tile__item-title h1">Теплый дом</h2>
+							<figure class="projects-tile__item-image"
+								style="--iconPositionBottom: -15px;--iconMobilePositionBottom: -4px;--iconMobileScale: 0.3;">
+								<img src="/images/projects/tile/projects-2.svg" alt="">
+							</figure>
+						</div>
+					</dt>
+					<dd class="projects-tile__content">
+						<p class="projects-tile__status projects-tile__status--completed">Завершенная программа</p>
+						<div class="projects-tile__description">
+							<p>Помогите стерилизовать котиков из душных квартир, где у пожилых людей бесконтрольно плодятся, умирая от
+								скученности и болезней, десятки кошек.</p>
+						</div>
+						<a href="#" class="projects-tile__link button--more">Подробности</a>
+					</dd>
+				</div>
+				<div class="projects-tile__item">
+					<dt class="projects-tile__item-header">
+						<div class="projects-tile__item-header-inner">
+							<h2 class="projects-tile__item-title h1">Живой уголок</h2>
+							<figure class="projects-tile__item-image" style="--iconPositionBottom: 28px; --iconMobileScale: 0.35;">
+								<img src="/images/projects/tile/projects-3.svg" alt="">
+							</figure>
+						</div>
+					</dt>
+					<dd class="projects-tile__content">
+						<p class="projects-tile__status projects-tile__status--active">Активная программа</p>
+						<div class="projects-tile__description">
+							<p>Помогите стерилизовать котиков из душных квартир, где у пожилых людей бесконтрольно плодятся, умирая от
+								скученности и болезней, десятки кошек.</p>
+						</div>
+						<a href="#" class="projects-tile__link button--more">Подробности</a>
+					</dd>
+				</div>
+				<div class="projects-tile__item">
+					<dt class="projects-tile__item-header">
+						<div class="projects-tile__item-header-inner">
+							<h2 class="projects-tile__item-title h1">Добрый доктор</h2>
+							<figure class="projects-tile__item-image"
+								style="--iconMobilePositionRight: 10px; --iconMobilePositionBottom: -14px;">
+								<img src="/images/projects/tile/projects-4.svg" alt="">
+							</figure>
+						</div>
+					</dt>
+					<dd class="projects-tile__content">
+						<p class="projects-tile__status projects-tile__status--active">Активная программа</p>
+						<div class="projects-tile__description">
+							<p>Помогите стерилизовать котиков из душных квартир, где у пожилых людей бесконтрольно плодятся, умирая от
+								скученности и болезней, десятки кошек.</p>
+						</div>
+						<a href="#" class="projects-tile__link button--more">Подробности</a>
+					</dd>
+				</div>
+				<div class="projects-tile__item">
+					<dt class="projects-tile__item-header">
+						<div class="projects-tile__item-header-inner">
+							<h2 class="projects-tile__item-title h1">Десант добра</h2>
+							<figure class="projects-tile__item-image"
+								style="--iconPositionBottom: -70px;--iconMobilePositionRight: 20px;--iconMobilePositionBottom: -26px;--iconMobileScale: 0.35;">
+								<img src="/images/projects/tile/projects-5.svg" alt="">
+							</figure>
+						</div>
+					</dt>
+					<dd class="projects-tile__content">
+						<p class="projects-tile__status projects-tile__status--active">Активная программа</p>
+						<div class="projects-tile__description">
+							<p>Помогите стерилизовать котиков из душных квартир, где у пожилых людей бесконтрольно плодятся, умирая от
+								скученности и болезней, десятки кошек.</p>
+						</div>
+						<a href="#" class="projects-tile__link button--more">Подробности</a>
+					</dd>
+				</div>
+				<div class="projects-tile__item">
+					<dt class="projects-tile__item-header">
+						<div class="projects-tile__item-header-inner">
+							<h2 class="projects-tile__item-title h1">Верный друг</h2>
+							<figure class="projects-tile__item-image"
+								style="--iconPositionRight: -60px; --iconPositionBottom: -110px; --iconMobilePositionRight: -30px; --iconMobilePositionBottom: -60px; --iconMobileScale: 0.35;">
+								<img src="/images/projects/tile/projects-6.svg" alt="">
+							</figure>
+						</div>
+					</dt>
+					<dd class="projects-tile__content">
+						<p class="projects-tile__status projects-tile__status--active">Активная программа</p>
+						<div class="projects-tile__description">
+							<p>Помогите стерилизовать котиков из душных квартир, где у пожилых людей бесконтрольно плодятся, умирая от
+								скученности и болезней, десятки кошек.</p>
+						</div>
+						<a href="#" class="projects-tile__link button--more">Подробности</a>
+					</dd>
+				</div>
+				<div class="projects-tile__item">
+					<dt class="projects-tile__item-header">
+						<div class="projects-tile__item-header-inner">
+							<h2 class="projects-tile__item-title h1">Шкаф ДоброДел</h2>
+							<figure class="projects-tile__item-image"
+								style="--iconMobilePositionBottom: 5px; --iconMobileScale: 0.35;">
+								<img src="/images/projects/tile/projects-7.svg" alt="">
+							</figure>
+						</div>
+					</dt>
+					<dd class="projects-tile__content">
+						<p class="projects-tile__status projects-tile__status--active">Активная программа</p>
+						<div class="projects-tile__description">
+							<p>Помогите стерилизовать котиков из душных квартир, где у пожилых людей бесконтрольно плодятся, умирая от
+								скученности и болезней, десятки кошек.</p>
+						</div>
+						<a href="#" class="projects-tile__link button--more">Подробности</a>
+					</dd>
+				</div>
+			</dl>
+			<div class="projects-tile__pagination pagination">
 				<a href="#" class="pagination-item pagination-prev">
 					<svg xmlns="http://www.w3.org/2000/svg" width="6" height="11" viewBox="0 0 6 11" fill="none">
 						<g clip-path="url(#clip0_91_216)">
@@ -607,7 +361,6 @@
 					</svg>
 				</a>
 			</div>
-			<a href="#" class="button button--outline">Посмотреть все</a>
 		</section>
 
 	</main>
@@ -770,8 +523,170 @@
 		</div>
 	</footer>
 
+	<!-- Modals -->
+	<div class="modal fade" id="get-help" tabindex="-1" aria-labelledby="getHelpModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2 class="modal-title" id="getHelpModalLabel">Получить помощь</h2>
+				</div>
+				<div class="modal-body">
+					<form class="modal__form">
+						<div class="modal__form-group">
+							<label class="visually-hidden" for="shelter-name">Название приюта</label>
+							<input class="modal__form-input" type="text" name="shelter-name" id="shelter-name"
+								placeholder="Название приюта*" required>
+						</div>
+
+						<div class="modal__form-group">
+							<label class="visually-hidden" for="shelter-foundation">Дата основания</label>
+							<input class="modal__form-input" type="text" name="shelter-foundation" id="shelter-foundation"
+								placeholder="Дата основания">
+							<label class="visually-hidden" for="shelter-site">Ссылка на ваш сайт</label>
+							<input class="modal__form-input" type="url" name="shelter-site" id="shelter-site"
+								placeholder="Ссылка на ваш сайт">
+						</div>
+
+						<div class="modal__form-group">
+							<label class="visually-hidden" for="shelter-animals">Какие животные содержатся</label>
+							<textarea class="modal__form-input" name="shelter-animals" id="shelter-animals"
+								placeholder="Какие животные содержатся" rows="4"></textarea>
+						</div>
+
+						<div class="modal__form-group">
+							<label class="visually-hidden" for="shelter-contact-person">Контактное лицо</label>
+							<input class="modal__form-input" type="text" name="shelter-contact-person" id="shelter-contact-person"
+								placeholder="Контактное лицо*" required>
+							<label class="visually-hidden" for="shelter-phone">Номер телефона</label>
+							<input class="modal__form-input" type="tel" name="shelter-phone" id="shelter-phone"
+								placeholder="Номер телефона*" required>
+						</div>
+
+						<div class="modal__form-group">
+							<label class="modal__form-checkbox checkbox" for="shelter-checkbox">
+								<input class="checkbox-controll" type="checkbox" name="shelter-checkbox" id="shelter-checkbox" checked
+									required>
+								<span class="checkbox-emulator"></span>
+								<span class="checkbox-label">Даю согласие на обработку <a href="#">Персональных данных</a></span>
+							</label>
+						</div>
+
+						<button class="modal__form-button button button--primary" type="submit">Отправить заявку</button>
+					</form>
+				</div>
+				<div class="modal-footer"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="fund-help" tabindex="-1" aria-labelledby="fundHelpModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2 class="modal-title" id="fundHelpModalLabel">Помочь фонду</h2>
+				</div>
+				<div class="modal-body">
+					<form class="modal__form">
+						<div class="modal__form-group">
+							<label class="visually-hidden" for="fund-person-name">Ваше имя</label>
+							<input class="modal__form-input" type="text" name="fund-person-name" id="fund-person-name"
+								placeholder="Ваше имя">
+						</div>
+
+						<div class="modal__form-group">
+							<label class="visually-hidden" for="fund-person-email">Email</label>
+							<input class="modal__form-input" type="email" name="fund-person-email" id="fund-person-email"
+								placeholder="Email">
+						</div>
+
+						<div class="modal__form-group">
+							<label class="visually-hidden" for="fund-donation-type">Тип пожертвования</label>
+							<select class="modal__form-input form-select" name="fund-donation-type" id="fund-donation-type"
+								aria-label="Тип пожертвования" required>
+								<option value="" disabled selected>Тип пожертвования</option>
+								<option value="Единоразово">Единоразово</option>
+								<option value="Ежемесячно">Ежемесячно</option>
+							</select>
+							<label class="visually-hidden" for="fund-donation-amount">Сумма пожертвования</label>
+							<select class="modal__form-input form-select" name="fund-donation-amount" id="fund-donation-amount"
+								aria-label="Сумма пожертвования" required>
+								<option value="" disabled selected>Сумма</option>
+								<option value="100">100 ₽</option>
+								<option value="500">500 ₽</option>
+								<option value="1000">1 000 ₽</option>
+							</select>
+						</div>
+
+						<div class="modal__form-group">
+							<label class="modal__form-checkbox checkbox" for="fund-checkbox-offer">
+								<input class="checkbox-controll" type="checkbox" name="fund-checkbox-offer" id="fund-checkbox-offer"
+									checked required>
+								<span class="checkbox-emulator"></span>
+								<span class="checkbox-label">Соглашаюсь с офертой</span>
+							</label>
+						</div>
+
+						<div class="modal__form-group">
+							<label class="modal__form-checkbox checkbox" for="fund-checkbox-privacy">
+								<input class="checkbox-controll" type="checkbox" name="fund-checkbox-privacy" id="fund-checkbox-privacy"
+									checked required>
+								<span class="checkbox-emulator"></span>
+								<span class="checkbox-label">Даю согласие на обработку <a href="#">Персональных данных</a></span>
+							</label>
+						</div>
+
+						<button class="modal__form-button button button--primary" type="submit">Отправить заявку</button>
+					</form>
+				</div>
+				<div class="modal-footer"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="partnership" tabindex="-1" aria-labelledby="fundHelpModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2 class="modal-title" id="fundHelpModalLabel">Стать партнером</h2>
+				</div>
+				<div class="modal-body">
+					<form class="modal__form">
+
+						<div class="modal__form-group">
+							<label class="visually-hidden" for="partnership-contact-person">Контактное лицо</label>
+							<input class="modal__form-input" type="text" name="partnership-contact-person"
+								id="partnership-contact-person" placeholder="Контактное лицо*" required>
+							<label class="visually-hidden" for="partnership-phone">Номер телефона</label>
+							<input class="modal__form-input" type="tel" name="partnership-phone" id="partnership-phone"
+								placeholder="Номер телефона*" required>
+						</div>
+
+						<div class="modal__form-group">
+							<label class="visually-hidden" for="company-name">Компания</label>
+							<input class="modal__form-input" type="text" name="company-name" id="company-name" placeholder="Компания">
+						</div>
+
+						<div class="modal__form-group">
+							<label class="modal__form-checkbox checkbox" for="partnership-checkbox">
+								<input class="checkbox-controll" type="checkbox" name="partnership-checkbox" id="partnership-checkbox"
+									checked required>
+								<span class="checkbox-emulator"></span>
+								<span class="checkbox-label">Даю согласие на обработку <a href="#">Персональных данных</a></span>
+							</label>
+						</div>
+
+						<button class="modal__form-button button button--primary" type="submit">Отправить заявку</button>
+					</form>
+				</div>
+				<div class="modal-footer"></div>
+			</div>
+		</div>
+	</div>
+
 	<script src="/scripts/jquery-3.7.1.min.js"></script>
+	<script src="/scripts/jquery.mask.min.js"></script>
 	<script src="/scripts/swiper-bundle.min.js"></script>
+	<script src="/scripts/bootstrap.bundle.min.js"></script>
 	<script src="/scripts/main.js"></script>
 </body>
 

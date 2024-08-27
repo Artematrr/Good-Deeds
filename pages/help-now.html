@@ -5,7 +5,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 	<title>Нужна помощь</title>
+
 	<link rel="stylesheet" href="/styles/css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="/styles/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/styles/css/styles.css">
 </head>
 
@@ -38,11 +40,13 @@
 					<div class="header__buttons">
 						<button type="button"
 							style="--buttonIcon: url('/images/icons/heart-help.svg'); --buttonIconHover: url('/images/icons/heart-help-white.svg');"
-							class="header__button button button--primary button--icon">
+							class="header__button button button--primary button--icon" data-bs-toggle="modal"
+							data-bs-target="#fund-help">
 							Помочь фонду
 						</button>
 						<button type="button" style="--buttonIcon: url('/images/icons/paw.svg');"
-							class="header__button button button--secondary button--icon">Получить помощь</button>
+							class="header__button button button--secondary button--icon" data-bs-toggle="modal"
+							data-bs-target="#get-help">Получить помощь</button>
 					</div>
 				</div>
 				<div class="header__content-bottom">
@@ -127,15 +131,17 @@
 					</li>
 				</ul>
 				<button class="aside-menu__button button button--primary button--icon" type="button"
-					style="--buttonIcon: url('/images/icons/heart-help.svg'); --buttonIconHover: url('/images/icons/heart-help-white.svg');">
+					style="--buttonIcon: url('/images/icons/heart-help.svg'); --buttonIconHover: url('/images/icons/heart-help-white.svg');"
+					data-bs-toggle="modal" data-bs-target="#fund-help">
 					Помочь фонду
 				</button>
 				<button class="aside-menu__button button button--secondary button--icon" type="button"
-					style="--buttonIcon: url('/images/icons/paw.svg');">
+					style="--buttonIcon: url('/images/icons/paw.svg');" data-bs-toggle="modal" data-bs-target="#get-help">
 					Получить помощь
 				</button>
 				<button class="aside-menu__button button button--primary button--icon"
-					style="--buttonIcon: url('/images/icons/heart-partner.svg');">
+					style="--buttonIcon: url('/images/icons/heart-partner.svg');" data-bs-toggle="modal"
+					data-bs-target="#partnership">
 					Стать партнером
 				</button>
 			</div>
@@ -174,9 +180,12 @@
 			<div class="help-now__filter filter filter--start">
 				<div class="help-now__tabs filter__tabs swiper">
 					<div class="swiper-wrapper">
-						<div class="swiper-slide"><a href="#" class="help-now__tab filter__tab button button--outline is-active">Все</a></div>
-						<div class="swiper-slide"><a href="#" class="help-now__tab filter__tab button button--outline">Помочь</a></div>
-						<div class="swiper-slide"><a href="#" class="help-now__tab filter__tab button button--outline">Пожертвовать</a></div>
+						<div class="swiper-slide"><a href="#"
+								class="help-now__tab filter__tab button button--outline is-active">Все</a></div>
+						<div class="swiper-slide"><a href="#" class="help-now__tab filter__tab button button--outline">Помочь</a>
+						</div>
+						<div class="swiper-slide"><a href="#"
+								class="help-now__tab filter__tab button button--outline">Пожертвовать</a></div>
 					</div>
 				</div>
 			</div>
@@ -391,7 +400,7 @@
 						</div>
 					</article>
 				</li>
-			</ul>			
+			</ul>
 			<div class="help-now__pagination pagination">
 				<a href="#" class="pagination-item pagination-prev">
 					<svg xmlns="http://www.w3.org/2000/svg" width="6" height="11" viewBox="0 0 6 11" fill="none">
@@ -589,8 +598,170 @@
 		</div>
 	</footer>
 
+	<!-- Modals -->
+	<div class="modal fade" id="get-help" tabindex="-1" aria-labelledby="getHelpModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2 class="modal-title" id="getHelpModalLabel">Получить помощь</h2>
+				</div>
+				<div class="modal-body">
+					<form class="modal__form">
+						<div class="modal__form-group">
+							<label class="visually-hidden" for="shelter-name">Название приюта</label>
+							<input class="modal__form-input" type="text" name="shelter-name" id="shelter-name"
+								placeholder="Название приюта*" required>
+						</div>
+
+						<div class="modal__form-group">
+							<label class="visually-hidden" for="shelter-foundation">Дата основания</label>
+							<input class="modal__form-input" type="text" name="shelter-foundation" id="shelter-foundation"
+								placeholder="Дата основания">
+							<label class="visually-hidden" for="shelter-site">Ссылка на ваш сайт</label>
+							<input class="modal__form-input" type="url" name="shelter-site" id="shelter-site"
+								placeholder="Ссылка на ваш сайт">
+						</div>
+
+						<div class="modal__form-group">
+							<label class="visually-hidden" for="shelter-animals">Какие животные содержатся</label>
+							<textarea class="modal__form-input" name="shelter-animals" id="shelter-animals"
+								placeholder="Какие животные содержатся" rows="4"></textarea>
+						</div>
+
+						<div class="modal__form-group">
+							<label class="visually-hidden" for="shelter-contact-person">Контактное лицо</label>
+							<input class="modal__form-input" type="text" name="shelter-contact-person" id="shelter-contact-person"
+								placeholder="Контактное лицо*" required>
+							<label class="visually-hidden" for="shelter-phone">Номер телефона</label>
+							<input class="modal__form-input" type="tel" name="shelter-phone" id="shelter-phone"
+								placeholder="Номер телефона*" required>
+						</div>
+
+						<div class="modal__form-group">
+							<label class="modal__form-checkbox checkbox" for="shelter-checkbox">
+								<input class="checkbox-controll" type="checkbox" name="shelter-checkbox" id="shelter-checkbox" checked
+									required>
+								<span class="checkbox-emulator"></span>
+								<span class="checkbox-label">Даю согласие на обработку <a href="#">Персональных данных</a></span>
+							</label>
+						</div>
+
+						<button class="modal__form-button button button--primary" type="submit">Отправить заявку</button>
+					</form>
+				</div>
+				<div class="modal-footer"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="fund-help" tabindex="-1" aria-labelledby="fundHelpModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2 class="modal-title" id="fundHelpModalLabel">Помочь фонду</h2>
+				</div>
+				<div class="modal-body">
+					<form class="modal__form">
+						<div class="modal__form-group">
+							<label class="visually-hidden" for="fund-person-name">Ваше имя</label>
+							<input class="modal__form-input" type="text" name="fund-person-name" id="fund-person-name"
+								placeholder="Ваше имя">
+						</div>
+
+						<div class="modal__form-group">
+							<label class="visually-hidden" for="fund-person-email">Email</label>
+							<input class="modal__form-input" type="email" name="fund-person-email" id="fund-person-email"
+								placeholder="Email">
+						</div>
+
+						<div class="modal__form-group">
+							<label class="visually-hidden" for="fund-donation-type">Тип пожертвования</label>
+							<select class="modal__form-input form-select" name="fund-donation-type" id="fund-donation-type"
+								aria-label="Тип пожертвования" required>
+								<option value="" disabled selected>Тип пожертвования</option>
+								<option value="Единоразово">Единоразово</option>
+								<option value="Ежемесячно">Ежемесячно</option>
+							</select>
+							<label class="visually-hidden" for="fund-donation-amount">Сумма пожертвования</label>
+							<select class="modal__form-input form-select" name="fund-donation-amount" id="fund-donation-amount"
+								aria-label="Сумма пожертвования" required>
+								<option value="" disabled selected>Сумма</option>
+								<option value="100">100 ₽</option>
+								<option value="500">500 ₽</option>
+								<option value="1000">1 000 ₽</option>
+							</select>
+						</div>
+
+						<div class="modal__form-group">
+							<label class="modal__form-checkbox checkbox" for="fund-checkbox-offer">
+								<input class="checkbox-controll" type="checkbox" name="fund-checkbox-offer" id="fund-checkbox-offer"
+									checked required>
+								<span class="checkbox-emulator"></span>
+								<span class="checkbox-label">Соглашаюсь с офертой</span>
+							</label>
+						</div>
+
+						<div class="modal__form-group">
+							<label class="modal__form-checkbox checkbox" for="fund-checkbox-privacy">
+								<input class="checkbox-controll" type="checkbox" name="fund-checkbox-privacy" id="fund-checkbox-privacy"
+									checked required>
+								<span class="checkbox-emulator"></span>
+								<span class="checkbox-label">Даю согласие на обработку <a href="#">Персональных данных</a></span>
+							</label>
+						</div>
+
+						<button class="modal__form-button button button--primary" type="submit">Отправить заявку</button>
+					</form>
+				</div>
+				<div class="modal-footer"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="partnership" tabindex="-1" aria-labelledby="fundHelpModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2 class="modal-title" id="fundHelpModalLabel">Стать партнером</h2>
+				</div>
+				<div class="modal-body">
+					<form class="modal__form">
+
+						<div class="modal__form-group">
+							<label class="visually-hidden" for="partnership-contact-person">Контактное лицо</label>
+							<input class="modal__form-input" type="text" name="partnership-contact-person"
+								id="partnership-contact-person" placeholder="Контактное лицо*" required>
+							<label class="visually-hidden" for="partnership-phone">Номер телефона</label>
+							<input class="modal__form-input" type="tel" name="partnership-phone" id="partnership-phone"
+								placeholder="Номер телефона*" required>
+						</div>
+
+						<div class="modal__form-group">
+							<label class="visually-hidden" for="company-name">Компания</label>
+							<input class="modal__form-input" type="text" name="company-name" id="company-name" placeholder="Компания">
+						</div>
+
+						<div class="modal__form-group">
+							<label class="modal__form-checkbox checkbox" for="partnership-checkbox">
+								<input class="checkbox-controll" type="checkbox" name="partnership-checkbox" id="partnership-checkbox"
+									checked required>
+								<span class="checkbox-emulator"></span>
+								<span class="checkbox-label">Даю согласие на обработку <a href="#">Персональных данных</a></span>
+							</label>
+						</div>
+
+						<button class="modal__form-button button button--primary" type="submit">Отправить заявку</button>
+					</form>
+				</div>
+				<div class="modal-footer"></div>
+			</div>
+		</div>
+	</div>
+
 	<script src="/scripts/jquery-3.7.1.min.js"></script>
+	<script src="/scripts/jquery.mask.min.js"></script>
 	<script src="/scripts/swiper-bundle.min.js"></script>
+	<script src="/scripts/bootstrap.bundle.min.js"></script>
 	<script src="/scripts/main.js"></script>
 </body>
 

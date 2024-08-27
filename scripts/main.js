@@ -1,4 +1,4 @@
-const projectSwiper = new Swiper('.projects__swiper', {
+var projectSwiper = new Swiper('.projects__swiper', {
 	slidesPerView: 1,
 	spaceBetween: 50,
 	effect: 'fade',
@@ -11,27 +11,13 @@ const projectSwiper = new Swiper('.projects__swiper', {
 	},
 })
 
-$('#project-1').click(projectSwiper, function () {
-	projectSwiper.slideTo(0)
-})
-$('#project-2').click(projectSwiper, function () {
-	projectSwiper.slideTo(1)
-})
-$('#project-3').click(projectSwiper, function () {
-	projectSwiper.slideTo(2)
-})
-$('#project-4').click(projectSwiper, function () {
-	projectSwiper.slideTo(3)
-})
-$('#project-5').click(projectSwiper, function () {
-	projectSwiper.slideTo(4)
-})
-$('#project-6').click(projectSwiper, function () {
-	projectSwiper.slideTo(5)
-})
-$('#project-7').click(projectSwiper, function () {
-	projectSwiper.slideTo(6)
-})
+const slideCount = 7
+
+for (let i = 1; i <= slideCount; i++) {
+	$(`#project-${i}`).click(projectSwiper, function () {
+		projectSwiper.slideTo(i - 1)
+	})
+}
 
 $(document).ready(function () {
 	$('.projects__item-inner').on('click touchend', function () {
@@ -141,11 +127,23 @@ new Swiper('.help-now__tabs', {
 	},
 })
 
-$('.js-aside-menu-open').on('click touchend', function () {
-	$('.aside-menu').addClass('is-open')
-})
-$('.js-aside-menu-close').on('click touchend', function () {
-	$('.aside-menu').removeClass('is-open')
+new Swiper('.projects-tile__tabs', {
+	slidesPerView: 'auto',
+	spaceBetween: 10,
+	mousewheel: true,
+	freeMode: true,
+	scrollbar: {
+		el: '.swiper-scrollbar',
+	},
 })
 
-// При нажатии на
+jQuery(document).ready(function () {
+	$("input[type='tel']").mask('+7 (999) 999-99-99')
+
+	$('.js-aside-menu-open').on('click touchend', function () {
+		$('.aside-menu').addClass('is-open')
+	})
+	$('.js-aside-menu-close').on('click touchend', function () {
+		$('.aside-menu').removeClass('is-open')
+	})
+})
