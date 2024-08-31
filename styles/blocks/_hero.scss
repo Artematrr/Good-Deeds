@@ -1,6 +1,20 @@
 .hero {
 	background-image: url('/images/bg-wide.png');
 
+	&--unfold {
+		.hero__image {
+			@include mobile {
+				@include full-width;
+
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				overflow: hidden;
+				max-height: 346px;
+			}
+		}
+	}
+
 	&__inner {
 		row-gap: 15px;
 	}
@@ -38,8 +52,13 @@
 	&__text {
 		display: flex;
 		flex-direction: column;
+		align-items: flex-start;
 		row-gap: 15px;
-		max-width: 570px;
+		max-width: 660px;
+
+		&--short {
+			max-width: 570px;
+		}
 
 		@include mobile {
 			max-width: 100%;
@@ -47,6 +66,8 @@
 	}
 
 	&__title {
+		margin-bottom: 0;
+		text-wrap: wrap;
 	}
 
 	&__description {
@@ -59,7 +80,11 @@
 		display: flex;
 		flex-wrap: wrap;
 		gap: 10px 30px;
-		margin-top: calc(50px - 15px);
+		margin-top: calc(50px - 15px); // (necessary margin-top minus row-gap)
+
+		&--short-top {
+			margin-top: calc(30px - 15px);
+		}
 
 		@include mobile {
 			flex-direction: column;

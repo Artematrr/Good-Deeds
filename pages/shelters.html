@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-	<title>Проекты и программы фонда</title>
+	<title>Приюты</title>
 
 	<link rel="stylesheet" href="/styles/css/swiper-bundle.min.css">
 	<link rel="stylesheet" href="/styles/css/bootstrap.min.css">
@@ -12,6 +12,7 @@
 </head>
 
 <body>
+
 	<header class="header">
 		<div class="header__inner container">
 			<div class="header__logo">
@@ -56,14 +57,14 @@
 								style="--underlineImage: url(/images/icons/underline-28.svg); --underlineAspectRatio: 17/3;">
 								<a href="#" class="header__nav-link">Фонд</a>
 							</li>
-							<li class="header__nav-item" style="--underlineOffset: 1px;">
+							<li class="header__nav-item " styl="--underlineOffset: 1px;">
 								<a href="#" class="header__nav-link">Ищу
 									хозяина</a>
 							</li>
 							<li class="header__nav-item" style="--underlineOffset: 5px;">
 								<a href="#" class="header__nav-link">Нужна помощь</a>
 							</li>
-							<li class="header__nav-item is-active">
+							<li class="header__nav-item">
 								<a href="#" class="header__nav-link">Проекты и программы</a>
 							</li>
 							<li class="header__nav-item" style="--underlineOffset: -5px; --underlineWidth: 130%;">
@@ -94,13 +95,12 @@
 					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Фонд</a></li>
 					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Ищу хозяина</a></li>
 					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Нужна помощь</a></li>
-					<li class="aside-menu__nav-item is-active"><a href="#" class="aside-menu__nav-link">Проекты и программы</a>
-					</li>
+					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Проекты и программы</a></li>
 					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Отчет</a></li>
 					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Новости</a></li>
 					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Контакты</a></li>
 					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Партнеры</a></li>
-					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Приюты</a></li>
+					<li class="aside-menu__nav-item is-active"><a href="#" class="aside-menu__nav-link">Приюты</a></li>
 					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Счастливые истории</a></li>
 				</ol>
 			</nav>
@@ -152,7 +152,7 @@
 	<nav class="breadcrumbs container">
 		<ul class="breadcrumbs-list">
 			<li class="breadcrumbs-item"><a href="#" class="breadcrumbs-link">Главная</a></li>
-			<li class="breadcrumbs-item"><a href="#" class="breadcrumbs-link">Проекты и программы</a></li>
+			<li class="breadcrumbs-item"><a href="#" class="breadcrumbs-link">Приюты</a></li>
 		</ul>
 	</nav>
 
@@ -161,171 +161,446 @@
 		<section class="hero banner section--margin-bottom">
 			<div class="hero__inner banner__inner container">
 				<div class="hero__content banner__content">
-					<div class="hero__text hero__text--short">
-						<h1 class="hero__title h1">Проекты и программы  фонда</h1>
+					<div class="hero__text">
+						<h1 class="hero__title h1">Приюты которым помогаем</h1>
 						<div class="hero__description">
-							<p>Защита и помощь животных, которые нуждаются в нашей помощи.</p>
-							<p>Бездомные животные не могут самостоятельно обратиться за помощью, сказать что они хотя есть или у них
-								что то болит.</p>
+							<p>И для партнёров, и для многих сотрудников сегодня важно иметь дело с социально ответственной компанией.
+								КСО тесно связана с устойчивым развитием и часто входит в ESG-стратегии современных компаний.</p>
+							<p>Возможно, вы давно ищете партнера среди благотворительных организаций?</p>
+							<p>Фонд защиты городских животных давно сотрудничает с бизнесом и предлагает компаниям широкие возможности
+								внедрения благотворительных программ.</p>
+							<p>Поддерживая наш фонд, вы по-настоящему системно решаете проблему бездомности животных.</p>
 						</div>
+					</div>
+					<div class="hero__buttons hero__buttons--short-top">
+						<button class="hero__button button button--secondary button--icon"
+							style="--buttonIcon: url('/images/icons/heart-partner.svg');" data-bs-toggle="modal"
+							data-bs-target="#partnership">
+							Стать партнером
+						</button>
+						<button type="button" style="--buttonIcon: url('/images/icons/paw.svg');"
+							class="hero__button button button--secondary button--icon" data-bs-toggle="modal"
+							data-bs-target="#get-help">Получить помощь</button>
 					</div>
 				</div>
 			</div>
 			<div class="hero__image banner__image">
-				<img src="/images/projects-hero.jpg" alt="Счастливые животные" width="1000" height="480" loading="lazy">
+				<img src="/images/shelters-hero.jpg" alt="Счастливые животные" width="1000" height="480" loading="lazy">
 			</div>
 		</section>
 
-		<section class="projects-tile container section--flex-column section--margin-bottom">
-			<div class="projects-tile__filter filter filter--start">
-				<div class="projects-tile__tabs filter__tabs swiper">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide"><a href="#"
-								class="projects-tile__tab filter__tab button button--outline is-active">Все</a></div>
-						<div class="swiper-slide"><a href="#"
-								class="projects-tile__tab filter__tab button button--outline">Активные</a>
+		<section class="shelters container section--flex-column section--margin-bottom">
+			<ul class="shelters__list">
+				<li class="shelters__item">
+					<div class="shelters__item-header">
+						<figure class="shelters__item-image-wrapper">
+							<img class="shelters__item-image" src="/images/shelter-logo.svg" alt="Четыре Лапы" width="60" height="55"
+								loading="lazy">
+						</figure>
+						<div class="shelters__item-header-content">
+							<h2 class="shelters__item-title h3">Четыре Лапы</h2>
+							<p class="shelters__item-description">приют для бездомных животных</p>
+							<div class="shelters__item-links">
+								<a href="#"><img src="/images/icons/odnoklassniki.svg" alt="Одноклассники"></a>
+								<a href="#"><img src="/images/icons/vkontakte.svg" alt="Вконтакте"></a>
+								<a href="#"><img src="/images/icons/youtube.svg" alt="Ютуб"></a>
+							</div>
+							<a href="#" class="shelters__item-button button button--primary button--icon button--small"
+								style="--buttonIcon: url('/images/icons/heart-help.svg'); --buttonIconHover: url('/images/icons/heart-help-white.svg');">
+								Помочь приюту
+							</a>
 						</div>
-						<div class="swiper-slide"><a href="#"
-								class="projects-tile__tab filter__tab button button--outline">Завершенные</a></div>
 					</div>
-				</div>
-			</div>
-
-			<dl class="projects-tile__container full-width-mobile">
-				<div class="projects-tile__item">
-					<dt class="projects-tile__item-header">
-						<div class="projects-tile__item-header-inner">
-							<h2 class="projects-tile__item-title h1">Здоровый город</h2>
-							<figure class="projects-tile__item-image"
-								style="--iconPositionBottom: -4px; --iconMobilePositionRight: -8px; --iconMobilePositionBottom: -30px;">
-								<img src="/images/projects/tile/projects-1.svg" alt="">
-							</figure>
+					<div class="shelters__item-content">
+						<dl>
+							<dt>Адрес:</dt>
+							<dd>г. Москва, Октября 30</dd>
+							<dt>Контактный телефон:</dt>
+							<dd>
+								<a href="tel:+74951111115">+7 (495) 111-11-15</a>
+							</dd>
+							<dt>Контакное лицо:</dt>
+							<dd>Ивановский Иван</dd>
+							<dt>Сайт приюта:</dt>
+							<dd><a href="четырилапы.рф">четырилапы.рф</a></dd>
+							<dt class="visible-mobile">Соц. сети:</dt>
+							<dd class="visible-mobile">
+								<div class="shelters__item-links">
+									<a href="#" class="shelters__item-link"><img src="/images/icons/odnoklassniki.svg"
+											alt="Одноклассники"></a>
+									<a href="#" class="shelters__item-link"><img src="/images/icons/vkontakte.svg" alt="Вконтакте"></a>
+									<a href="#" class="shelters__item-link"><img src="/images/icons/youtube.svg" alt="Ютуб"></a>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</li>
+				<li class="shelters__item">
+					<div class="shelters__item-header">
+						<figure class="shelters__item-image-wrapper">
+							<img src="/images/shelter-logo.svg" alt="Четыре Лапы" loading="lazy">
+						</figure>
+						<div class="shelters__item-header-content">
+							<h2 class="shelters__item-title h3">Четыре Лапы</h2>
+							<p class="shelters__item-description">приют для бездомных животных</p>
+							<div class="shelters__item-links">
+								<a href="#"><img src="/images/icons/odnoklassniki.svg" alt="Одноклассники"></a>
+								<a href="#"><img src="/images/icons/vkontakte.svg" alt="Вконтакте"></a>
+								<a href="#"><img src="/images/icons/youtube.svg" alt="Ютуб"></a>
+							</div>
+							<a href="#" class="shelters__item-button button button--primary button--icon button--small"
+								style="--buttonIcon: url('/images/icons/heart-help.svg'); --buttonIconHover: url('/images/icons/heart-help-white.svg');">
+								Помочь приюту
+							</a>
 						</div>
-					</dt>
-					<dd class="projects-tile__content">
-						<p class="projects-tile__status projects-tile__status--active">Активная программа</p>
-						<div class="projects-tile__description">
-							<p>Помогите стерилизовать котиков из душных квартир, где у пожилых людей бесконтрольно плодятся, умирая от
-								скученности и болезней, десятки кошек.</p>
+					</div>
+					<div class="shelters__item-content">
+						<dl>
+							<dt>Адрес:</dt>
+							<dd>г. Москва, Октября 30</dd>
+							<dt>Контактный телефон:</dt>
+							<dd>
+								<a href="tel:+74951111115">+7 (495) 111-11-15</a>
+							</dd>
+							<dt>Контакное лицо:</dt>
+							<dd>Ивановский Иван</dd>
+							<dt>Сайт приюта:</dt>
+							<dd><a href="четырилапы.рф">четырилапы.рф</a></dd>
+							<dt class="visible-mobile">Соц. сети:</dt>
+							<dd class="visible-mobile">
+								<div class="shelters__item-links">
+									<a href="#" class="shelters__item-link"><img src="/images/icons/odnoklassniki.svg"
+											alt="Одноклассники"></a>
+									<a href="#" class="shelters__item-link"><img src="/images/icons/vkontakte.svg" alt="Вконтакте"></a>
+									<a href="#" class="shelters__item-link"><img src="/images/icons/youtube.svg" alt="Ютуб"></a>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</li>
+				<li class="shelters__item">
+					<div class="shelters__item-header">
+						<figure class="shelters__item-image-wrapper">
+							<img class="shelters__item-image" src="/images/shelter-logo.svg" alt="Четыре Лапы" width="60" height="55"
+								loading="lazy">
+						</figure>
+						<div class="shelters__item-header-content">
+							<h2 class="shelters__item-title h3">Четыре Лапы</h2>
+							<p class="shelters__item-description">приют для бездомных животных</p>
+							<div class="shelters__item-links">
+								<a href="#"><img src="/images/icons/odnoklassniki.svg" alt="Одноклассники"></a>
+								<a href="#"><img src="/images/icons/vkontakte.svg" alt="Вконтакте"></a>
+								<a href="#"><img src="/images/icons/youtube.svg" alt="Ютуб"></a>
+							</div>
+							<a href="#" class="shelters__item-button button button--primary button--icon button--small"
+								style="--buttonIcon: url('/images/icons/heart-help.svg'); --buttonIconHover: url('/images/icons/heart-help-white.svg');">
+								Помочь приюту
+							</a>
 						</div>
-						<a href="#" class="projects-tile__link button--more">Подробности</a>
-					</dd>
-				</div>
-				<div class="projects-tile__item">
-					<dt class="projects-tile__item-header">
-						<div class="projects-tile__item-header-inner">
-							<h2 class="projects-tile__item-title h1">Теплый дом</h2>
-							<figure class="projects-tile__item-image"
-								style="--iconPositionBottom: -15px;--iconMobilePositionBottom: -4px;--iconMobileScale: 0.3;">
-								<img src="/images/projects/tile/projects-2.svg" alt="">
-							</figure>
+					</div>
+					<div class="shelters__item-content">
+						<dl>
+							<dt>Адрес:</dt>
+							<dd>г. Москва, Октября 30</dd>
+							<dt>Контактный телефон:</dt>
+							<dd>
+								<a href="tel:+74951111115">+7 (495) 111-11-15</a>
+								<div class="shelters__item-links">
+									<a href="#" class="shelters__item-link"><img src="/images/icons/whatsapp.svg" alt="Whatsapp"></a>
+									<a href="#" class="shelters__item-link"><img src="/images/icons/viber.svg" alt="Viber"></a>
+									<a href="#" class="shelters__item-link"><img src="/images/icons/telegram.svg" alt="Telegram"></a>
+								</div>
+							</dd>
+							<dt>Контакное лицо:</dt>
+							<dd>Ивановский Иван</dd>
+							<dt>Сайт приюта:</dt>
+							<dd><a href="четырилапы.рф">четырилапы.рф</a></dd>
+							<dt class="visible-mobile">Соц. сети:</dt>
+							<dd class="visible-mobile">
+								<div class="shelters__item-links">
+									<a href="#" class="shelters__item-link"><img src="/images/icons/odnoklassniki.svg"
+											alt="Одноклассники"></a>
+									<a href="#" class="shelters__item-link"><img src="/images/icons/vkontakte.svg" alt="Вконтакте"></a>
+									<a href="#" class="shelters__item-link"><img src="/images/icons/youtube.svg" alt="Ютуб"></a>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</li>
+				<li class="shelters__item">
+					<div class="shelters__item-header">
+						<figure class="shelters__item-image-wrapper">
+							<img class="shelters__item-image" src="/images/shelter-logo.svg" alt="Четыре Лапы" width="60" height="55"
+								loading="lazy">
+						</figure>
+						<div class="shelters__item-header-content">
+							<h2 class="shelters__item-title h3">Четыре Лапы</h2>
+							<p class="shelters__item-description">приют для бездомных животных</p>
+							<div class="shelters__item-links">
+								<a href="#"><img src="/images/icons/odnoklassniki.svg" alt="Одноклассники"></a>
+								<a href="#"><img src="/images/icons/vkontakte.svg" alt="Вконтакте"></a>
+								<a href="#"><img src="/images/icons/youtube.svg" alt="Ютуб"></a>
+							</div>
+							<a href="#" class="shelters__item-button button button--primary button--icon button--small"
+								style="--buttonIcon: url('/images/icons/heart-help.svg'); --buttonIconHover: url('/images/icons/heart-help-white.svg');">
+								Помочь приюту
+							</a>
 						</div>
-					</dt>
-					<dd class="projects-tile__content">
-						<p class="projects-tile__status projects-tile__status--completed">Завершенная программа</p>
-						<div class="projects-tile__description">
-							<p>Помогите стерилизовать котиков из душных квартир, где у пожилых людей бесконтрольно плодятся, умирая от
-								скученности и болезней, десятки кошек.</p>
+					</div>
+					<div class="shelters__item-content">
+						<dl>
+							<dt>Адрес:</dt>
+							<dd>г. Москва, Октября 30</dd>
+							<dt>Контактный телефон:</dt>
+							<dd>
+								<a href="tel:+74951111115">+7 (495) 111-11-15</a>
+							</dd>
+							<dt>Контакное лицо:</dt>
+							<dd>Ивановский Иван</dd>
+							<dt>Сайт приюта:</dt>
+							<dd><a href="четырилапы.рф">четырилапы.рф</a></dd>
+							<dt class="visible-mobile">Соц. сети:</dt>
+							<dd class="visible-mobile">
+								<div class="shelters__item-links">
+									<a href="#" class="shelters__item-link"><img src="/images/icons/odnoklassniki.svg"
+											alt="Одноклассники"></a>
+									<a href="#" class="shelters__item-link"><img src="/images/icons/vkontakte.svg" alt="Вконтакте"></a>
+									<a href="#" class="shelters__item-link"><img src="/images/icons/youtube.svg" alt="Ютуб"></a>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</li>
+				<li class="shelters__item">
+					<div class="shelters__item-header">
+						<figure class="shelters__item-image-wrapper">
+							<img src="/images/shelter-logo.svg" alt="Четыре Лапы" loading="lazy">
+						</figure>
+						<div class="shelters__item-header-content">
+							<h2 class="shelters__item-title h3">Четыре Лапы</h2>
+							<p class="shelters__item-description">приют для бездомных животных</p>
+							<div class="shelters__item-links">
+								<a href="#"><img src="/images/icons/odnoklassniki.svg" alt="Одноклассники"></a>
+								<a href="#"><img src="/images/icons/vkontakte.svg" alt="Вконтакте"></a>
+								<a href="#"><img src="/images/icons/youtube.svg" alt="Ютуб"></a>
+							</div>
+							<a href="#" class="shelters__item-button button button--primary button--icon button--small"
+								style="--buttonIcon: url('/images/icons/heart-help.svg'); --buttonIconHover: url('/images/icons/heart-help-white.svg');">
+								Помочь приюту
+							</a>
 						</div>
-						<a href="#" class="projects-tile__link button--more">Подробности</a>
-					</dd>
-				</div>
-				<div class="projects-tile__item">
-					<dt class="projects-tile__item-header">
-						<div class="projects-tile__item-header-inner">
-							<h2 class="projects-tile__item-title h1">Живой уголок</h2>
-							<figure class="projects-tile__item-image" style="--iconPositionBottom: 28px; --iconMobileScale: 0.35;">
-								<img src="/images/projects/tile/projects-3.svg" alt="">
-							</figure>
+					</div>
+					<div class="shelters__item-content">
+						<dl>
+							<dt>Адрес:</dt>
+							<dd>г. Москва, Октября 30</dd>
+							<dt>Контактный телефон:</dt>
+							<dd>
+								<a href="tel:+74951111115">+7 (495) 111-11-15</a>
+							</dd>
+							<dt>Контакное лицо:</dt>
+							<dd>Ивановский Иван</dd>
+							<dt>Сайт приюта:</dt>
+							<dd><a href="четырилапы.рф">четырилапы.рф</a></dd>
+							<dt class="visible-mobile">Соц. сети:</dt>
+							<dd class="visible-mobile">
+								<div class="shelters__item-links">
+									<a href="#" class="shelters__item-link"><img src="/images/icons/odnoklassniki.svg"
+											alt="Одноклассники"></a>
+									<a href="#" class="shelters__item-link"><img src="/images/icons/vkontakte.svg" alt="Вконтакте"></a>
+									<a href="#" class="shelters__item-link"><img src="/images/icons/youtube.svg" alt="Ютуб"></a>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</li>
+				<li class="shelters__item">
+					<div class="shelters__item-header">
+						<figure class="shelters__item-image-wrapper">
+							<img class="shelters__item-image" src="/images/shelter-logo.svg" alt="Четыре Лапы" width="60" height="55"
+								loading="lazy">
+						</figure>
+						<div class="shelters__item-header-content">
+							<h2 class="shelters__item-title h3">Четыре Лапы</h2>
+							<p class="shelters__item-description">приют для бездомных животных</p>
+							<div class="shelters__item-links">
+								<a href="#"><img src="/images/icons/odnoklassniki.svg" alt="Одноклассники"></a>
+								<a href="#"><img src="/images/icons/vkontakte.svg" alt="Вконтакте"></a>
+								<a href="#"><img src="/images/icons/youtube.svg" alt="Ютуб"></a>
+							</div>
+							<a href="#" class="shelters__item-button button button--primary button--icon button--small"
+								style="--buttonIcon: url('/images/icons/heart-help.svg'); --buttonIconHover: url('/images/icons/heart-help-white.svg');">
+								Помочь приюту
+							</a>
 						</div>
-					</dt>
-					<dd class="projects-tile__content">
-						<p class="projects-tile__status projects-tile__status--active">Активная программа</p>
-						<div class="projects-tile__description">
-							<p>Помогите стерилизовать котиков из душных квартир, где у пожилых людей бесконтрольно плодятся, умирая от
-								скученности и болезней, десятки кошек.</p>
+					</div>
+					<div class="shelters__item-content">
+						<dl>
+							<dt>Адрес:</dt>
+							<dd>г. Москва, Октября 30</dd>
+							<dt>Контактный телефон:</dt>
+							<dd>
+								<a href="tel:+74951111115">+7 (495) 111-11-15</a>
+								<div class="shelters__item-links">
+									<a href="#" class="shelters__item-link"><img src="/images/icons/whatsapp.svg" alt="Whatsapp"></a>
+									<a href="#" class="shelters__item-link"><img src="/images/icons/viber.svg" alt="Viber"></a>
+									<a href="#" class="shelters__item-link"><img src="/images/icons/telegram.svg" alt="Telegram"></a>
+								</div>
+							</dd>
+							<dt>Контакное лицо:</dt>
+							<dd>Ивановский Иван</dd>
+							<dt>Сайт приюта:</dt>
+							<dd><a href="четырилапы.рф">четырилапы.рф</a></dd>
+							<dt class="visible-mobile">Соц. сети:</dt>
+							<dd class="visible-mobile">
+								<div class="shelters__item-links">
+									<a href="#" class="shelters__item-link"><img src="/images/icons/odnoklassniki.svg"
+											alt="Одноклассники"></a>
+									<a href="#" class="shelters__item-link"><img src="/images/icons/vkontakte.svg" alt="Вконтакте"></a>
+									<a href="#" class="shelters__item-link"><img src="/images/icons/youtube.svg" alt="Ютуб"></a>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</li>
+				<li class="shelters__item">
+					<div class="shelters__item-header">
+						<figure class="shelters__item-image-wrapper">
+							<img class="shelters__item-image" src="/images/shelter-logo.svg" alt="Четыре Лапы" width="60" height="55"
+								loading="lazy">
+						</figure>
+						<div class="shelters__item-header-content">
+							<h2 class="shelters__item-title h3">Четыре Лапы</h2>
+							<p class="shelters__item-description">приют для бездомных животных</p>
+							<div class="shelters__item-links">
+								<a href="#"><img src="/images/icons/odnoklassniki.svg" alt="Одноклассники"></a>
+								<a href="#"><img src="/images/icons/vkontakte.svg" alt="Вконтакте"></a>
+								<a href="#"><img src="/images/icons/youtube.svg" alt="Ютуб"></a>
+							</div>
+							<a href="#" class="shelters__item-button button button--primary button--icon button--small"
+								style="--buttonIcon: url('/images/icons/heart-help.svg'); --buttonIconHover: url('/images/icons/heart-help-white.svg');">
+								Помочь приюту
+							</a>
 						</div>
-						<a href="#" class="projects-tile__link button--more">Подробности</a>
-					</dd>
-				</div>
-				<div class="projects-tile__item">
-					<dt class="projects-tile__item-header">
-						<div class="projects-tile__item-header-inner">
-							<h2 class="projects-tile__item-title h1">Добрый доктор</h2>
-							<figure class="projects-tile__item-image"
-								style="--iconMobilePositionRight: 10px; --iconMobilePositionBottom: -14px;">
-								<img src="/images/projects/tile/projects-4.svg" alt="">
-							</figure>
+					</div>
+					<div class="shelters__item-content">
+						<dl>
+							<dt>Адрес:</dt>
+							<dd>г. Москва, Октября 30</dd>
+							<dt>Контактный телефон:</dt>
+							<dd>
+								<a href="tel:+74951111115">+7 (495) 111-11-15</a>
+							</dd>
+							<dt>Контакное лицо:</dt>
+							<dd>Ивановский Иван</dd>
+							<dt>Сайт приюта:</dt>
+							<dd><a href="четырилапы.рф">четырилапы.рф</a></dd>
+							<dt class="visible-mobile">Соц. сети:</dt>
+							<dd class="visible-mobile">
+								<div class="shelters__item-links">
+									<a href="#" class="shelters__item-link"><img src="/images/icons/odnoklassniki.svg"
+											alt="Одноклассники"></a>
+									<a href="#" class="shelters__item-link"><img src="/images/icons/vkontakte.svg" alt="Вконтакте"></a>
+									<a href="#" class="shelters__item-link"><img src="/images/icons/youtube.svg" alt="Ютуб"></a>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</li>
+				<li class="shelters__item">
+					<div class="shelters__item-header">
+						<figure class="shelters__item-image-wrapper">
+							<img src="/images/shelter-logo.svg" alt="Четыре Лапы" loading="lazy">
+						</figure>
+						<div class="shelters__item-header-content">
+							<h2 class="shelters__item-title h3">Четыре Лапы</h2>
+							<p class="shelters__item-description">приют для бездомных животных</p>
+							<div class="shelters__item-links">
+								<a href="#"><img src="/images/icons/odnoklassniki.svg" alt="Одноклассники"></a>
+								<a href="#"><img src="/images/icons/vkontakte.svg" alt="Вконтакте"></a>
+								<a href="#"><img src="/images/icons/youtube.svg" alt="Ютуб"></a>
+							</div>
+							<a href="#" class="shelters__item-button button button--primary button--icon button--small"
+								style="--buttonIcon: url('/images/icons/heart-help.svg'); --buttonIconHover: url('/images/icons/heart-help-white.svg');">
+								Помочь приюту
+							</a>
 						</div>
-					</dt>
-					<dd class="projects-tile__content">
-						<p class="projects-tile__status projects-tile__status--active">Активная программа</p>
-						<div class="projects-tile__description">
-							<p>Помогите стерилизовать котиков из душных квартир, где у пожилых людей бесконтрольно плодятся, умирая от
-								скученности и болезней, десятки кошек.</p>
+					</div>
+					<div class="shelters__item-content">
+						<dl>
+							<dt>Адрес:</dt>
+							<dd>г. Москва, Октября 30</dd>
+							<dt>Контактный телефон:</dt>
+							<dd>
+								<a href="tel:+74951111115">+7 (495) 111-11-15</a>
+							</dd>
+							<dt>Контакное лицо:</dt>
+							<dd>Ивановский Иван</dd>
+							<dt>Сайт приюта:</dt>
+							<dd><a href="четырилапы.рф">четырилапы.рф</a></dd>
+							<dt class="visible-mobile">Соц. сети:</dt>
+							<dd class="visible-mobile">
+								<div class="shelters__item-links">
+									<a href="#" class="shelters__item-link"><img src="/images/icons/odnoklassniki.svg"
+											alt="Одноклассники"></a>
+									<a href="#" class="shelters__item-link"><img src="/images/icons/vkontakte.svg" alt="Вконтакте"></a>
+									<a href="#" class="shelters__item-link"><img src="/images/icons/youtube.svg" alt="Ютуб"></a>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</li>
+				<li class="shelters__item">
+					<div class="shelters__item-header">
+						<figure class="shelters__item-image-wrapper">
+							<img class="shelters__item-image" src="/images/shelter-logo.svg" alt="Четыре Лапы" width="60" height="55"
+								loading="lazy">
+						</figure>
+						<div class="shelters__item-header-content">
+							<h2 class="shelters__item-title h3">Четыре Лапы</h2>
+							<p class="shelters__item-description">приют для бездомных животных</p>
+							<div class="shelters__item-links">
+								<a href="#"><img src="/images/icons/odnoklassniki.svg" alt="Одноклассники"></a>
+								<a href="#"><img src="/images/icons/vkontakte.svg" alt="Вконтакте"></a>
+								<a href="#"><img src="/images/icons/youtube.svg" alt="Ютуб"></a>
+							</div>
+							<a href="#" class="shelters__item-button button button--primary button--icon button--small"
+								style="--buttonIcon: url('/images/icons/heart-help.svg'); --buttonIconHover: url('/images/icons/heart-help-white.svg');">
+								Помочь приюту
+							</a>
 						</div>
-						<a href="#" class="projects-tile__link button--more">Подробности</a>
-					</dd>
-				</div>
-				<div class="projects-tile__item">
-					<dt class="projects-tile__item-header">
-						<div class="projects-tile__item-header-inner">
-							<h2 class="projects-tile__item-title h1">Десант добра</h2>
-							<figure class="projects-tile__item-image"
-								style="--iconPositionBottom: -70px;--iconMobilePositionRight: 20px;--iconMobilePositionBottom: -26px;--iconMobileScale: 0.35;">
-								<img src="/images/projects/tile/projects-5.svg" alt="">
-							</figure>
-						</div>
-					</dt>
-					<dd class="projects-tile__content">
-						<p class="projects-tile__status projects-tile__status--active">Активная программа</p>
-						<div class="projects-tile__description">
-							<p>Помогите стерилизовать котиков из душных квартир, где у пожилых людей бесконтрольно плодятся, умирая от
-								скученности и болезней, десятки кошек.</p>
-						</div>
-						<a href="#" class="projects-tile__link button--more">Подробности</a>
-					</dd>
-				</div>
-				<div class="projects-tile__item">
-					<dt class="projects-tile__item-header">
-						<div class="projects-tile__item-header-inner">
-							<h2 class="projects-tile__item-title h1">Верный друг</h2>
-							<figure class="projects-tile__item-image"
-								style="--iconPositionRight: -60px; --iconPositionBottom: -110px; --iconMobilePositionRight: -30px; --iconMobilePositionBottom: -60px; --iconMobileScale: 0.35;">
-								<img src="/images/projects/tile/projects-6.svg" alt="">
-							</figure>
-						</div>
-					</dt>
-					<dd class="projects-tile__content">
-						<p class="projects-tile__status projects-tile__status--active">Активная программа</p>
-						<div class="projects-tile__description">
-							<p>Помогите стерилизовать котиков из душных квартир, где у пожилых людей бесконтрольно плодятся, умирая от
-								скученности и болезней, десятки кошек.</p>
-						</div>
-						<a href="#" class="projects-tile__link button--more">Подробности</a>
-					</dd>
-				</div>
-				<div class="projects-tile__item">
-					<dt class="projects-tile__item-header">
-						<div class="projects-tile__item-header-inner">
-							<h2 class="projects-tile__item-title h1">Шкаф ДоброДел</h2>
-							<figure class="projects-tile__item-image"
-								style="--iconMobilePositionBottom: 5px; --iconMobileScale: 0.35;">
-								<img src="/images/projects/tile/projects-7.svg" alt="">
-							</figure>
-						</div>
-					</dt>
-					<dd class="projects-tile__content">
-						<p class="projects-tile__status projects-tile__status--active">Активная программа</p>
-						<div class="projects-tile__description">
-							<p>Помогите стерилизовать котиков из душных квартир, где у пожилых людей бесконтрольно плодятся, умирая от
-								скученности и болезней, десятки кошек.</p>
-						</div>
-						<a href="#" class="projects-tile__link button--more">Подробности</a>
-					</dd>
-				</div>
-			</dl>
-			<div class="projects-tile__pagination pagination">
+					</div>
+					<div class="shelters__item-content">
+						<dl>
+							<dt>Адрес:</dt>
+							<dd>г. Москва, Октября 30</dd>
+							<dt>Контактный телефон:</dt>
+							<dd>
+								<a href="tel:+74951111115">+7 (495) 111-11-15</a>
+								<div class="shelters__item-links">
+									<a href="#" class="shelters__item-link"><img src="/images/icons/whatsapp.svg" alt="Whatsapp"></a>
+									<a href="#" class="shelters__item-link"><img src="/images/icons/viber.svg" alt="Viber"></a>
+									<a href="#" class="shelters__item-link"><img src="/images/icons/telegram.svg" alt="Telegram"></a>
+								</div>
+							</dd>
+							<dt>Контакное лицо:</dt>
+							<dd>Ивановский Иван</dd>
+							<dt>Сайт приюта:</dt>
+							<dd><a href="четырилапы.рф">четырилапы.рф</a></dd>
+							<dt class="visible-mobile">Соц. сети:</dt>
+							<dd class="visible-mobile">
+								<div class="shelters__item-links">
+									<a href="#" class="shelters__item-link"><img src="/images/icons/odnoklassniki.svg"
+											alt="Одноклассники"></a>
+									<a href="#" class="shelters__item-link"><img src="/images/icons/vkontakte.svg" alt="Вконтакте"></a>
+									<a href="#" class="shelters__item-link"><img src="/images/icons/youtube.svg" alt="Ютуб"></a>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</li>
+			</ul>
+			<div class="shelters__pagination pagination">
 				<a href="#" class="pagination-item pagination-prev">
 					<svg xmlns="http://www.w3.org/2000/svg" width="6" height="11" viewBox="0 0 6 11" fill="none">
 						<g clip-path="url(#clip0_91_216)">
@@ -359,6 +634,33 @@
 						</defs>
 					</svg>
 				</a>
+			</div>
+		</section>
+
+		<section class="project container section--margin-bottom">
+			<div class="project__wrapper">
+				<div class="project__image-wrapper">
+					<figure class="project__image"
+						style="--iconPositionRight: -60px; --iconPositionBottom: -110px; --iconMobilePositionRight: -30px; --iconMobilePositionBottom: -160px; --iconMobileScale: 0.7;">
+						<img src="/images/projects/tile/projects-6.svg" alt="">
+					</figure>
+				</div>
+				<div class="project__content">
+					<h2 class="project__title h3">Программа “Верный друг”</h2>
+					<div class="project__description">
+						<ul>
+							<li>гуманитарная помощь от фонда</li>
+							<li>поможем создать или модернизировать ваш сайт</li>
+							<li>позиционирование вашего приюта через наши соц сети и сайт</li>
+							<li>поможем найти дом вашим животным</li>
+							<li>качественная ветеринарная помощь</li>
+							<li>участие вашего приюта в программах фонда</li>
+							<li>содействие в развитие и благополучие приюта</li>
+						</ul>
+					</div>
+					<a href="#" style="--buttonIcon: url('/images/icons/paw.svg');"
+						class="project__button button button--secondary button--icon button--small">Принять участие в программе</a>
+				</div>
 			</div>
 		</section>
 

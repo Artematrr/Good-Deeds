@@ -1,0 +1,52 @@
+.content-block {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 30px;
+	padding-inline: calc(var(--container-padding-x) + 100px);
+
+	@include tablet {
+		padding-inline: calc(var(--container-padding-x) + 50px);
+	}
+
+	@include mobile {
+		padding-inline: var(--container-padding-x);
+	}
+
+	article {
+		display: flex;
+		flex-direction: column;
+		row-gap: 1.5em;
+		width: 100%;
+	}
+
+	figure {
+		display: flex;
+		height: 520px;
+		width: 100%;
+		overflow: hidden;
+
+		@include tablet {
+			height: 400px;
+		}
+
+		@include mobile {
+			height: 228px;
+		}
+
+		img {
+			flex-shrink: 0;
+			height: 100%;
+			width: inherit;
+			object-fit: cover;
+		}
+	}
+
+	@include tablet {
+		margin-inline: 20px;
+	}
+
+	@include mobile {
+		margin-inline: 0;
+	}
+}

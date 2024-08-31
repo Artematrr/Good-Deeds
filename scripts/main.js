@@ -117,6 +117,26 @@ new Swiper('.news__swiper', {
 	},
 })
 
+new Swiper('.histories__swiper', {
+	spaceBetween: 0,
+
+	breakpoints: {
+		320: {
+			centeredSlides: true,
+			slidesPerView: 1,
+		},
+		540: {
+			slidesPerView: 2,
+		},
+		1024: {
+			slidesPerView: 3,
+		},
+		1240: {
+			slidesPerView: 4,
+		},
+	},
+})
+
 new Swiper('.help-now__tabs', {
 	slidesPerView: 'auto',
 	spaceBetween: 10,

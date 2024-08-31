@@ -4,6 +4,10 @@
 	padding-block: 54px;
 	margin-top: 50px;
 
+	&--margin-top-0 {
+		margin-top: 0;
+	}
+
 	@include mobile {
 		padding-block: 30px;
 		margin-top: 30px;

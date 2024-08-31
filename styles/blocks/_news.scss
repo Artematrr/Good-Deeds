@@ -2,6 +2,23 @@
 	&__swiper {
 	}
 
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+
+		@include desktop {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		
+		@include tablet {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include mobile {
+			grid-template-columns: 1fr;
+		}
+	}
+
 	&__card {
 		position: relative;
 		display: flex;

@@ -73,6 +73,7 @@ h3,
 .h3 {
 	font-family: var(--font-family-accent);
 	line-height: 1.25;
+	margin-block: 0;
 
 	@include mobile {
 		font-family: var(--font-family-base);

@@ -1,6 +1,23 @@
 .partners {
-	&__swiper {
-		.swiper-wrapper {
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		width: 100%;
+
+		@include desktop {
+			grid-template-columns: repeat(4, 1fr);
+		}
+
+		@include tablet {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include mobile-s {
+			grid-template-columns: 1fr;
+		}
+
+		.partners__card {
+			min-height: 200px;
 		}
 	}
 
@@ -17,15 +34,4 @@
 		width: 100%;
 		background-color: var(--white);
 	}
-}
-
-.swiper {
-}
-.swiper-wrapper {
-}
-.swiper-slide {
-}
-.swiper-button-prev {
-}
-.swiper-button-next {
 }

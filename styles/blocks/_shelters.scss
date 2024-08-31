@@ -1,0 +1,178 @@
+.shelters {
+	&__list {
+		display: flex;
+		flex-direction: column;
+		row-gap: 30px;
+		width: 100%;
+	}
+
+	&__item {
+		display: flex;
+		padding: 30px;
+		justify-content: space-between;
+		gap: 15px 40px;
+		border-radius: var(--border-radius);
+		border: 1px solid var(--gray-400);
+
+		@include tablet {
+			flex-direction: column;
+		}
+
+		@include mobile {
+			padding: 15px;
+			border-color: var(--primary-500);
+		}
+	}
+
+	&__item-header {
+		display: flex;
+		align-items: stretch;
+		max-width: 690px;
+		width: 100%;
+		column-gap: 30px;
+
+		.shelters__item-links {
+			@include mobile {
+				display: none;
+				align-items: flex-start;
+				column-gap: 15px;
+			}
+		}
+	}
+
+	&__item-image-wrapper {
+		display: flex;
+		max-width: 150px;
+		width: 100%;
+		aspect-ratio: 1 / 1;
+		padding: 10px;
+		justify-content: center;
+		align-items: center;
+		flex-shrink: 0;
+		border-radius: var(--border-radius);
+		border: 1px solid var(--primary-500);
+
+		@include mobile {
+			max-width: 60px;
+		}
+	}
+
+	&__item-image {
+		display: flex;
+		flex-shrink: 1;
+		height: 100%;
+	}
+
+	&__item-header-content {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		row-gap: 10px;
+
+		@include mobile {
+			row-gap: 0;
+			justify-content: flex-start;
+		}
+	}
+
+	&__item-title {
+		@include fluid-text(20, 34);
+
+		color: var(--primary-600);
+	}
+
+	&__item-description {
+		@include mobile-above {
+			@include visually-hidden;
+		}
+	}
+
+	&__item-links {
+		display: flex;
+		gap: 5px 15px;
+
+		a {
+			@include square(40px);
+
+			@include mobile {
+				width: 32px;
+			}
+
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		@include mobile {
+			gap: 5px 10px;
+		}
+	}
+
+	&__item-button {
+		@include mobile {
+			display: none;
+		}
+	}
+
+	&__item-content {
+		width: 100%;
+
+		.shelters__item-links {
+			gap: 5px;
+
+			a {
+				width: 24px;
+
+				@include mobile {
+					width: 32px;
+				}
+			}
+		}
+
+		dl {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			align-items: center;
+			gap: 15px 10px;
+
+			@include mobile {
+				grid-template-columns: 1fr 2fr;
+			}
+		}
+
+		dt {
+			@include fluid-text(14, 20);
+
+			color: var(--gray-900);
+			font-weight: 700;
+
+			@include mobile {
+				font-weight: 400;
+			}
+		}
+
+		dd {
+			@include fluid-text(14, 20);
+
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			gap: 5px 10px;
+			color: var(--gray-900);
+
+			a {
+				color: var(--primary-500);
+				text-decoration: underline;
+
+				&[href^='tel:'] {
+					text-decoration: none;
+				}
+
+				@include hover {
+					color: var(--primary-600);
+				}
+			}
+		}
+	}
+}

@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-	<title>Проекты и программы фонда</title>
+	<title>Новости</title>
 
 	<link rel="stylesheet" href="/styles/css/swiper-bundle.min.css">
 	<link rel="stylesheet" href="/styles/css/bootstrap.min.css">
@@ -12,6 +12,7 @@
 </head>
 
 <body>
+
 	<header class="header">
 		<div class="header__inner container">
 			<div class="header__logo">
@@ -56,20 +57,20 @@
 								style="--underlineImage: url(/images/icons/underline-28.svg); --underlineAspectRatio: 17/3;">
 								<a href="#" class="header__nav-link">Фонд</a>
 							</li>
-							<li class="header__nav-item" style="--underlineOffset: 1px;">
+							<li class="header__nav-item " styl="--underlineOffset: 1px;">
 								<a href="#" class="header__nav-link">Ищу
 									хозяина</a>
 							</li>
 							<li class="header__nav-item" style="--underlineOffset: 5px;">
 								<a href="#" class="header__nav-link">Нужна помощь</a>
 							</li>
-							<li class="header__nav-item is-active">
+							<li class="header__nav-item">
 								<a href="#" class="header__nav-link">Проекты и программы</a>
 							</li>
 							<li class="header__nav-item" style="--underlineOffset: -5px; --underlineWidth: 130%;">
 								<a href="#" class="header__nav-link">Отчет</a>
 							</li>
-							<li class="header__nav-item" style="--underlineOffset: 3px;">
+							<li class="header__nav-item is-active" style="--underlineOffset: 3px;">
 								<a href="#" class="header__nav-link">Новости</a>
 							</li>
 							<li class="header__nav-item" style="--underlineOffset: 5px;">
@@ -94,10 +95,9 @@
 					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Фонд</a></li>
 					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Ищу хозяина</a></li>
 					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Нужна помощь</a></li>
-					<li class="aside-menu__nav-item is-active"><a href="#" class="aside-menu__nav-link">Проекты и программы</a>
-					</li>
+					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Проекты и программы</a></li>
 					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Отчет</a></li>
-					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Новости</a></li>
+					<li class="aside-menu__nav-item is-active"><a href="#" class="aside-menu__nav-link">Новости</a></li>
 					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Контакты</a></li>
 					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Партнеры</a></li>
 					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Приюты</a></li>
@@ -152,7 +152,7 @@
 	<nav class="breadcrumbs container">
 		<ul class="breadcrumbs-list">
 			<li class="breadcrumbs-item"><a href="#" class="breadcrumbs-link">Главная</a></li>
-			<li class="breadcrumbs-item"><a href="#" class="breadcrumbs-link">Проекты и программы</a></li>
+			<li class="breadcrumbs-item"><a href="#" class="breadcrumbs-link">Новости</a></li>
 		</ul>
 	</nav>
 
@@ -161,171 +161,310 @@
 		<section class="hero banner section--margin-bottom">
 			<div class="hero__inner banner__inner container">
 				<div class="hero__content banner__content">
-					<div class="hero__text hero__text--short">
-						<h1 class="hero__title h1">Проекты и программы  фонда</h1>
-						<div class="hero__description">
-							<p>Защита и помощь животных, которые нуждаются в нашей помощи.</p>
-							<p>Бездомные животные не могут самостоятельно обратиться за помощью, сказать что они хотя есть или у них
-								что то болит.</p>
-						</div>
+					<div class="hero__text">
+						<h1 class="hero__title h1">Новости</h1>
 					</div>
 				</div>
 			</div>
 			<div class="hero__image banner__image">
-				<img src="/images/projects-hero.jpg" alt="Счастливые животные" width="1000" height="480" loading="lazy">
+				<img src="/images/news-hero.jpg" alt="Счастливые животные" width="1000" height="480" loading="lazy">
 			</div>
 		</section>
 
-		<section class="projects-tile container section--flex-column section--margin-bottom">
-			<div class="projects-tile__filter filter filter--start">
-				<div class="projects-tile__tabs filter__tabs swiper">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide"><a href="#"
-								class="projects-tile__tab filter__tab button button--outline is-active">Все</a></div>
-						<div class="swiper-slide"><a href="#"
-								class="projects-tile__tab filter__tab button button--outline">Активные</a>
-						</div>
-						<div class="swiper-slide"><a href="#"
-								class="projects-tile__tab filter__tab button button--outline">Завершенные</a></div>
+		<section class="news container section--flex-column">
+			<div class="news__grid full-width-mobile">
+				<a href="#" class="news__card">
+					<img src="/images/news/1.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
+						loading="lazy">
+					<div class="news__card-content">
+						<ul class="news__card-tags">
+							<li>#благотворительность</li>
+							<li>#котики</li>
+						</ul>
+						<time class="news__card-date" datetime="2024-03-08">8 марта 2024 г.</time>
+						<h3 class="news__card-title">Кошки поздравляют с 8 марта!</h3>
 					</div>
-				</div>
-			</div>
+				</a>
+				<a href="#" class="news__card">
+					<img src="/images/news/2.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
+						loading="lazy">
+					<div class="news__card-content">
+						<ul class="news__card-tags">
+							<li>#благотворительность</li>
+							<li>#котики</li>
+						</ul>
+						<time class="news__card-date" datetime="2024-02-14">14 февраля 2024 г..</time>
+						<h3 class="news__card-title">Валентинка от псинки</h3>
+					</div>
+				</a>
+				<a href="#" class="news__card">
+					<img src="/images/news/3.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
+						loading="lazy">
+					<div class="news__card-content">
+						<ul class="news__card-tags">
+							<li>#благотворительность</li>
+							<li>#котики</li>
+						</ul>
+						<time class="news__card-date" datetime="2024-03-01">1 марта 2024 г.</time>
+						<h3 class="news__card-title">Поздравляем всех кошек с Кошкиным днем!</h3>
+					</div>
+				</a>
+				<a href="#" class="news__card">
+					<img src="/images/news/4.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
+						loading="lazy">
+					<div class="news__card-content">
+						<ul class="news__card-tags">
+							<li>#благотворительность</li>
+							<li>#котики</li>
+						</ul>
+						<time class="news__card-date" datetime="2024-12-31">31 декабря 2023 г.</time>
+						<h3 class="news__card-title">Кошки поздравляют с Новым годом и Рождеством!</h3>
+					</div>
+				</a>
+				<a href="#" class="news__card">
+					<img src="/images/news/3.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
+						loading="lazy">
+					<div class="news__card-content">
+						<ul class="news__card-tags">
+							<li>#благотворительность</li>
+							<li>#котики</li>
+						</ul>
+						<time class="news__card-date" datetime="2024-03-01">1 марта 2024 г.</time>
+						<h3 class="news__card-title">Поздравляем всех кошек с Кошкиным днем!</h3>
+					</div>
+				</a>
+				<a href="#" class="news__card">
+					<img src="/images/news/4.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
+						loading="lazy">
+					<div class="news__card-content">
+						<ul class="news__card-tags">
+							<li>#благотворительность</li>
+							<li>#котики</li>
+						</ul>
+						<time class="news__card-date" datetime="2024-12-31">31 декабря 2023 г.</time>
+						<h3 class="news__card-title">Кошки поздравляют с Новым годом и Рождеством!</h3>
+					</div>
+				</a>
+				<a href="#" class="news__card">
+					<img src="/images/news/2.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
+						loading="lazy">
+					<div class="news__card-content">
+						<ul class="news__card-tags">
+							<li>#благотворительность</li>
+							<li>#котики</li>
+						</ul>
+						<time class="news__card-date" datetime="2024-02-14">14 февраля 2024 г..</time>
+						<h3 class="news__card-title">Валентинка от псинки</h3>
+					</div>
+				</a>
+				<a href="#" class="news__card">
+					<img src="/images/news/1.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
+						loading="lazy">
+					<div class="news__card-content">
+						<ul class="news__card-tags">
+							<li>#благотворительность</li>
+							<li>#котики</li>
+						</ul>
+						<time class="news__card-date" datetime="2024-03-08">8 марта 2024 г.</time>
+						<h3 class="news__card-title">Кошки поздравляют с 8 марта!</h3>
+					</div>
+				</a>
+				<a href="#" class="news__card">
+					<img src="/images/news/1.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
+						loading="lazy">
+					<div class="news__card-content">
+						<ul class="news__card-tags">
+							<li>#благотворительность</li>
+							<li>#котики</li>
+						</ul>
+						<time class="news__card-date" datetime="2024-03-08">8 марта 2024 г.</time>
+						<h3 class="news__card-title">Кошки поздравляют с 8 марта!</h3>
+					</div>
+				</a>
+				<a href="#" class="news__card">
+					<img src="/images/news/2.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
+						loading="lazy">
+					<div class="news__card-content">
+						<ul class="news__card-tags">
+							<li>#благотворительность</li>
+							<li>#котики</li>
+						</ul>
+						<time class="news__card-date" datetime="2024-02-14">14 февраля 2024 г..</time>
+						<h3 class="news__card-title">Валентинка от псинки</h3>
+					</div>
+				</a>
+				<a href="#" class="news__card">
+					<img src="/images/news/3.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
+						loading="lazy">
+					<div class="news__card-content">
+						<ul class="news__card-tags">
+							<li>#благотворительность</li>
+							<li>#котики</li>
+						</ul>
+						<time class="news__card-date" datetime="2024-03-01">1 марта 2024 г.</time>
+						<h3 class="news__card-title">Поздравляем всех кошек с Кошкиным днем!</h3>
+					</div>
+				</a>
+				<a href="#" class="news__card">
+					<img src="/images/news/4.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
+						loading="lazy">
+					<div class="news__card-content">
+						<ul class="news__card-tags">
+							<li>#благотворительность</li>
+							<li>#котики</li>
+						</ul>
+						<time class="news__card-date" datetime="2024-12-31">31 декабря 2023 г.</time>
+						<h3 class="news__card-title">Кошки поздравляют с Новым годом и Рождеством!</h3>
+					</div>
+				</a>
+				<a href="#" class="news__card">
+					<img src="/images/news/3.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
+						loading="lazy">
+					<div class="news__card-content">
+						<ul class="news__card-tags">
+							<li>#благотворительность</li>
+							<li>#котики</li>
+						</ul>
+						<time class="news__card-date" datetime="2024-03-01">1 марта 2024 г.</time>
+						<h3 class="news__card-title">Поздравляем всех кошек с Кошкиным днем!</h3>
+					</div>
+				</a>
+				<a href="#" class="news__card">
+					<img src="/images/news/4.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
+						loading="lazy">
+					<div class="news__card-content">
+						<ul class="news__card-tags">
+							<li>#благотворительность</li>
+							<li>#котики</li>
+						</ul>
+						<time class="news__card-date" datetime="2024-12-31">31 декабря 2023 г.</time>
+						<h3 class="news__card-title">Кошки поздравляют с Новым годом и Рождеством!</h3>
+					</div>
+				</a>
+				<a href="#" class="news__card">
+					<img src="/images/news/2.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
+						loading="lazy">
+					<div class="news__card-content">
+						<ul class="news__card-tags">
+							<li>#благотворительность</li>
+							<li>#котики</li>
+						</ul>
+						<time class="news__card-date" datetime="2024-02-14">14 февраля 2024 г..</time>
+						<h3 class="news__card-title">Валентинка от псинки</h3>
+					</div>
+				</a>
+				<a href="#" class="news__card">
+					<img src="/images/news/1.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
+						loading="lazy">
+					<div class="news__card-content">
+						<ul class="news__card-tags">
+							<li>#благотворительность</li>
+							<li>#котики</li>
+						</ul>
+						<time class="news__card-date" datetime="2024-03-08">8 марта 2024 г.</time>
+						<h3 class="news__card-title">Кошки поздравляют с 8 марта!</h3>
+					</div>
+				</a>
+				<a href="#" class="news__card">
+					<img src="/images/news/1.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
+						loading="lazy">
+					<div class="news__card-content">
+						<ul class="news__card-tags">
+							<li>#благотворительность</li>
+							<li>#котики</li>
+						</ul>
+						<time class="news__card-date" datetime="2024-03-08">8 марта 2024 г.</time>
+						<h3 class="news__card-title">Кошки поздравляют с 8 марта!</h3>
+					</div>
+				</a>
+				<a href="#" class="news__card">
+					<img src="/images/news/2.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
+						loading="lazy">
+					<div class="news__card-content">
+						<ul class="news__card-tags">
+							<li>#благотворительность</li>
+							<li>#котики</li>
+						</ul>
+						<time class="news__card-date" datetime="2024-02-14">14 февраля 2024 г..</time>
+						<h3 class="news__card-title">Валентинка от псинки</h3>
+					</div>
+				</a>
+				<a href="#" class="news__card">
+					<img src="/images/news/3.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
+						loading="lazy">
+					<div class="news__card-content">
+						<ul class="news__card-tags">
+							<li>#благотворительность</li>
+							<li>#котики</li>
+						</ul>
+						<time class="news__card-date" datetime="2024-03-01">1 марта 2024 г.</time>
+						<h3 class="news__card-title">Поздравляем всех кошек с Кошкиным днем!</h3>
+					</div>
+				</a>
+				<a href="#" class="news__card">
+					<img src="/images/news/4.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
+						loading="lazy">
+					<div class="news__card-content">
+						<ul class="news__card-tags">
+							<li>#благотворительность</li>
+							<li>#котики</li>
+						</ul>
+						<time class="news__card-date" datetime="2024-12-31">31 декабря 2023 г.</time>
+						<h3 class="news__card-title">Кошки поздравляют с Новым годом и Рождеством!</h3>
+					</div>
+				</a>
+				<a href="#" class="news__card">
+					<img src="/images/news/3.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
+						loading="lazy">
+					<div class="news__card-content">
+						<ul class="news__card-tags">
+							<li>#благотворительность</li>
+							<li>#котики</li>
+						</ul>
+						<time class="news__card-date" datetime="2024-03-01">1 марта 2024 г.</time>
+						<h3 class="news__card-title">Поздравляем всех кошек с Кошкиным днем!</h3>
+					</div>
+				</a>
+				<a href="#" class="news__card">
+					<img src="/images/news/4.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
+						loading="lazy">
+					<div class="news__card-content">
+						<ul class="news__card-tags">
+							<li>#благотворительность</li>
+							<li>#котики</li>
+						</ul>
+						<time class="news__card-date" datetime="2024-12-31">31 декабря 2023 г.</time>
+						<h3 class="news__card-title">Кошки поздравляют с Новым годом и Рождеством!</h3>
+					</div>
+				</a>
+				<a href="#" class="news__card">
+					<img src="/images/news/2.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
+						loading="lazy">
+					<div class="news__card-content">
+						<ul class="news__card-tags">
+							<li>#благотворительность</li>
+							<li>#котики</li>
+						</ul>
+						<time class="news__card-date" datetime="2024-02-14">14 февраля 2024 г..</time>
+						<h3 class="news__card-title">Валентинка от псинки</h3>
+					</div>
+				</a>
+				<a href="#" class="news__card">
+					<img src="/images/news/1.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
+						loading="lazy">
+					<div class="news__card-content">
+						<ul class="news__card-tags">
+							<li>#благотворительность</li>
+							<li>#котики</li>
+						</ul>
+						<time class="news__card-date" datetime="2024-03-08">8 марта 2024 г.</time>
+						<h3 class="news__card-title">Кошки поздравляют с 8 марта!</h3>
+					</div>
+				</a>
 
-			<dl class="projects-tile__container full-width-mobile">
-				<div class="projects-tile__item">
-					<dt class="projects-tile__item-header">
-						<div class="projects-tile__item-header-inner">
-							<h2 class="projects-tile__item-title h1">Здоровый город</h2>
-							<figure class="projects-tile__item-image"
-								style="--iconPositionBottom: -4px; --iconMobilePositionRight: -8px; --iconMobilePositionBottom: -30px;">
-								<img src="/images/projects/tile/projects-1.svg" alt="">
-							</figure>
-						</div>
-					</dt>
-					<dd class="projects-tile__content">
-						<p class="projects-tile__status projects-tile__status--active">Активная программа</p>
-						<div class="projects-tile__description">
-							<p>Помогите стерилизовать котиков из душных квартир, где у пожилых людей бесконтрольно плодятся, умирая от
-								скученности и болезней, десятки кошек.</p>
-						</div>
-						<a href="#" class="projects-tile__link button--more">Подробности</a>
-					</dd>
-				</div>
-				<div class="projects-tile__item">
-					<dt class="projects-tile__item-header">
-						<div class="projects-tile__item-header-inner">
-							<h2 class="projects-tile__item-title h1">Теплый дом</h2>
-							<figure class="projects-tile__item-image"
-								style="--iconPositionBottom: -15px;--iconMobilePositionBottom: -4px;--iconMobileScale: 0.3;">
-								<img src="/images/projects/tile/projects-2.svg" alt="">
-							</figure>
-						</div>
-					</dt>
-					<dd class="projects-tile__content">
-						<p class="projects-tile__status projects-tile__status--completed">Завершенная программа</p>
-						<div class="projects-tile__description">
-							<p>Помогите стерилизовать котиков из душных квартир, где у пожилых людей бесконтрольно плодятся, умирая от
-								скученности и болезней, десятки кошек.</p>
-						</div>
-						<a href="#" class="projects-tile__link button--more">Подробности</a>
-					</dd>
-				</div>
-				<div class="projects-tile__item">
-					<dt class="projects-tile__item-header">
-						<div class="projects-tile__item-header-inner">
-							<h2 class="projects-tile__item-title h1">Живой уголок</h2>
-							<figure class="projects-tile__item-image" style="--iconPositionBottom: 28px; --iconMobileScale: 0.35;">
-								<img src="/images/projects/tile/projects-3.svg" alt="">
-							</figure>
-						</div>
-					</dt>
-					<dd class="projects-tile__content">
-						<p class="projects-tile__status projects-tile__status--active">Активная программа</p>
-						<div class="projects-tile__description">
-							<p>Помогите стерилизовать котиков из душных квартир, где у пожилых людей бесконтрольно плодятся, умирая от
-								скученности и болезней, десятки кошек.</p>
-						</div>
-						<a href="#" class="projects-tile__link button--more">Подробности</a>
-					</dd>
-				</div>
-				<div class="projects-tile__item">
-					<dt class="projects-tile__item-header">
-						<div class="projects-tile__item-header-inner">
-							<h2 class="projects-tile__item-title h1">Добрый доктор</h2>
-							<figure class="projects-tile__item-image"
-								style="--iconMobilePositionRight: 10px; --iconMobilePositionBottom: -14px;">
-								<img src="/images/projects/tile/projects-4.svg" alt="">
-							</figure>
-						</div>
-					</dt>
-					<dd class="projects-tile__content">
-						<p class="projects-tile__status projects-tile__status--active">Активная программа</p>
-						<div class="projects-tile__description">
-							<p>Помогите стерилизовать котиков из душных квартир, где у пожилых людей бесконтрольно плодятся, умирая от
-								скученности и болезней, десятки кошек.</p>
-						</div>
-						<a href="#" class="projects-tile__link button--more">Подробности</a>
-					</dd>
-				</div>
-				<div class="projects-tile__item">
-					<dt class="projects-tile__item-header">
-						<div class="projects-tile__item-header-inner">
-							<h2 class="projects-tile__item-title h1">Десант добра</h2>
-							<figure class="projects-tile__item-image"
-								style="--iconPositionBottom: -70px;--iconMobilePositionRight: 20px;--iconMobilePositionBottom: -26px;--iconMobileScale: 0.35;">
-								<img src="/images/projects/tile/projects-5.svg" alt="">
-							</figure>
-						</div>
-					</dt>
-					<dd class="projects-tile__content">
-						<p class="projects-tile__status projects-tile__status--active">Активная программа</p>
-						<div class="projects-tile__description">
-							<p>Помогите стерилизовать котиков из душных квартир, где у пожилых людей бесконтрольно плодятся, умирая от
-								скученности и болезней, десятки кошек.</p>
-						</div>
-						<a href="#" class="projects-tile__link button--more">Подробности</a>
-					</dd>
-				</div>
-				<div class="projects-tile__item">
-					<dt class="projects-tile__item-header">
-						<div class="projects-tile__item-header-inner">
-							<h2 class="projects-tile__item-title h1">Верный друг</h2>
-							<figure class="projects-tile__item-image"
-								style="--iconPositionRight: -60px; --iconPositionBottom: -110px; --iconMobilePositionRight: -30px; --iconMobilePositionBottom: -60px; --iconMobileScale: 0.35;">
-								<img src="/images/projects/tile/projects-6.svg" alt="">
-							</figure>
-						</div>
-					</dt>
-					<dd class="projects-tile__content">
-						<p class="projects-tile__status projects-tile__status--active">Активная программа</p>
-						<div class="projects-tile__description">
-							<p>Помогите стерилизовать котиков из душных квартир, где у пожилых людей бесконтрольно плодятся, умирая от
-								скученности и болезней, десятки кошек.</p>
-						</div>
-						<a href="#" class="projects-tile__link button--more">Подробности</a>
-					</dd>
-				</div>
-				<div class="projects-tile__item">
-					<dt class="projects-tile__item-header">
-						<div class="projects-tile__item-header-inner">
-							<h2 class="projects-tile__item-title h1">Шкаф ДоброДел</h2>
-							<figure class="projects-tile__item-image"
-								style="--iconMobilePositionBottom: 5px; --iconMobileScale: 0.35;">
-								<img src="/images/projects/tile/projects-7.svg" alt="">
-							</figure>
-						</div>
-					</dt>
-					<dd class="projects-tile__content">
-						<p class="projects-tile__status projects-tile__status--active">Активная программа</p>
-						<div class="projects-tile__description">
-							<p>Помогите стерилизовать котиков из душных квартир, где у пожилых людей бесконтрольно плодятся, умирая от
-								скученности и болезней, десятки кошек.</p>
-						</div>
-						<a href="#" class="projects-tile__link button--more">Подробности</a>
-					</dd>
-				</div>
-			</dl>
-			<div class="projects-tile__pagination pagination">
+			</div>
+			
+			<div class="news__pagination pagination">
 				<a href="#" class="pagination-item pagination-prev">
 					<svg xmlns="http://www.w3.org/2000/svg" width="6" height="11" viewBox="0 0 6 11" fill="none">
 						<g clip-path="url(#clip0_91_216)">
