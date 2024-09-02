@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-	<title>Новости</title>
+	<title>Контакты</title>
 
 	<link rel="stylesheet" href="/styles/css/swiper-bundle.min.css">
 	<link rel="stylesheet" href="/styles/css/bootstrap.min.css">
@@ -70,10 +70,10 @@
 							<li class="header__nav-item" style="--underlineOffset: -5px; --underlineWidth: 130%;">
 								<a href="#" class="header__nav-link">Отчет</a>
 							</li>
-							<li class="header__nav-item is-active" style="--underlineOffset: 3px;">
+							<li class="header__nav-item" style="--underlineOffset: 3px;">
 								<a href="#" class="header__nav-link">Новости</a>
 							</li>
-							<li class="header__nav-item" style="--underlineOffset: 5px;">
+							<li class="header__nav-item is-active" style="--underlineOffset: 5px;">
 								<a href="#" class="header__nav-link">Контакты</a>
 							</li>
 						</ul>
@@ -97,8 +97,8 @@
 					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Нужна помощь</a></li>
 					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Проекты и программы</a></li>
 					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Отчет</a></li>
-					<li class="aside-menu__nav-item is-active"><a href="#" class="aside-menu__nav-link">Новости</a></li>
-					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Контакты</a></li>
+					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Новости</a></li>
+					<li class="aside-menu__nav-item is-active"><a href="#" class="aside-menu__nav-link">Контакты</a></li>
 					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Партнеры</a></li>
 					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Приюты</a></li>
 					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Счастливые истории</a></li>
@@ -152,7 +152,7 @@
 	<nav class="breadcrumbs container">
 		<ul class="breadcrumbs-list">
 			<li class="breadcrumbs-item"><a href="#" class="breadcrumbs-link">Главная</a></li>
-			<li class="breadcrumbs-item"><a href="#" class="breadcrumbs-link">Новости</a></li>
+			<li class="breadcrumbs-item"><a href="#" class="breadcrumbs-link">Контакты</a></li>
 		</ul>
 	</nav>
 
@@ -162,342 +162,345 @@
 			<div class="hero__inner banner__inner container">
 				<div class="hero__content banner__content">
 					<div class="hero__text hero__text--short">
-						<h1 class="hero__title h1">Новости</h1>
+						<h1 class="hero__title h1">Контакты</h1>
+						<div class="hero__description">
+							<address>
+								<dl>
+									<dt>Телефон</dt>
+									<dd><a href="tel:+74957674715">+7 (495) 767-47-15</a></dd>
+								</dl>
+								<dl>
+									<dt>Электронная почта</dt>
+									<dd>
+										<a href='mailto:info@sitename.ru'>info@sitename.ru</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt>Адрес</dt>
+									<dd>г. Реутов, ул. Октября, д.30</dd>
+								</dl>
+							</address>
+						</div>
 					</div>
+					<a href="#" class="hero__button button button--primary button--small">Написать сообщение</a>
 				</div>
-			</div>
-			<div class="hero__image banner__image">
-				<img src="/images/news-hero.jpg" alt="Счастливые животные" width="1000" height="480" loading="lazy">
-			</div>
+				<div class="hero__image banner__image">
+					<img src="/images/contacts-hero.jpg" alt="Счастливые животные" width="1000" height="480" loading="lazy">
+				</div>
 		</section>
 
-		<section class="news container section--flex-column">
-			<div class="news__grid full-width-mobile">
-				<a href="#" class="news__card">
-					<img src="/images/news/1.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
-						loading="lazy">
-					<div class="news__card-content">
-						<ul class="news__card-tags">
-							<li>#благотворительность</li>
-							<li>#котики</li>
-						</ul>
-						<time class="news__card-date" datetime="2024-03-08">8 марта 2024 г.</time>
-						<h3 class="news__card-title">Кошки поздравляют с 8 марта!</h3>
+		<section class="requisites container section--margin-bottom">
+			<h2 class="h2">Реквизиты</h2>
+			<ul class="requisites__list">
+				<li class="requisites__item is-active">
+					<div class="requisites__bank js-toggle-requisites">
+						<figure class="requisites__bank-icon">
+							<img src="/images/icons/sberbank.svg" alt="Сбербанк">
+						</figure>
+						<div class="requisites__bank-name">Сбербанк</div>
+						<a href="javascript:void(0)" class="requisites__bank-button button--circle">
+							<img src="/images/icons/arrow-next-white.svg" alt="">
+						</a>
 					</div>
-				</a>
-				<a href="#" class="news__card">
-					<img src="/images/news/2.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
-						loading="lazy">
-					<div class="news__card-content">
-						<ul class="news__card-tags">
-							<li>#благотворительность</li>
-							<li>#котики</li>
-						</ul>
-						<time class="news__card-date" datetime="2024-02-14">14 февраля 2024 г..</time>
-						<h3 class="news__card-title">Валентинка от псинки</h3>
+					<div class="requisites__info">
+						<div class="requisites__aside">
+							<div class="requisites__qr">
+								<img src="/images/qr-code-black.svg" alt="Сбербанк QR-код">
+							</div>
+						</div>
+						<div class="requisites__content">
+							<table class="requisites__table">
+								<thead>
+									<tr>
+										<th>Наименование</th>
+										<th>Описание</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Полное наименование: </td>
+										<td>Международный благотворительный фонд социальной поддержки и защиты животных «Добрые дела»</td>
+									</tr>
+									<tr>
+										<td>Сокращенное наименование: </td>
+										<td>Фонд защиты животных “Добрые дела”</td>
+									</tr>
+									<tr>
+										<td>Юридический адрес:</td>
+										<td>г. Реутов, Октября 30</td>
+									</tr>
+									<tr>
+										<td>ИНН/КПП: </td>
+										<td>11111111111111111111</td>
+									</tr>
+									<tr>
+										<td>ОГРН: </td>
+										<td>1111111111111111</td>
+									</tr>
+									<tr>
+										<td>Банк: </td>
+										<td>Московский филиал</td>
+									</tr>
+									<tr>
+										<td>Р/с: </td>
+										<td>407000000000000000</td>
+									</tr>
+									<tr>
+										<td>К/с: </td>
+										<td>30000000000000000</td>
+									</tr>
+									<tr>
+										<td>БИК:</td>
+										<td>000000000</td>
+									</tr>
+									<tr>
+										<td>Контактный телефон: </td>
+										<td>+7 (495) 767-47-15</td>
+									</tr>
+									<tr>
+										<td>Директор:</td>
+										<td>Бессонова Ольга</td>
+									</tr>
+									<tr>
+										<td>Главный бухгалтер: </td>
+										<td>Попов Сергей Валерьевич</td>
+									</tr>
+								</tbody>
+							</table>
+							<a href="javascript:void(0)" class="requisites__button button button--primary button--icon-after"
+								style="--buttonIcon: url('/images/icons/copy.svg');">Cкопировать реквизиты</a>
+						</div>
 					</div>
-				</a>
-				<a href="#" class="news__card">
-					<img src="/images/news/3.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
-						loading="lazy">
-					<div class="news__card-content">
-						<ul class="news__card-tags">
-							<li>#благотворительность</li>
-							<li>#котики</li>
-						</ul>
-						<time class="news__card-date" datetime="2024-03-01">1 марта 2024 г.</time>
-						<h3 class="news__card-title">Поздравляем всех кошек с Кошкиным днем!</h3>
+				</li>
+				<li class="requisites__item">
+					<div class="requisites__bank js-toggle-requisites">
+						<figure class="requisites__bank-icon">
+							<img src="/images/icons/alfabank.svg" alt="Альфабанк">
+						</figure>
+						<div class="requisites__bank-name">Альфабанк</div>
+						<a href="javascript:void(0)" class="requisites__bank-button button--circle">
+							<img src="/images/icons/arrow-next-white.svg" alt="">
+						</a>
 					</div>
-				</a>
-				<a href="#" class="news__card">
-					<img src="/images/news/4.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
-						loading="lazy">
-					<div class="news__card-content">
-						<ul class="news__card-tags">
-							<li>#благотворительность</li>
-							<li>#котики</li>
-						</ul>
-						<time class="news__card-date" datetime="2024-12-31">31 декабря 2023 г.</time>
-						<h3 class="news__card-title">Кошки поздравляют с Новым годом и Рождеством!</h3>
+					<div class="requisites__info">
+						<div class="requisites__aside">
+							<div class="requisites__qr">
+								<img src="/images/qr-code-black.svg" alt="Тинькофф QR-код">
+							</div>
+						</div>
+						<div class="requisites__content">
+							<table class="requisites__table">
+								<thead>
+									<tr>
+										<th>Наименование</th>
+										<th>Описание</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Полное наименование: </td>
+										<td>Международный благотворительный фонд социальной поддержки и защиты животных «Добрые дела»</td>
+									</tr>
+									<tr>
+										<td>Сокращенное наименование: </td>
+										<td>Фонд защиты животных “Добрые дела”</td>
+									</tr>
+									<tr>
+										<td>Юридический адрес:</td>
+										<td>г. Реутов, Октября 30</td>
+									</tr>
+									<tr>
+										<td>ИНН/КПП: </td>
+										<td>11111111111111111111</td>
+									</tr>
+									<tr>
+										<td>ОГРН: </td>
+										<td>1111111111111111</td>
+									</tr>
+									<tr>
+										<td>Банк: </td>
+										<td>Московский филиал</td>
+									</tr>
+									<tr>
+										<td>Р/с: </td>
+										<td>407000000000000000</td>
+									</tr>
+									<tr>
+										<td>К/с: </td>
+										<td>30000000000000000</td>
+									</tr>
+									<tr>
+										<td>БИК:</td>
+										<td>000000000</td>
+									</tr>
+									<tr>
+										<td>Контактный телефон: </td>
+										<td>+7 (495) 767-47-15</td>
+									</tr>
+									<tr>
+										<td>Директор:</td>
+										<td>Бессонова Ольга</td>
+									</tr>
+									<tr>
+										<td>Главный бухгалтер: </td>
+										<td>Попов Сергей Валерьевич</td>
+									</tr>
+								</tbody>
+							</table>
+							<a href="javascript:void(0)" class="requisites__button button button--primary button--icon-after"
+								style="--buttonIcon: url('/images/icons/copy.svg');">Cкопировать реквизиты</a>
+						</div>
 					</div>
-				</a>
-				<a href="#" class="news__card">
-					<img src="/images/news/3.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
-						loading="lazy">
-					<div class="news__card-content">
-						<ul class="news__card-tags">
-							<li>#благотворительность</li>
-							<li>#котики</li>
-						</ul>
-						<time class="news__card-date" datetime="2024-03-01">1 марта 2024 г.</time>
-						<h3 class="news__card-title">Поздравляем всех кошек с Кошкиным днем!</h3>
+				</li>
+				<li class="requisites__item">
+					<div class="requisites__bank js-toggle-requisites">
+						<figure class="requisites__bank-icon">
+							<img src="/images/icons/tinkoff.svg" alt="Тинькофф">
+						</figure>
+						<div class="requisites__bank-name">Тинькофф</div>
+						<a href="javascript:void(0)" class="requisites__bank-button button--circle">
+							<img src="/images/icons/arrow-next-white.svg" alt="">
+						</a>
 					</div>
-				</a>
-				<a href="#" class="news__card">
-					<img src="/images/news/4.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
-						loading="lazy">
-					<div class="news__card-content">
-						<ul class="news__card-tags">
-							<li>#благотворительность</li>
-							<li>#котики</li>
-						</ul>
-						<time class="news__card-date" datetime="2024-12-31">31 декабря 2023 г.</time>
-						<h3 class="news__card-title">Кошки поздравляют с Новым годом и Рождеством!</h3>
+					<div class="requisites__info">
+						<div class="requisites__aside">
+							<div class="requisites__qr">
+								<img src="/images/qr-code-black.svg" alt="Тинькофф QR-код">
+							</div>
+						</div>
+						<div class="requisites__content">
+							<table class="requisites__table">
+								<thead>
+									<tr>
+										<th>Наименование</th>
+										<th>Описание</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Полное наименование: </td>
+										<td>Международный благотворительный фонд социальной поддержки и защиты животных «Добрые дела»</td>
+									</tr>
+									<tr>
+										<td>Сокращенное наименование: </td>
+										<td>Фонд защиты животных “Добрые дела”</td>
+									</tr>
+									<tr>
+										<td>Юридический адрес:</td>
+										<td>г. Реутов, Октября 30</td>
+									</tr>
+									<tr>
+										<td>ИНН/КПП: </td>
+										<td>11111111111111111111</td>
+									</tr>
+									<tr>
+										<td>ОГРН: </td>
+										<td>1111111111111111</td>
+									</tr>
+									<tr>
+										<td>Банк: </td>
+										<td>Московский филиал</td>
+									</tr>
+									<tr>
+										<td>Р/с: </td>
+										<td>407000000000000000</td>
+									</tr>
+									<tr>
+										<td>К/с: </td>
+										<td>30000000000000000</td>
+									</tr>
+									<tr>
+										<td>БИК:</td>
+										<td>000000000</td>
+									</tr>
+									<tr>
+										<td>Контактный телефон: </td>
+										<td>+7 (495) 767-47-15</td>
+									</tr>
+									<tr>
+										<td>Директор:</td>
+										<td>Бессонова Ольга</td>
+									</tr>
+									<tr>
+										<td>Главный бухгалтер: </td>
+										<td>Попов Сергей Валерьевич</td>
+									</tr>
+								</tbody>
+							</table>
+							<a href="javascript:void(0)" class="requisites__button button button--primary button--icon-after"
+								style="--buttonIcon: url('/images/icons/copy.svg');">Cкопировать реквизиты</a>
+						</div>
 					</div>
-				</a>
-				<a href="#" class="news__card">
-					<img src="/images/news/2.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
-						loading="lazy">
-					<div class="news__card-content">
-						<ul class="news__card-tags">
-							<li>#благотворительность</li>
-							<li>#котики</li>
-						</ul>
-						<time class="news__card-date" datetime="2024-02-14">14 февраля 2024 г..</time>
-						<h3 class="news__card-title">Валентинка от псинки</h3>
-					</div>
-				</a>
-				<a href="#" class="news__card">
-					<img src="/images/news/1.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
-						loading="lazy">
-					<div class="news__card-content">
-						<ul class="news__card-tags">
-							<li>#благотворительность</li>
-							<li>#котики</li>
-						</ul>
-						<time class="news__card-date" datetime="2024-03-08">8 марта 2024 г.</time>
-						<h3 class="news__card-title">Кошки поздравляют с 8 марта!</h3>
-					</div>
-				</a>
-				<a href="#" class="news__card">
-					<img src="/images/news/1.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
-						loading="lazy">
-					<div class="news__card-content">
-						<ul class="news__card-tags">
-							<li>#благотворительность</li>
-							<li>#котики</li>
-						</ul>
-						<time class="news__card-date" datetime="2024-03-08">8 марта 2024 г.</time>
-						<h3 class="news__card-title">Кошки поздравляют с 8 марта!</h3>
-					</div>
-				</a>
-				<a href="#" class="news__card">
-					<img src="/images/news/2.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
-						loading="lazy">
-					<div class="news__card-content">
-						<ul class="news__card-tags">
-							<li>#благотворительность</li>
-							<li>#котики</li>
-						</ul>
-						<time class="news__card-date" datetime="2024-02-14">14 февраля 2024 г..</time>
-						<h3 class="news__card-title">Валентинка от псинки</h3>
-					</div>
-				</a>
-				<a href="#" class="news__card">
-					<img src="/images/news/3.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
-						loading="lazy">
-					<div class="news__card-content">
-						<ul class="news__card-tags">
-							<li>#благотворительность</li>
-							<li>#котики</li>
-						</ul>
-						<time class="news__card-date" datetime="2024-03-01">1 марта 2024 г.</time>
-						<h3 class="news__card-title">Поздравляем всех кошек с Кошкиным днем!</h3>
-					</div>
-				</a>
-				<a href="#" class="news__card">
-					<img src="/images/news/4.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
-						loading="lazy">
-					<div class="news__card-content">
-						<ul class="news__card-tags">
-							<li>#благотворительность</li>
-							<li>#котики</li>
-						</ul>
-						<time class="news__card-date" datetime="2024-12-31">31 декабря 2023 г.</time>
-						<h3 class="news__card-title">Кошки поздравляют с Новым годом и Рождеством!</h3>
-					</div>
-				</a>
-				<a href="#" class="news__card">
-					<img src="/images/news/3.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
-						loading="lazy">
-					<div class="news__card-content">
-						<ul class="news__card-tags">
-							<li>#благотворительность</li>
-							<li>#котики</li>
-						</ul>
-						<time class="news__card-date" datetime="2024-03-01">1 марта 2024 г.</time>
-						<h3 class="news__card-title">Поздравляем всех кошек с Кошкиным днем!</h3>
-					</div>
-				</a>
-				<a href="#" class="news__card">
-					<img src="/images/news/4.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
-						loading="lazy">
-					<div class="news__card-content">
-						<ul class="news__card-tags">
-							<li>#благотворительность</li>
-							<li>#котики</li>
-						</ul>
-						<time class="news__card-date" datetime="2024-12-31">31 декабря 2023 г.</time>
-						<h3 class="news__card-title">Кошки поздравляют с Новым годом и Рождеством!</h3>
-					</div>
-				</a>
-				<a href="#" class="news__card">
-					<img src="/images/news/2.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
-						loading="lazy">
-					<div class="news__card-content">
-						<ul class="news__card-tags">
-							<li>#благотворительность</li>
-							<li>#котики</li>
-						</ul>
-						<time class="news__card-date" datetime="2024-02-14">14 февраля 2024 г..</time>
-						<h3 class="news__card-title">Валентинка от псинки</h3>
-					</div>
-				</a>
-				<a href="#" class="news__card">
-					<img src="/images/news/1.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
-						loading="lazy">
-					<div class="news__card-content">
-						<ul class="news__card-tags">
-							<li>#благотворительность</li>
-							<li>#котики</li>
-						</ul>
-						<time class="news__card-date" datetime="2024-03-08">8 марта 2024 г.</time>
-						<h3 class="news__card-title">Кошки поздравляют с 8 марта!</h3>
-					</div>
-				</a>
-				<a href="#" class="news__card">
-					<img src="/images/news/1.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
-						loading="lazy">
-					<div class="news__card-content">
-						<ul class="news__card-tags">
-							<li>#благотворительность</li>
-							<li>#котики</li>
-						</ul>
-						<time class="news__card-date" datetime="2024-03-08">8 марта 2024 г.</time>
-						<h3 class="news__card-title">Кошки поздравляют с 8 марта!</h3>
-					</div>
-				</a>
-				<a href="#" class="news__card">
-					<img src="/images/news/2.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
-						loading="lazy">
-					<div class="news__card-content">
-						<ul class="news__card-tags">
-							<li>#благотворительность</li>
-							<li>#котики</li>
-						</ul>
-						<time class="news__card-date" datetime="2024-02-14">14 февраля 2024 г..</time>
-						<h3 class="news__card-title">Валентинка от псинки</h3>
-					</div>
-				</a>
-				<a href="#" class="news__card">
-					<img src="/images/news/3.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
-						loading="lazy">
-					<div class="news__card-content">
-						<ul class="news__card-tags">
-							<li>#благотворительность</li>
-							<li>#котики</li>
-						</ul>
-						<time class="news__card-date" datetime="2024-03-01">1 марта 2024 г.</time>
-						<h3 class="news__card-title">Поздравляем всех кошек с Кошкиным днем!</h3>
-					</div>
-				</a>
-				<a href="#" class="news__card">
-					<img src="/images/news/4.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
-						loading="lazy">
-					<div class="news__card-content">
-						<ul class="news__card-tags">
-							<li>#благотворительность</li>
-							<li>#котики</li>
-						</ul>
-						<time class="news__card-date" datetime="2024-12-31">31 декабря 2023 г.</time>
-						<h3 class="news__card-title">Кошки поздравляют с Новым годом и Рождеством!</h3>
-					</div>
-				</a>
-				<a href="#" class="news__card">
-					<img src="/images/news/3.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
-						loading="lazy">
-					<div class="news__card-content">
-						<ul class="news__card-tags">
-							<li>#благотворительность</li>
-							<li>#котики</li>
-						</ul>
-						<time class="news__card-date" datetime="2024-03-01">1 марта 2024 г.</time>
-						<h3 class="news__card-title">Поздравляем всех кошек с Кошкиным днем!</h3>
-					</div>
-				</a>
-				<a href="#" class="news__card">
-					<img src="/images/news/4.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
-						loading="lazy">
-					<div class="news__card-content">
-						<ul class="news__card-tags">
-							<li>#благотворительность</li>
-							<li>#котики</li>
-						</ul>
-						<time class="news__card-date" datetime="2024-12-31">31 декабря 2023 г.</time>
-						<h3 class="news__card-title">Кошки поздравляют с Новым годом и Рождеством!</h3>
-					</div>
-				</a>
-				<a href="#" class="news__card">
-					<img src="/images/news/2.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
-						loading="lazy">
-					<div class="news__card-content">
-						<ul class="news__card-tags">
-							<li>#благотворительность</li>
-							<li>#котики</li>
-						</ul>
-						<time class="news__card-date" datetime="2024-02-14">14 февраля 2024 г..</time>
-						<h3 class="news__card-title">Валентинка от псинки</h3>
-					</div>
-				</a>
-				<a href="#" class="news__card">
-					<img src="/images/news/1.jpg" alt="Мусена" class="news__card-image" width="350" height="350"
-						loading="lazy">
-					<div class="news__card-content">
-						<ul class="news__card-tags">
-							<li>#благотворительность</li>
-							<li>#котики</li>
-						</ul>
-						<time class="news__card-date" datetime="2024-03-08">8 марта 2024 г.</time>
-						<h3 class="news__card-title">Кошки поздравляют с 8 марта!</h3>
-					</div>
-				</a>
+				</li>
+			</ul>
+		</section>
 
+
+		<section class="documents container section--margin-bottom">
+			<div class="documents__aside">
+				<h2 class="h2">Документы</h2>
 			</div>
-			
-			<div class="news__pagination pagination">
-				<a href="#" class="pagination-item pagination-prev">
-					<svg xmlns="http://www.w3.org/2000/svg" width="6" height="11" viewBox="0 0 6 11" fill="none">
-						<g clip-path="url(#clip0_91_216)">
-							<path
-								d="M5.97656 1.70762L2.40513 5.27905L5.97656 8.85048L5.26228 10.2791L0.262278 5.27905L5.26228 0.279052L5.97656 1.70762Z"
-								fill="#0073B4" />
-						</g>
-						<defs>
-							<clipPath id="clip0_91_216">
-								<rect width="5.71428" height="10" fill="white" transform="matrix(-1 0 0 -1 5.97656 10.2791)" />
-							</clipPath>
-						</defs>
-					</svg>
-				</a>
-				<a href="#" class="pagination-item is-active">1</a>
-				<a href="#" class="pagination-item">2</a>
-				<a href="#" class="pagination-item">...</a>
-				<a href="#" class="pagination-item">14</a>
-				<a href="#" class="pagination-item">15</a>
-				<a href="#" class="pagination-item pagination-next">
-					<svg xmlns="http://www.w3.org/2000/svg" width="6" height="11" viewBox="0 0 6 11" fill="none">
-						<g clip-path="url(#clip0_91_219)">
-							<path
-								d="M0.176758 8.85048L3.74819 5.27905L0.176758 1.70762L0.891043 0.279053L5.89104 5.27905L0.891043 10.2791L0.176758 8.85048Z"
-								fill="#0073B4" />
-						</g>
-						<defs>
-							<clipPath id="clip0_91_219">
-								<rect width="5.71428" height="10" fill="white" transform="translate(0.176758 0.279053)" />
-							</clipPath>
-						</defs>
-					</svg>
-				</a>
+			<div class="documents__content">
+				<ul class="documents__list">
+					<li class="documents__item">
+						<div class="documents__item-text">
+							<p class="documents__item-title">Устав</p>
+							<p class="documents__item-description">Adobe Portable Document Format (1,0 МБ)</p>
+						</div>
+						<a href="#" class="button--circle" title="Скачать документ">
+							<span class="visually-hidden">Скачать документ</span>
+							<img src="/images/icons/download.svg" alt="">
+						</a>
+					</li>
+					<li class="documents__item">
+						<div class="documents__item-text">
+							<p class="documents__item-title">Свидетельство о государственной регистрации НКО</p>
+							<p class="documents__item-description">Adobe Portable Document Format (1,0 МБ)</p>
+						</div>
+						<a href="#" class="button--circle" title="Скачать документ">
+							<span class="visually-hidden">Скачать документ</span>
+							<img src="/images/icons/download.svg" alt="">
+						</a>
+					</li>
+					<li class="documents__item">
+						<div class="documents__item-text">
+							<p class="documents__item-title">Свидетельство о постановке на учёт в налоговом органе</p>
+							<p class="documents__item-description">Adobe Portable Document Format (1,0 МБ)</p>
+						</div>
+						<a href="#" class="button--circle" title="Скачать документ">
+							<span class="visually-hidden">Скачать документ</span>
+							<img src="/images/icons/download.svg" alt="">
+						</a>
+					</li>
+					<li class="documents__item">
+						<div class="documents__item-text">
+							<p class="documents__item-title">Свидетельство о государственной регистрации НКО</p>
+							<p class="documents__item-description">Adobe Portable Document Format (1,0 МБ)</p>
+						</div>
+						<a href="#" class="button--circle" title="Скачать документ">
+							<span class="visually-hidden">Скачать документ</span>
+							<img src="/images/icons/download.svg" alt="">
+						</a>
+					</li>
+					<li class="documents__item">
+						<div class="documents__item-text">
+							<p class="documents__item-title">Свидетельство о постановке на учёт в налоговом органе</p>
+							<p class="documents__item-description">Adobe Portable Document Format (1,0 МБ)</p>
+						</div>
+						<a href="#" class="button--circle" title="Скачать документ">
+							<span class="visually-hidden">Скачать документ</span>
+							<img src="/images/icons/download.svg" alt="">
+						</a>
+					</li>
+				</ul>
+				<div class="documents__control">
+					<a href="#" class="documents__control-button documents__control-button-pre button--circle">
+						<img src="/images/icons/arrow-prev-white.svg" alt="">
+					</a>
+					<a href="#" class="documents__control-button documents__control-button-next button--circle">
+						<img src="/images/icons/arrow-next-white.svg" alt="">
+					</a>
+				</div>
 			</div>
 		</section>
 

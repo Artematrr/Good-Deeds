@@ -1,0 +1,114 @@
+.documents {
+	display: flex;
+	gap: 15px 140px;
+
+	@include tablet {
+		flex-direction: column;
+	}
+
+	&--border-bottom {
+		padding-bottom: 50px;
+		border-bottom: 1px solid var(--gray-400);
+
+		@include tablet {
+			padding-bottom: 30px;
+		}
+
+		@include mobile {
+			padding-bottom: 10px;
+		}
+	}
+
+	&__aside {
+		max-width: 340px;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		row-gap: 30px;
+		width: 100%;
+
+		@include mobile {
+			row-gap: 15px;
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		row-gap: 30px;
+		width: 100%;
+
+		@include mobile {
+			row-gap: 15px;
+		}
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		column-gap: 20px;
+		width: 100%;
+	}
+
+	&__item-text {
+		display: flex;
+		flex-direction: column;
+		row-gap: 5px;
+	}
+
+	&__item-title {
+		@include fluid-text(20, 24);
+
+		color: var(--gray-900);
+		font-weight: 700;
+	}
+
+	&__item-description {
+		color: var(--gray-700);
+		font-size: 16px;
+	}
+
+	&__control {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		column-gap: 50px;
+		width: 100%;
+	}
+
+	&__control-button {
+		img {
+			width: 20px;
+		}
+	}
+
+	&__control-button-prev {
+	}
+
+	&__control-button-next {
+	}
+
+	&__more {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		column-gap: 20px;
+		width: 100%;
+	}
+
+	&__more-button {
+		img {
+			width: 20px;
+		}
+	}
+
+	&__more-title {
+		@include fluid-text(18, 24);
+
+		color: var(--gray-900);
+		font-weight: 700;
+	}
+}

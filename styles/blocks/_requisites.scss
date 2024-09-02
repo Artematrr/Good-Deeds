@@ -1,0 +1,152 @@
+.requisites {
+	display: flex;
+	flex-direction: column;
+	row-gap: 30px;
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		row-gap: 30px;
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		row-gap: 30px;
+
+		@include hover {
+			.requisites__bank-button {
+				background-color: var(--secondary-500);
+			}
+		}
+
+		&.is-active {
+			.requisites__info {
+				display: flex;
+				opacity: 1;
+				height: auto;
+
+				@starting-style {
+					opacity: 0;
+					height: 0;
+				}
+			}
+
+			.requisites__bank-button {
+				background-color: var(--secondary-500);
+			}
+
+			@include hover {
+				.requisites__bank-button {
+					background-color: var(--secondary-500);
+				}
+			}
+		}
+	}
+
+	&__bank {
+		display: flex;
+		align-items: center;
+		column-gap: 20px;
+	}
+
+	&__bank-icon {
+		min-width: 45px;
+		aspect-ratio: 1 / 1;
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__bank-name {
+		min-width: 280px;
+		color: var(--gray-900);
+		font-size: 24px;
+		font-weight: 700;
+
+		@include tablet {
+			min-width: auto;
+			width: 100%;
+		}
+	}
+
+	&__info {
+		display: none;
+		align-items: center;
+		gap: 10px 140px;
+		opacity: 0;
+		height: 0;
+		transition: all var(--transition-duration) ease-in-out;
+
+		@include tablet {
+			flex-direction: column;
+		}
+	}
+
+	&__aside {
+		display: flex;
+		max-width: 340px;
+		width: 100%;
+
+		@include tablet {
+			justify-content: center;
+			max-width: 100%;
+		}
+	}
+
+	&__qr {
+		max-width: 300px;
+		width: 100%;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		row-gap: 30px;
+
+		@include tablet {
+			align-items: center;
+		}
+
+		@include mobile {
+			align-items: stretch;
+		}
+	}
+
+	&__table {
+		thead {
+			@include visually-hidden;
+		}
+
+		tr {
+			&:not(:first-child) {
+				border-top: 5px solid transparent;
+			}
+		}
+
+		td {
+			hyphens: auto;
+			@include fluid-text(16, 20);
+			color: var(--gray-900);
+
+			&:nth-child(1) {
+				min-width: 130px;
+				font-weight: 700;
+			}
+
+			&:nth-child(2) {
+				min-width: 130px;
+				border-left: 10px solid transparent;
+			}
+		}
+	}
+
+	&__button {
+	}
+}
+
+.js-toggle-requisites {
+}

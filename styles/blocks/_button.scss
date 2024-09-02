@@ -83,6 +83,9 @@
 			background-position: center;
 		}
 
+		@include hover {
+		}
+
 		&:hover {
 			&::before {
 				background-image: var(--buttonIconHover, var(--buttonIcon));
@@ -91,17 +94,20 @@
 	}
 
 	&--icon-after {
-		&::before {
+		&::after {
 			content: '';
-			width: 20px;
-			height: 18px;
+			width: 24px;
+			height: 24px;
 			background-image: var(--buttonIcon);
 			background-repeat: no-repeat;
 			background-position: center;
 		}
 
+		@include hover {
+		}
+
 		&:hover {
-			&::before {
+			&::after {
 				background-image: var(--buttonIconHover, var(--buttonIcon));
 			}
 		}
@@ -126,6 +132,27 @@
 	&--more-white {
 		&::after {
 			background-image: url('/images/icons/arrow-more-white.svg');
+		}
+	}
+
+	&--circle {
+		@include flex-center(true);
+		@include square(45px);
+
+		flex-shrink: 0;
+		border-radius: 50%;
+		background-color: var(--primary-500);
+
+		@include hover {
+			background-color: var(--secondary-500);
+		}
+
+		@include mobile {
+			width: 32px;
+		}
+
+		img {
+			@include square(24px);
 		}
 	}
 }
