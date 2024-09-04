@@ -1,0 +1,21 @@
+.section {
+	&--margin-bottom {
+		margin-bottom: var(--section-margin-bottom);
+	}
+
+	&--bg {
+		padding-block: 60px;
+		background-image: url('/images/bg.png');
+	}
+
+	&--flex-column {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 30px;
+
+		@include mobile {
+			gap: 15px;
+		}
+	}
+}

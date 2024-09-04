@@ -4,14 +4,28 @@
 	font-size: clamp(#{$min}px, #{$max / $layoutWidth * 100}vw, #{$max}px);
 }
 
-// @mixin reset-link {
-//   color: inherit;
-//
-//   &,
-//   &:hover {
-//     text-decoration: none;
-//   }
-// }
+@mixin full-width {
+	margin-inline: calc(var(--container-padding-x) * -1);
+	max-width: 2560px;
+}
+
+@mixin visually-hidden {
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	margin: -1px !important;
+	border: 0 !important;
+	padding: 0 !important;
+	white-space: nowrap !important;
+	clip-path: inset(100%) !important;
+	clip: rect(0 0 0 0) !important;
+	overflow: hidden !important;
+}
+
+@mixin square($size) {
+	width: $size;
+	aspect-ratio: 1;
+}
 
 @mixin reset-button {
 	padding: 0;
@@ -37,25 +51,23 @@
 	translate: -50% -50%;
 }
 
-@mixin square($size) {
-	width: $size;
-	aspect-ratio: 1;
-}
+@mixin underline-wave {
+	position: relative;
 
-@mixin visually-hidden {
-	position: absolute !important;
-	width: 1px !important;
-	height: 1px !important;
-	margin: -1px !important;
-	border: 0 !important;
-	padding: 0 !important;
-	white-space: nowrap !important;
-	clip-path: inset(100%) !important;
-	clip: rect(0 0 0 0) !important;
-	overflow: hidden !important;
-}
-
-@mixin full-width {
-	margin-inline: calc(var(--container-padding-x) * -1);
-	// max-width: 2560px;
+	&::before {
+		content: '';
+		position: absolute;
+		top: calc(100% - var(--underlineOffsetTop, 2px));
+		left: var(--underlineOffset, 0);
+		display: block;
+		width: var(--underlineWidth, 100%);
+		aspect-ratio: var(--underlineAspectRatio, 27 / 3);
+		background-image: var(
+			--underlineImage,
+			url('/images/icons/underline-134.svg')
+		);
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		background-position: left;
+	}
 }

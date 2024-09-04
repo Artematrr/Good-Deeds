@@ -2,7 +2,7 @@
 	color: var(--white);
 	background-color: var(--primary-500);
 
-	@include mobile {
+	@include mobile-s {
 		margin-bottom: 0;
 	}
 

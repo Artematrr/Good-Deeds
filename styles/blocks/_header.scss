@@ -68,7 +68,7 @@
 		}
 
 		&-description {
-			max-width: 360px;
+			max-width: 320px;
 
 			@include tablet {
 				@include visually-hidden;
@@ -211,28 +211,12 @@
 			}
 
 			&.is-active {
+				@include underline-wave;
+
 				color: var(--secondary-500);
-				position: relative;
 
 				@include hover {
 					color: var(--secondary-500);
-				}
-
-				&::before {
-					content: '';
-					position: absolute;
-					top: calc(100% - 2px);
-					left: var(--underlineOffset, 0);
-					display: block;
-					width: var(--underlineWidth, 100%);
-					aspect-ratio: var(--underlineAspectRatio, 27 / 3);
-					background-image: var(
-						--underlineImage,
-						url('/images/icons/underline-134.svg')
-					);
-					background-size: 100% 100%;
-					background-repeat: no-repeat;
-					background-position: left;
 				}
 			}
 		}

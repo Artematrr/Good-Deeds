@@ -43,9 +43,6 @@
 		}
 	}
 
-	&__tabs-link {
-	}
-
 	&__content-wrapper {
 		display: flex;
 		flex-direction: column;
@@ -79,45 +76,19 @@
 	}
 
 	&__table {
-		thead {
-			@include visually-hidden;
-		}
-
 		tbody {
-			tr {
-				&:nth-child(odd) {
-					background-color: var(--gray-100);
-				}
-			}
-
 			td {
+				@include fluid-text(14, 20);
+
 				font-family: var(--font-family-accent);
 				line-height: 1.25;
-				hyphens: auto;
 
 				&:nth-child(1) {
-					@include fluid-text(14, 20);
-
 					padding: 10px 30px;
-					color: var(--gray-700);
-
-					@include mobile {
-						padding: 10px;
-					}
 				}
-				
+
 				&:nth-child(2) {
-					@include fluid-text(14, 20);
-
-					padding: 10px 50px;
 					min-width: 130px;
-					border-left: 10px solid var(--white);
-					color: var(--black);
-
-					@include mobile {
-						padding: 10px;
-						border-left: none;
-					}
 				}
 			}
 		}
@@ -188,6 +159,5 @@
 	}
 
 	&__income-button {
-
 	}
 }

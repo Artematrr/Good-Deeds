@@ -181,6 +181,52 @@ new Swiper('.projects-tile__tabs', {
 	},
 })
 
+new Swiper('.animal__tabs', {
+	slidesPerView: 'auto',
+	spaceBetween: 30,
+	mousewheel: true,
+	freeMode: true,
+	scrollbar: {
+		el: '.swiper-scrollbar',
+	},
+})
+
+new Swiper('.animal__swiper', {
+	slidesPerView: 2,
+	spaceBetween: 10,
+	watchSlidesProgress: true,
+	breakpoints: {
+		375: {
+			slidesPerView: 3,
+		},
+	},
+	navigation: {
+		prevEl: '.animal__swiper-prev',
+		nextEl: '.animal__swiper-next',
+	},
+})
+
+new Swiper('.animal__swiper-preview', {
+	grabCursor: true,
+	slidesPerView: 1,
+	spaceBetween: 30,
+	thumbs: { swiper: `.animal__swiper` },
+	// function to stop youtube video on slidechange
+	on: {
+		slideChange: function (el) {
+			$('.swiper-slide').each(function () {
+				var youtubePlayer = $(this).find('iframe').get(0)
+				if (youtubePlayer) {
+					youtubePlayer.contentWindow.postMessage(
+						'{"event":"command","func":"pauseVideo","args":""}',
+						'*'
+					)
+				}
+			})
+		},
+	},
+})
+
 jQuery(document).ready(function () {
 	$("input[type='tel']").mask('+7 (999) 999-99-99')
 
@@ -194,35 +240,53 @@ jQuery(document).ready(function () {
 		}
 	)
 
-	// reports__tabs
-	$('.reports__content').hide()
-	var defaultActive = $(
-		'.reports__tabs-item.is-active .reports__tabs-link'
-	).attr('href')
+	// tabs switch
+	$('.tabs__content').hide()
+	var defaultActive = $('.tabs__item.is-active a').attr('href')
 	$(defaultActive).show()
 
-	$('.reports__tabs-link').on('click touchend', function (e) {
+	$('.tabs__item a').on('click touchend', function (e) {
 		e.preventDefault()
-		$('.reports__tabs-item').removeClass('is-active')
+		$('.tabs__item').removeClass('is-active')
 		var related = $(this).attr('href')
 		$(this).parent().addClass('is-active')
 		if ($(this).parent().hasClass('is-active')) {
-			$('.reports__content').hide()
+			$('.tabs__content').hide()
 			$(related).show()
 		}
 	})
 
 	// requisites toggle
 	$('.js-toggle-requisites').on('click touchend', function (e) {
-    e.preventDefault();
+		e.preventDefault()
 
-    var $requisitesItem = $(this).closest('.requisites__item');
-    var isActive = $requisitesItem.hasClass('is-active');
-    if (isActive) {
-        $requisitesItem.removeClass('is-active');
-    } else {
-        $('.requisites__item').removeClass('is-active');
-        $requisitesItem.addClass('is-active');
-    }
-});
+		var $requisitesItem = $(this).closest('.requisites__item')
+		var isActive = $requisitesItem.hasClass('is-active')
+		if (isActive) {
+			$requisitesItem.removeClass('is-active')
+		} else {
+			$('.requisites__item').removeClass('is-active')
+			$requisitesItem.addClass('is-active')
+		}
+	})
+
+	// swap hero's content on mobile
+	function swapHeroContent() {
+		let isCurrentMobile = $(window).width() <= 767
+
+		if (isCurrentMobile !== isInitialMobile) {
+			if (isCurrentMobile) {
+				$('.hero__content--donation').appendTo('.hero--fund .hero__inner')
+				$('.hero__content--fund').appendTo('.hero--donation .hero__inner')
+			} else {
+				$('.hero__content--donation').appendTo('.hero--donation .hero__inner')
+				$('.hero__content--fund').appendTo('.hero--fund .hero__inner')
+			}
+
+			isInitialMobile = isCurrentMobile
+		}
+	}
+	let isInitialMobile = $(window).width() <= 767
+	swapHeroContent()
+	$(window).resize(swapHeroContent)
 })

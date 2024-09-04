@@ -31,11 +31,14 @@
 		width: 100%;
 		column-gap: 30px;
 
+		@include mobile {
+			column-gap: 15px;
+		}
+
 		.shelters__item-links {
 			@include mobile {
 				display: none;
 				align-items: flex-start;
-				column-gap: 15px;
 			}
 		}
 	}
@@ -82,8 +85,10 @@
 	}
 
 	&__item-description {
+		@include fluid-text(16, 20);
+
 		@include mobile-above {
-			@include visually-hidden;
+			display: none;
 		}
 	}
 

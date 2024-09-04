@@ -1,6 +1,69 @@
 .hero {
 	background-image: url('/images/bg-wide.png');
 
+	&--donation {
+		padding-top: 30px;
+		background-image: none;
+
+		@include mobile {
+			padding-top: 10px;
+		}
+
+		.hero__link {
+			right: 30px;
+
+			@include mobile {
+				right: 0;
+			}
+		}
+
+		.banner__image {
+			right: calc(50% + 15px);
+
+			@include mobile {
+				right: 0;
+			}
+		}
+
+		.hero__image {
+			background-image: url('/images/bg-wide.png');
+
+			img {
+				padding-right: 30px;
+
+				@include mobile {
+					padding-right: 0;
+				}
+			}
+		}
+	}
+
+	&--fund {
+		.hero__link {
+			left: 0;
+		}
+
+		.banner__image {
+			left: calc(50% - 15px);
+
+			@include mobile {
+				left: 0;
+				justify-content: flex-end;
+			}
+		}
+	}
+
+	&__link {
+		@include fluid-text(20, 24);
+
+		position: absolute;
+		bottom: 0;
+		border-radius: 0;
+		font-family: var(--font-family-base);
+		font-weight: 700;
+		text-transform: inherit;
+	}
+
 	&--unfold {
 		.hero__image {
 			@include mobile {
@@ -10,7 +73,7 @@
 				justify-content: center;
 				align-items: center;
 				overflow: hidden;
-				max-height: 346px;
+				height: 346px;
 			}
 		}
 	}
@@ -46,6 +109,19 @@
 		@include mobile {
 			align-items: flex-start;
 			text-align: left;
+		}
+
+		&--center {
+			@include mobile {
+				align-items: center;
+				text-align: center;
+			}
+
+			.hero__text {
+				@include mobile {
+					align-items: center;
+				}
+			}
 		}
 	}
 

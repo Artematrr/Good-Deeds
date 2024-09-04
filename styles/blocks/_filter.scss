@@ -33,7 +33,7 @@
 
 		padding: 8px 30px;
 		font-family: var(--font-family-base);
-		text-transform: capitalize;
+		text-transform: inherit;
 
 		&:focus-visible {
 			outline-color: var(--primary-600);

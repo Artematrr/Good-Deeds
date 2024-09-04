@@ -21,6 +21,20 @@
 		padding: 10px 15px;
 	}
 
+	&--big {
+		padding: 15px 50px;
+	}
+
+	&--gray {
+		color: var(--primary-500);
+		background-color: var(--gray-100);
+
+		@include hover {
+			color: var(--white);
+			background-color: var(--primary-500);
+		}
+	}
+
 	&--outline {
 		color: var(--primary-500);
 		background-color: transparent;
@@ -53,7 +67,7 @@
 	&--back {
 		padding: 5px 15px;
 		font-family: var(--font-family-base);
-		text-transform: capitalize;
+		text-transform: inherit;
 		gap: 5px;
 		border-radius: 0;
 		color: var(--primary-600);

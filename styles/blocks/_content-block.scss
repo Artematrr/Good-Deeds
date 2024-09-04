@@ -13,7 +13,7 @@
 		padding-inline: var(--container-padding-x);
 	}
 
-	article {
+	div:not([class])  {
 		display: flex;
 		flex-direction: column;
 		row-gap: 1.5em;

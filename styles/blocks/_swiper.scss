@@ -38,3 +38,27 @@
 		background-image: url('/images/icons/next-secondary.svg') !important;
 	}
 }
+
+.slide-overlay {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.4) url(/images/icons/play.svg) no-repeat center /
+		30% auto;
+	border-radius: inherit;
+	cursor: pointer;
+	z-index: 1;
+}
+
+.swiper:has(.swiper-slide-thumb-active) {
+	.swiper-slide {
+		border: 1px solid transparent;
+	}
+
+	.swiper-slide-thumb-active {
+		border: 1px solid var(--secondary-500);
+	}
+}

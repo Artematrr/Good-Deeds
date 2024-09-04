@@ -1,0 +1,37 @@
+.simple-table {
+	thead {
+		@include visually-hidden;
+	}
+
+	tbody {
+		tr {
+			&:nth-child(odd) {
+				background-color: var(--gray-100);
+			}
+		}
+
+		td {
+			@include fluid-text(16, 20);
+
+			padding: 10px 50px;
+			hyphens: auto;
+
+			@include mobile {
+				padding: 10px;
+			}
+
+			&:first-child {
+				color: var(--gray-700);
+			}
+
+			&:not(:first-child) {
+				border-left: 10px solid var(--white);
+				color: var(--black);
+
+				@include mobile {
+					border-left: none;
+				}
+			}
+		}
+	}
+}
