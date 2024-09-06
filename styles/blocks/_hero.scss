@@ -6,6 +6,10 @@
 		background-image: none;
 
 		@include mobile {
+			background-image: url('/images/bg-wide.png');
+		}
+
+		@include mobile {
 			padding-top: 10px;
 		}
 
@@ -36,9 +40,66 @@
 				}
 			}
 		}
+
+		.donation__form {
+			gap: 10px 15px;
+
+			@include tablet {
+				justify-items: flex-start;
+			}
+
+			@include mobile {
+				justify-items: center;
+			}
+		}
+
+		.donation__form-label {
+			font-size: 20px;
+		}
+
+		.donation__form-col-group {
+			gap: 10px 15px;
+
+			@include tablet {
+				width: min-content;
+			}
+
+			@include mobile {
+				width: auto;
+			}
+		}
+
+		.donation__form-group {
+			flex-direction: column-reverse;
+		}
+
+		.donation__form-input {
+			width: 220px;
+			font-size: 60px;
+		}
+
+		.donation__form-scrollable-item {
+			font-size: 20px;
+
+			&.is-active {
+				--underlineOffsetTop: 10px;
+
+				@include underline-wave;
+
+				color: var(--secondary-500);
+
+				&::before {
+					opacity: 0.5;
+				}
+			}
+		}
 	}
 
 	&--fund {
+		@include mobile {
+			background-image: none;
+		}
+
 		.hero__link {
 			left: 0;
 		}

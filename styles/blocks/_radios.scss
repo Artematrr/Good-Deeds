@@ -1,0 +1,49 @@
+.radios {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 15px;
+
+	@include tablet {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@include mobile {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	@include mobile-s {
+		grid-template-columns: 1fr;
+	}
+
+	.checkbox-control:not(:checked) ~ .checkbox-label {
+		background-color: var(--primary-500);
+		color: var(--white);
+	}
+
+	.checkbox-emulator {
+		display: none;
+	}
+
+	.checkbox-emulator::after {
+		display: none;
+	}
+
+	.checkbox-label {
+		@include fluid-text(16, 20);
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 15px;
+		width: 100%;
+		border-radius: var(--border-radius-small);
+		border: 1px solid var(--gray-500);
+		color: var(--primary-500);
+		background-color: var(--white);
+		font-family: var(--font-family-accent);
+
+		a {
+			text-decoration-line: none;
+		}
+	}
+}

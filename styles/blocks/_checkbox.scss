@@ -1,0 +1,46 @@
+
+.checkbox {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	user-select: none;
+}
+
+.checkbox-control {
+	@include visually-hidden;
+}
+
+.checkbox-control:not(:checked) + .checkbox-emulator::after {
+	display: none;
+}
+
+.checkbox-emulator {
+	@include square(20px);
+
+	display: inline-flex;
+	flex-shrink: 0;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid var(--gray-500);
+	border-radius: var(--border-radius-small);
+}
+
+.checkbox-emulator::after {
+	content: '';
+	width: 16px;
+	height: 12px;
+	background-image: url('/images/icons/cheked.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.checkbox-label {
+	color: var(--gray-800);
+	font-family: var(--font-family-form-base);
+	font-size: 14px;
+
+	a {
+		text-decoration-line: underline;
+	}
+}

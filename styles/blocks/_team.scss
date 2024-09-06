@@ -1,8 +1,17 @@
 .team {
 	&__swiper-container {
 		position: relative;
-		padding-inline: 42px;
+		padding-inline: 54px;
 		width: 100%;
+
+		@include mobile {
+			padding-inline: 34px;
+		}
+	}
+
+	.swiper-button-prev,
+	.swiper-button-next {
+		width: 24px;
 	}
 
 	&__swiper-prev {

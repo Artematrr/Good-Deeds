@@ -44,20 +44,21 @@
 
 	--input-height: 52px;
 	--button-height: 48px;
-	
+
 	--font-family-base: 'Geometria', sans-serif;
-	--font-family-accent: 'Unbounded', sans-serif;
-	--font-family-form-accent: 'Circe', sans-serif; // in form only
-	--font-family-form-base: 'Montserrat', sans-serif; // in form only?
-	
+	--font-family-accent: 'Unbounded', serif;
+	--font-family-form-base: 'Roboto', sans-serif;
+	--font-family-form-accent: 'Circe', serif;
+	--font-family-extra: 'Montserrat', sans-serif;
+
 	--container-width: 1410px;
 	--container-padding-x: 17px;
-	
+
 	--transition-duration: 0.2s;
-	
+
 	--section-margin-bottom: 50px;
 	--header-height: 120px;
-	
+
 	@include mobile {
 		--section-margin-bottom: 30px;
 		--header-height: 65px;

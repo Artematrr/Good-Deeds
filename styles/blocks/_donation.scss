@@ -59,6 +59,7 @@
 		&--amount {
 			display: flex;
 			align-self: center;
+			align-items: center;
 			flex-direction: column;
 			row-gap: 30px;
 		}
@@ -70,7 +71,24 @@
 		}
 	}
 
+	&__form-col-group {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 20px 30px;
+
+		@include desktop {
+			flex-wrap: wrap;
+		}
+
+		@include mobile {
+			flex-direction: column;
+			gap: 10px 30px;
+		}
+	}
+
 	&__form-label {
+		@include reset-button;
 		@include fluid-text(20, 24);
 
 		font-weight: 700;
@@ -83,58 +101,107 @@
 	}
 
 	&__form-dropdown {
+		padding-inline: 10px;
+		padding-bottom: 5px;
+		min-width: 250px;
+		max-width: 320px;
+		border: none;
+		border-bottom: 1px solid var(--gray-400);
 		color: var(--primary-600);
 		font-family: var(--font-family-accent);
 		font-size: 20px;
 		line-height: 1.25;
-		
 		text-align: center;
-		// padding-inline: 30px;
-		width: 100%;
-		border: none;
-		border-bottom: 1px solid var(--gray-400);
+		text-transform: lowercase;
+		-moz-appearance: none;
+		-webkit-appearance: none;
+
+		&::-ms-expand {
+			display: none;
+		}
+
+		@include mobile-s {
+			min-width: 200px;
+			max-width: 290px;
+		}
 	}
 
 	&__form-input {
-		color: var(--secondary-500);
-		font-size: 70px;
-		font-weight: 700;
-
-		text-align: center;
-		// padding-inline: 30px;
-		width: 100%;
+		padding-inline: 10px;
+		padding-bottom: 5px;
+		width: 250px;
 		border: none;
 		border-bottom: 1px solid var(--gray-400);
+		color: var(--secondary-500);
+		font-size: 70px;
+		line-height: 1;
+		font-weight: 700;
+		text-align: center;
+
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+
+		&[type='number'] {
+			-moz-appearance: textfield;
+		}
+
+		@include mobile-s {
+			width: 230px;
+		}
 	}
 
-	// input[type='number'] {
-	// 	/*for absolutely positioning spinners*/
-	// 	position: relative;
-	// 	padding: 5px;
-	// 	padding-right: 25px;
-	// }
+	&__button-down,
+	&__button-up {
+		@include reset-button;
 
-	// input[type='number']::-webkit-outer-spin-button,
-	// input[type='number']::-webkit-inner-spin-button {
-	// 	-webkit-appearance: inner-spin-button !important;
-	// 	position: absolute;
-	// 	top: 0;
-	// 	right: 0;
-	// 	width: 250px;
-	// 	height: 100%;
-	// 	opacity: 1;
-	// }
+		display: flex;
+		flex-shrink: 0;
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+		background-position: center;
+		width: 24px;
+		aspect-ratio: 1 / 1;
+		z-index: 1;
+		transition: background-image var(--transition-duration) ease-in-out;
+	}
+
+	&__button-down {
+		background-image: url('/images/icons/prev-primary.svg');
+		rotate: -90deg;
+
+		@include hover {
+			background-image: url('/images/icons/prev-secondary.svg');
+		}
+	}
+	&__button-up {
+		background-image: url('/images/icons/next-secondary.svg');
+		rotate: -90deg;
+
+		@include hover {
+			background-image: url('/images/icons/next-primary.svg');
+		}
+	}
+
+	&__form-group {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 5px 10px;
+	}
 
 	&__form-scrollabe-select {
 		display: flex;
 		flex-direction: column;
 		gap: 10px;
-		max-height: 120px;
-		scroll-snap-type: proximity;
-		// overflow-y: scroll;
+		max-height: 125px;
+		overflow-y: scroll;
 	}
 
 	&__form-scrollable-item {
+		width: fit-content;
 		color: var(--gray-400);
 		font-size: 24px;
 		font-weight: 700;

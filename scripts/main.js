@@ -1,3 +1,119 @@
+// swap hero's content on mobile with minimal delay 
+function swapHeroContent() {
+	let isCurrentMobile = $(window).width() <= 767
+
+	if (isCurrentMobile && !isSwapped) {
+		$('.hero__content--donation').appendTo('.hero--fund .hero__inner')
+		$('.hero__content--fund').appendTo('.hero--donation .hero__inner')
+		isSwapped = true
+	} else if (!isCurrentMobile && isSwapped) {
+		$('.hero__content--donation').appendTo('.hero--donation .hero__inner')
+		$('.hero__content--fund').appendTo('.hero--fund .hero__inner')
+		isSwapped = false
+	}
+}
+
+let isSwapped = false
+swapHeroContent()
+
+jQuery(document).ready(function () {
+	// swap hero's content on resize
+	let resizeTimeout
+
+	$(window).on('resize load', function () {
+		clearTimeout(resizeTimeout)
+		resizeTimeout = setTimeout(swapHeroContent, 200)
+	})
+
+	$("input[type='tel']").mask('+7 (999) 999-99-99')
+
+	// aside menu toggle
+	$('.js-aside-menu-open, .js-aside-menu-close').on(
+		'click touchend',
+		function (e) {
+			e.preventDefault()
+			var isOpen = $(this).hasClass('js-aside-menu-open')
+			$('.aside-menu').toggleClass('is-open', isOpen)
+		}
+	)
+
+	// tabs switch
+	$('.tabs__content').hide()
+	var defaultActive = $('.tabs__item.is-active a').attr('href')
+	$(defaultActive).show()
+
+	$('.tabs__item a').on('click touchend', function (e) {
+		e.preventDefault()
+		$('.tabs__item').removeClass('is-active')
+		var related = $(this).attr('href')
+		$(this).parent().addClass('is-active')
+		if ($(this).parent().hasClass('is-active')) {
+			$('.tabs__content').hide()
+			$(related).show()
+		}
+	})
+
+	// requisites toggle
+	$('.js-toggle-requisites').on('click touchend', function (e) {
+		e.preventDefault()
+
+		var $requisitesItem = $(this).closest('.requisites__item')
+		var isActive = $requisitesItem.hasClass('is-active')
+		if (isActive) {
+			$requisitesItem.removeClass('is-active')
+		} else {
+			$('.requisites__item').removeClass('is-active')
+			$requisitesItem.addClass('is-active')
+		}
+	})
+
+	// change amount value buttons
+	function updateDonationAmount($button, step) {
+		var $input = $button.siblings('.donation__form-input')
+		var currentValue = parseInt($input.val())
+		var newValue = currentValue + step
+
+		if (newValue >= 100) {
+			$input.val(newValue)
+		}
+	}
+	$('.js-donation-increase').on('click touchend', function () {
+		updateDonationAmount($(this), 50)
+	})
+	$('.js-donation-decrease').on('click touchend', function () {
+		updateDonationAmount($(this), -50)
+	})
+
+	// change select value buttons
+	function updateDropdownSelection($button, direction) {
+		var $select = $button.siblings('.donation__form-dropdown')
+		var currentIndex = $select.prop('selectedIndex')
+		var newIndex = currentIndex + direction
+
+		if (newIndex >= 0 && newIndex < $select.find('option').length) {
+			$select.prop('selectedIndex', newIndex)
+		}
+	}
+
+	$('.js-donation-next').on('click touchend', function () {
+		updateDropdownSelection($(this), 1)
+	})
+	$('.js-donation-prev').on('click touchend', function () {
+		updateDropdownSelection($(this), -1)
+	})
+
+	// change variation value
+	$('.js-donation-variation').on('click touchend', function () {
+		var value = $(this).data('value')
+		var $parentCol = $(this).closest('.donation__form-col--variation')
+
+		$parentCol.find('#donation-variation').val(value)
+		$parentCol.find('.donation__form-scrollable-item').removeClass('is-active')
+
+		$(this).addClass('is-active')
+	})
+})
+
 var projectSwiper = new Swiper('.projects__swiper', {
 	slidesPerView: 1,
 	spaceBetween: 50,
@@ -134,6 +250,9 @@ new Swiper('.histories__swiper', {
 		1240: {
 			slidesPerView: 4,
 		},
+		1920: {
+			slidesPerView: 5,
+		},
 	},
 })
 
@@ -211,8 +330,8 @@ new Swiper('.animal__swiper-preview', {
 	slidesPerView: 1,
 	spaceBetween: 30,
 	thumbs: { swiper: `.animal__swiper` },
-	// function to stop youtube video on slidechange
 	on: {
+		// function to stop youtube video on slidechange
 		slideChange: function (el) {
 			$('.swiper-slide').each(function () {
 				var youtubePlayer = $(this).find('iframe').get(0)
@@ -224,69 +343,14 @@ new Swiper('.animal__swiper-preview', {
 				}
 			})
 		},
+		// function to stop <video> on slidechange
+		slideChange: function (el) {
+			$('.swiper-slide').each(function () {
+				var video = $(this).find('video').get(0)
+				if (video) {
+					video.pause()
+				}
+			})
+		},
 	},
-})
-
-jQuery(document).ready(function () {
-	$("input[type='tel']").mask('+7 (999) 999-99-99')
-
-	// aside menu toggle
-	$('.js-aside-menu-open, .js-aside-menu-close').on(
-		'click touchend',
-		function (e) {
-			e.preventDefault()
-			var isOpen = $(this).hasClass('js-aside-menu-open')
-			$('.aside-menu').toggleClass('is-open', isOpen)
-		}
-	)
-
-	// tabs switch
-	$('.tabs__content').hide()
-	var defaultActive = $('.tabs__item.is-active a').attr('href')
-	$(defaultActive).show()
-
-	$('.tabs__item a').on('click touchend', function (e) {
-		e.preventDefault()
-		$('.tabs__item').removeClass('is-active')
-		var related = $(this).attr('href')
-		$(this).parent().addClass('is-active')
-		if ($(this).parent().hasClass('is-active')) {
-			$('.tabs__content').hide()
-			$(related).show()
-		}
-	})
-
-	// requisites toggle
-	$('.js-toggle-requisites').on('click touchend', function (e) {
-		e.preventDefault()
-
-		var $requisitesItem = $(this).closest('.requisites__item')
-		var isActive = $requisitesItem.hasClass('is-active')
-		if (isActive) {
-			$requisitesItem.removeClass('is-active')
-		} else {
-			$('.requisites__item').removeClass('is-active')
-			$requisitesItem.addClass('is-active')
-		}
-	})
-
-	// swap hero's content on mobile
-	function swapHeroContent() {
-		let isCurrentMobile = $(window).width() <= 767
-
-		if (isCurrentMobile !== isInitialMobile) {
-			if (isCurrentMobile) {
-				$('.hero__content--donation').appendTo('.hero--fund .hero__inner')
-				$('.hero__content--fund').appendTo('.hero--donation .hero__inner')
-			} else {
-				$('.hero__content--donation').appendTo('.hero--donation .hero__inner')
-				$('.hero__content--fund').appendTo('.hero--fund .hero__inner')
-			}
-
-			isInitialMobile = isCurrentMobile
-		}
-	}
-	let isInitialMobile = $(window).width() <= 767
-	swapHeroContent()
-	$(window).resize(swapHeroContent)
 })

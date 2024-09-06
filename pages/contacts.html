@@ -677,37 +677,37 @@
 					<form class="modal__form">
 						<div class="modal__form-group">
 							<label class="visually-hidden" for="shelter-name">Название приюта</label>
-							<input class="modal__form-input" type="text" name="shelter-name" id="shelter-name"
+							<input class="form__input" type="text" name="shelter-name" id="shelter-name"
 								placeholder="Название приюта*" required>
 						</div>
 
 						<div class="modal__form-group">
 							<label class="visually-hidden" for="shelter-foundation">Дата основания</label>
-							<input class="modal__form-input" type="text" name="shelter-foundation" id="shelter-foundation"
+							<input class="form__input" type="text" name="shelter-foundation" id="shelter-foundation"
 								placeholder="Дата основания">
 							<label class="visually-hidden" for="shelter-site">Ссылка на ваш сайт</label>
-							<input class="modal__form-input" type="url" name="shelter-site" id="shelter-site"
+							<input class="form__input" type="url" name="shelter-site" id="shelter-site"
 								placeholder="Ссылка на ваш сайт">
 						</div>
 
 						<div class="modal__form-group">
 							<label class="visually-hidden" for="shelter-animals">Какие животные содержатся</label>
-							<textarea class="modal__form-input" name="shelter-animals" id="shelter-animals"
+							<textarea class="form__input" name="shelter-animals" id="shelter-animals"
 								placeholder="Какие животные содержатся" rows="4"></textarea>
 						</div>
 
 						<div class="modal__form-group">
 							<label class="visually-hidden" for="shelter-contact-person">Контактное лицо</label>
-							<input class="modal__form-input" type="text" name="shelter-contact-person" id="shelter-contact-person"
+							<input class="form__input" type="text" name="shelter-contact-person" id="shelter-contact-person"
 								placeholder="Контактное лицо*" required>
 							<label class="visually-hidden" for="shelter-phone">Номер телефона</label>
-							<input class="modal__form-input" type="tel" name="shelter-phone" id="shelter-phone"
+							<input class="form__input" type="tel" name="shelter-phone" id="shelter-phone"
 								placeholder="Номер телефона*" required>
 						</div>
 
 						<div class="modal__form-group">
-							<label class="modal__form-checkbox checkbox" for="shelter-checkbox">
-								<input class="checkbox-controll" type="checkbox" name="shelter-checkbox" id="shelter-checkbox" checked
+							<label class="checkbox" for="shelter-checkbox">
+								<input class="checkbox-control" type="checkbox" name="shelter-checkbox" id="shelter-checkbox" checked
 									required>
 								<span class="checkbox-emulator"></span>
 								<span class="checkbox-label">Даю согласие на обработку <a href="#">Персональных данных</a></span>
@@ -732,26 +732,26 @@
 					<form class="modal__form">
 						<div class="modal__form-group">
 							<label class="visually-hidden" for="fund-person-name">Ваше имя</label>
-							<input class="modal__form-input" type="text" name="fund-person-name" id="fund-person-name"
+							<input class="form__input" type="text" name="fund-person-name" id="fund-person-name"
 								placeholder="Ваше имя">
 						</div>
 
 						<div class="modal__form-group">
 							<label class="visually-hidden" for="fund-person-email">Email</label>
-							<input class="modal__form-input" type="email" name="fund-person-email" id="fund-person-email"
+							<input class="form__input" type="email" name="fund-person-email" id="fund-person-email"
 								placeholder="Email">
 						</div>
 
 						<div class="modal__form-group">
 							<label class="visually-hidden" for="fund-donation-type">Тип пожертвования</label>
-							<select class="modal__form-input form-select" name="fund-donation-type" id="fund-donation-type"
+							<select class="form__input form-select" name="fund-donation-type" id="fund-donation-type"
 								aria-label="Тип пожертвования" required>
 								<option value="" disabled selected>Тип пожертвования</option>
 								<option value="Единоразово">Единоразово</option>
 								<option value="Ежемесячно">Ежемесячно</option>
 							</select>
 							<label class="visually-hidden" for="fund-donation-amount">Сумма пожертвования</label>
-							<select class="modal__form-input form-select" name="fund-donation-amount" id="fund-donation-amount"
+							<select class="form__input form-select" name="fund-donation-amount" id="fund-donation-amount"
 								aria-label="Сумма пожертвования" required>
 								<option value="" disabled selected>Сумма</option>
 								<option value="100">100 ₽</option>
@@ -761,8 +761,8 @@
 						</div>
 
 						<div class="modal__form-group">
-							<label class="modal__form-checkbox checkbox" for="fund-checkbox-offer">
-								<input class="checkbox-controll" type="checkbox" name="fund-checkbox-offer" id="fund-checkbox-offer"
+							<label class="checkbox" for="fund-checkbox-offer">
+								<input class="checkbox-control" type="checkbox" name="fund-checkbox-offer" id="fund-checkbox-offer"
 									checked required>
 								<span class="checkbox-emulator"></span>
 								<span class="checkbox-label">Соглашаюсь с офертой</span>
@@ -770,8 +770,8 @@
 						</div>
 
 						<div class="modal__form-group">
-							<label class="modal__form-checkbox checkbox" for="fund-checkbox-privacy">
-								<input class="checkbox-controll" type="checkbox" name="fund-checkbox-privacy" id="fund-checkbox-privacy"
+							<label class="checkbox" for="fund-checkbox-privacy">
+								<input class="checkbox-control" type="checkbox" name="fund-checkbox-privacy" id="fund-checkbox-privacy"
 									checked required>
 								<span class="checkbox-emulator"></span>
 								<span class="checkbox-label">Даю согласие на обработку <a href="#">Персональных данных</a></span>
@@ -797,21 +797,21 @@
 
 						<div class="modal__form-group">
 							<label class="visually-hidden" for="partnership-contact-person">Контактное лицо</label>
-							<input class="modal__form-input" type="text" name="partnership-contact-person"
+							<input class="form__input" type="text" name="partnership-contact-person"
 								id="partnership-contact-person" placeholder="Контактное лицо*" required>
 							<label class="visually-hidden" for="partnership-phone">Номер телефона</label>
-							<input class="modal__form-input" type="tel" name="partnership-phone" id="partnership-phone"
+							<input class="form__input" type="tel" name="partnership-phone" id="partnership-phone"
 								placeholder="Номер телефона*" required>
 						</div>
 
 						<div class="modal__form-group">
 							<label class="visually-hidden" for="company-name">Компания</label>
-							<input class="modal__form-input" type="text" name="company-name" id="company-name" placeholder="Компания">
+							<input class="form__input" type="text" name="company-name" id="company-name" placeholder="Компания">
 						</div>
 
 						<div class="modal__form-group">
-							<label class="modal__form-checkbox checkbox" for="partnership-checkbox">
-								<input class="checkbox-controll" type="checkbox" name="partnership-checkbox" id="partnership-checkbox"
+							<label class="checkbox" for="partnership-checkbox">
+								<input class="checkbox-control" type="checkbox" name="partnership-checkbox" id="partnership-checkbox"
 									checked required>
 								<span class="checkbox-emulator"></span>
 								<span class="checkbox-label">Даю согласие на обработку <a href="#">Персональных данных</a></span>

@@ -1,5 +1,6 @@
 .histories {
 	&__swiper {
+		max-width: 2560px;
 	}
 
 	&__card {
@@ -10,11 +11,11 @@
 		overflow: hidden;
 
 		@include hover {
-			.histories-swiper__card-image {
+			.histories__card-image {
 				filter: brightness(0.8);
 			}
 
-			.histories-swiper__card-overlay::after {
+			.histories__card-overlay::after {
 				scale: 1;
 			}
 		}

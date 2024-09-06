@@ -43,6 +43,7 @@
 		max-width: clamp(280px, 47.6vw, 690px);
 
 		@include mobile {
+			height: 346px;
 			max-width: 500px;
 		}
 
@@ -55,22 +56,22 @@
 
 	&__swiper-container {
 		position: relative;
-		padding-inline: 34px;
+		padding-inline: 42px;
 		width: 100%;
 		max-width: clamp(280px, 47.6vw, 690px);
 
 		@include mobile {
 			max-width: 500px;
-		}
-
-		.swiper-button-next,
-		.swiper-button-prev {
-			top: 55%;
+			padding-inline: 34px;
 		}
 	}
 
 	&__swiper {
 		height: 150px;
+
+		@include mobile {
+			height: 76px;
+		}
 
 		.swiper-slide {
 			img {
@@ -368,5 +369,65 @@
 		div {
 			margin-inline: auto;
 		}
+	}
+
+	&__help {
+		display: flex;
+		flex-direction: column;
+		row-gap: 30px;
+
+		@include mobile {
+			row-gap: 15px;
+		}
+	}
+
+	&__help-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 10px 15px;
+	}
+
+	&__help-title {
+		@include fluid-text(20, 24);
+
+		font-family: var(--font-family-base);
+		font-weight: 700;
+		line-height: 1.35;
+	}
+
+	&__help-link {
+		color: var(--primary-600);
+
+		@include hover {
+			color: var(--primary-500);
+		}
+	}
+
+	&__donate {
+		display: flex;
+		flex-direction: column;
+		row-gap: 30px;
+
+		@include mobile {
+			row-gap: 15px;
+		}
+
+		.help-now__card-need {
+			border-top: none;
+			border-bottom: none;
+		}
+
+		.help-now__card-need-title {
+			@include fluid-text(14, 20);
+		}
+
+		.help-now__card-need-accent {
+			@include fluid-text(20, 34);
+		}
+	}
+
+	&__form {
 	}
 }
