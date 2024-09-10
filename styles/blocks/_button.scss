@@ -3,7 +3,6 @@
 	@include fluid-text(12, 14);
 
 	font-family: var(--font-family-accent);
-	// line-height: 1;
 	letter-spacing: 0.42px;
 	text-transform: uppercase;
 	text-align: center;
@@ -15,6 +14,10 @@
 
 	&:active {
 		filter: brightness(0.8);
+	}
+
+	&::before {
+		transition: background-image var(--transition-duration) ease-in-out;
 	}
 
 	&--small {

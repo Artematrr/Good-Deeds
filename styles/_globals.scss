@@ -6,6 +6,21 @@ body {
 	line-height: 1.35;
 	color: var(--primary-900);
 	background-color: var(--white);
+
+	// preload icons
+	&::after {
+		position: absolute;
+		width: 0;
+		height: 0;
+		overflow: hidden;
+		z-index: -1;
+		content: url('/images/icons/next-primary.svg')
+			url('/images/icons/prev-primary.svg')
+			url('/images/icons/next-secondary.svg')
+			url('/images/icons/prev-secondary.svg')
+			url('/images/icons/heart-help-white.svg')
+			url('/images/icons/paw-secondary.svg');
+	}
 }
 
 html {

@@ -1,8 +1,4 @@
 .news {
-	@include mobile {
-		padding: 0;
-	}
-
 	&__swiper {
 	}
 
@@ -19,6 +15,8 @@
 		}
 
 		@include mobile {
+			@include full-width;
+
 			grid-template-columns: 1fr;
 		}
 	}

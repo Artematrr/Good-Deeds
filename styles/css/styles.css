@@ -201,21 +201,19 @@ svg * {
   	0px 48px 29px 0px rgba(203, 21, 23, 0.1),
   	0px 21px 21px 0px rgba(203, 21, 23, 0.17),
   	0px 5px 12px 0px rgba(203, 21, 23, 0.2);
+  --overlay-shadow: rgba(0, 32, 50, 0.6);
   --border-radius: 5px;
   --border-radius-small: 3px;
-  --overlay-shadow: rgba(0, 32, 50, 0.6);
-  --input-height: 52px;
-  --button-height: 48px;
+  --header-height: 120px;
+  --container-width: 1410px;
+  --container-padding-x: 17px;
+  --section-margin-bottom: 50px;
   --font-family-base: "Geometria", sans-serif;
   --font-family-accent: "Unbounded", serif;
   --font-family-form-base: "Roboto", sans-serif;
   --font-family-form-accent: "Circe", serif;
   --font-family-extra: "Montserrat", sans-serif;
-  --container-width: 1410px;
-  --container-padding-x: 17px;
   --transition-duration: 0.2s;
-  --section-margin-bottom: 50px;
-  --header-height: 120px;
 }
 @media (max-width: 767px) {
   :root {
@@ -280,7 +278,7 @@ svg * {
   display: block;
   width: var(--underlineWidth, 100%);
   aspect-ratio: var(--underlineAspectRatio, 27/3);
-  background-image: var(--underlineImage, url("/images/icons/underline-134.svg"));
+  background-image: var(--underlineImage, url("/images/icons/underline-long.svg"));
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: left;
@@ -293,6 +291,14 @@ body {
   line-height: 1.35;
   color: var(--primary-900);
   background-color: var(--white);
+}
+body::after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+  content: url("/images/icons/next-primary.svg") url("/images/icons/prev-primary.svg") url("/images/icons/next-secondary.svg") url("/images/icons/prev-secondary.svg") url("/images/icons/heart-help-white.svg") url("/images/icons/paw-secondary.svg");
 }
 
 html {
@@ -392,6 +398,9 @@ h3,
 }
 .button:active {
   filter: brightness(0.8);
+}
+.button::before {
+  transition: background-image var(--transition-duration) ease-in-out;
 }
 .button--small {
   padding: 10px 15px;
@@ -1043,7 +1052,7 @@ button:not(:disabled) {
   display: block;
   width: var(--underlineWidth, 100%);
   aspect-ratio: var(--underlineAspectRatio, 27/3);
-  background-image: var(--underlineImage, url("/images/icons/underline-134.svg"));
+  background-image: var(--underlineImage, url("/images/icons/underline-long.svg"));
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: left;
@@ -1566,6 +1575,30 @@ button:not(:disabled) {
 .hero {
   background-image: url("/images/bg-wide.png");
 }
+.hero .donation__form-scrollable-item {
+  font-size: 20px;
+}
+.hero .donation__form-scrollable-item.is-active {
+  --underlineOffsetTop: 10px;
+  position: relative;
+  color: var(--secondary-500);
+}
+.hero .donation__form-scrollable-item.is-active::before {
+  content: "";
+  position: absolute;
+  top: calc(100% - var(--underlineOffsetTop, 2px));
+  left: var(--underlineOffset, 0);
+  display: block;
+  width: var(--underlineWidth, 100%);
+  aspect-ratio: var(--underlineAspectRatio, 27/3);
+  background-image: var(--underlineImage, url("/images/icons/underline-long.svg"));
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+.hero .donation__form-scrollable-item.is-active::before {
+  opacity: 0.5;
+}
 .hero--donation {
   padding-top: 30px;
   background-image: none;
@@ -1600,10 +1633,12 @@ button:not(:disabled) {
   background-image: url("/images/bg-wide.png");
 }
 .hero--donation .hero__image img {
+  padding-top: 30px;
   padding-right: 30px;
 }
 @media (max-width: 767px) {
   .hero--donation .hero__image img {
+    padding-top: 0;
     padding-right: 0;
   }
 }
@@ -1643,30 +1678,6 @@ button:not(:disabled) {
 .hero--donation .donation__form-input {
   width: 220px;
   font-size: 60px;
-}
-.hero--donation .donation__form-scrollable-item {
-  font-size: 20px;
-}
-.hero--donation .donation__form-scrollable-item.is-active {
-  --underlineOffsetTop: 10px;
-  position: relative;
-  color: var(--secondary-500);
-}
-.hero--donation .donation__form-scrollable-item.is-active::before {
-  content: "";
-  position: absolute;
-  top: calc(100% - var(--underlineOffsetTop, 2px));
-  left: var(--underlineOffset, 0);
-  display: block;
-  width: var(--underlineWidth, 100%);
-  aspect-ratio: var(--underlineAspectRatio, 27/3);
-  background-image: var(--underlineImage, url("/images/icons/underline-134.svg"));
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: left;
-}
-.hero--donation .donation__form-scrollable-item.is-active::before {
-  opacity: 0.5;
 }
 @media (max-width: 767px) {
   .hero--fund {
@@ -1881,8 +1892,8 @@ button:not(:disabled) {
   justify-content: flex-start !important;
 }
 @media (max-width: 767px) {
-  .filter--without-container {
-    padding-left: var(--container-padding-x);
+  .filter--without-container .swiper-slide:first-child {
+    margin-left: var(--container-padding-x);
   }
 }
 .filter__tabs {
@@ -2785,6 +2796,12 @@ button:not(:disabled) {
 @media (max-width: 1023px) {
   .projects-tile__container {
     grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 767px) {
+  .projects-tile__container {
+    margin-inline: calc(var(--container-padding-x) * -1);
+    max-width: 2560px;
   }
 }
 .projects-tile__item {
@@ -3724,7 +3741,7 @@ button:not(:disabled) {
   display: block;
   width: var(--underlineWidth, 100%);
   aspect-ratio: var(--underlineAspectRatio, 27/3);
-  background-image: var(--underlineImage, url("/images/icons/underline-134.svg"));
+  background-image: var(--underlineImage, url("/images/icons/underline-long.svg"));
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: left;
@@ -4158,6 +4175,7 @@ button:not(:disabled) {
   border: none;
   border-bottom: 1px solid var(--gray-400);
   color: var(--primary-600);
+  background-color: var(--white);
   font-family: var(--font-family-accent);
   font-size: 20px;
   line-height: 1.25;
@@ -4266,11 +4284,6 @@ button:not(:disabled) {
   color: var(--primary-600);
 }
 
-@media (max-width: 767px) {
-  .news {
-    padding: 0;
-  }
-}
 .news__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -4287,6 +4300,8 @@ button:not(:disabled) {
 }
 @media (max-width: 767px) {
   .news__grid {
+    margin-inline: calc(var(--container-padding-x) * -1);
+    max-width: 2560px;
     grid-template-columns: 1fr;
   }
 }
@@ -4352,6 +4367,11 @@ button:not(:disabled) {
   color: var(--white);
 }
 
+@media (max-width: 767px) {
+  .histories {
+    padding-inline: 0;
+  }
+}
 .histories__swiper {
   max-width: 2560px;
 }

@@ -1,41 +1,45 @@
-// swap hero's content on mobile with minimal delay 
-function swapHeroContent() {
-	let isCurrentMobile = $(window).width() <= 767
-
-	if (isCurrentMobile && !isSwapped) {
-		$('.hero__content--donation').appendTo('.hero--fund .hero__inner')
-		$('.hero__content--fund').appendTo('.hero--donation .hero__inner')
-		isSwapped = true
-	} else if (!isCurrentMobile && isSwapped) {
-		$('.hero__content--donation').appendTo('.hero--donation .hero__inner')
-		$('.hero__content--fund').appendTo('.hero--fund .hero__inner')
-		isSwapped = false
-	}
-}
-
-let isSwapped = false
-swapHeroContent()
-
 jQuery(document).ready(function () {
-	// swap hero's content on resize
-	let resizeTimeout
-
-	$(window).on('resize load', function () {
-		clearTimeout(resizeTimeout)
-		resizeTimeout = setTimeout(swapHeroContent, 200)
+	// prevent touch on  scrolling
+	var isDragging = false
+	$('body').on('touchmove', function () {
+		isDragging = true
+	})
+	$('body').on('touchstart', function () {
+		isDragging = false
 	})
 
+	// prevent double click
+	var isCooldown = false
+
+	function setCooldown() {
+		isCooldown = true
+		setTimeout(function () {
+			isCooldown = false
+		}, 100)
+	}
+
+	// phone mask
 	$("input[type='tel']").mask('+7 (999) 999-99-99')
 
 	// aside menu toggle
 	$('.js-aside-menu-open, .js-aside-menu-close').on(
-		'click touchend',
+		'click touchstart',
 		function (e) {
+			if (isCooldown) return
 			e.preventDefault()
 			var isOpen = $(this).hasClass('js-aside-menu-open')
 			$('.aside-menu').toggleClass('is-open', isOpen)
+			setCooldown()
 		}
 	)
+
+	// swap hero's content on resize
+	let resizeTimeout
+
+	$(window).on('resize', function () {
+		clearTimeout(resizeTimeout)
+		resizeTimeout = setTimeout(swapHeroContent, 200)
+	})
 
 	// tabs switch
 	$('.tabs__content').hide()
@@ -43,6 +47,7 @@ jQuery(document).ready(function () {
 	$(defaultActive).show()
 
 	$('.tabs__item a').on('click touchend', function (e) {
+		if (isDragging || isCooldown) return
 		e.preventDefault()
 		$('.tabs__item').removeClass('is-active')
 		var related = $(this).attr('href')
@@ -51,12 +56,14 @@ jQuery(document).ready(function () {
 			$('.tabs__content').hide()
 			$(related).show()
 		}
+		setCooldown()
 	})
 
 	// requisites toggle
 	$('.js-toggle-requisites').on('click touchend', function (e) {
-		e.preventDefault()
+		if (isDragging || isCooldown) return
 
+		e.preventDefault()
 		var $requisitesItem = $(this).closest('.requisites__item')
 		var isActive = $requisitesItem.hasClass('is-active')
 		if (isActive) {
@@ -65,6 +72,7 @@ jQuery(document).ready(function () {
 			$('.requisites__item').removeClass('is-active')
 			$requisitesItem.addClass('is-active')
 		}
+		setCooldown()
 	})
 
 	// change amount value buttons
@@ -77,11 +85,16 @@ jQuery(document).ready(function () {
 			$input.val(newValue)
 		}
 	}
+
 	$('.js-donation-increase').on('click touchend', function () {
+		if (isCooldown) return
 		updateDonationAmount($(this), 50)
+		setCooldown()
 	})
 	$('.js-donation-decrease').on('click touchend', function () {
+		if (isCooldown) return
 		updateDonationAmount($(this), -50)
+		setCooldown()
 	})
 
 	// change select value buttons
@@ -96,261 +109,280 @@ jQuery(document).ready(function () {
 	}
 
 	$('.js-donation-next').on('click touchend', function () {
+		if (isCooldown) return
 		updateDropdownSelection($(this), 1)
+		setCooldown()
 	})
 	$('.js-donation-prev').on('click touchend', function () {
+		if (isCooldown) return
 		updateDropdownSelection($(this), -1)
+		setCooldown()
 	})
 
 	// change variation value
 	$('.js-donation-variation').on('click touchend', function () {
+		if (isCooldown) return
 		var value = $(this).data('value')
 		var $parentCol = $(this).closest('.donation__form-col--variation')
 
 		$parentCol.find('#donation-variation').val(value)
 		$parentCol.find('.donation__form-scrollable-item').removeClass('is-active')
-
 		$(this).addClass('is-active')
+		setCooldown()
 	})
-})
 
-var projectSwiper = new Swiper('.projects__swiper', {
-	slidesPerView: 1,
-	spaceBetween: 50,
-	effect: 'fade',
-	keyboard: {
-		enabled: true,
-	},
-	navigation: {
-		prevEl: '.projects__swiper-prev',
-		nextEl: '.projects__swiper-next',
-	},
-})
+	// projects section
+	const slideCount = 7
 
-const slideCount = 7
+	for (let i = 1; i <= slideCount; i++) {
+		$(`#project-${i}`).on('click touchend', function (e) {
+			if (isDragging) return
+			e.preventDefault()
 
-for (let i = 1; i <= slideCount; i++) {
-	$(`#project-${i}`).click(projectSwiper, function () {
-		projectSwiper.slideTo(i - 1)
-	})
-}
+			projectSwiper.slideTo(i - 1)
+			setTimeout(function () {
+				document.getElementById(`project-swiper`).scrollIntoView({
+					behavior: 'smooth',
+					block: 'start',
+				})
+			}, 50)
+		})
+	}
 
-$(document).ready(function () {
 	$('.projects__item-inner').on('click touchend', function () {
-		$('.projects__swiper-wrapper').removeClass('is-hidden')
-		$('.projects__wrapper').addClass('is-hidden')
+		if (isDragging) return
+		setTimeout(function () {
+			$('.projects__swiper-wrapper').removeClass('is-hidden')
+			$('.projects__wrapper').addClass('is-hidden')
+		}, 10)
 	})
-})
-$(document).ready(function () {
+
 	$('.projects__card-close-button').on('click touchend', function () {
-		$('.projects__swiper-wrapper').addClass('is-hidden')
-		$('.projects__wrapper').removeClass('is-hidden')
+		setTimeout(function () {
+			$('.projects__swiper-wrapper').addClass('is-hidden')
+			$('.projects__wrapper').removeClass('is-hidden')
+		}, 10)
 	})
-})
 
-new Swiper('.animals__tabs', {
-	slidesPerView: 'auto',
-	spaceBetween: 10,
-	mousewheel: true,
-	freeMode: true,
-	scrollbar: {
-		el: '.swiper-scrollbar',
-	},
-})
+	// close projects__swiper and aside menu on ESC
+	$(document).on('keydown', function (e) {
+		if (e.key === 'Escape') {
+			if ($('.aside-menu').hasClass('is-open')) {
+				$('.js-aside-menu-close').trigger('click')
+			} else {
+				$('.projects__swiper-wrapper').addClass('is-hidden')
+				$('.projects__wrapper').removeClass('is-hidden')
+			}
+		}
+	})
 
-new Swiper('.animals__swiper', {
-	spaceBetween: 0,
-	breakpoints: {
-		320: {
-			centeredSlides: true,
-			slidesPerView: 1,
-		},
-		540: {
-			slidesPerView: 2,
-		},
-		1024: {
-			slidesPerView: 3,
-		},
-		1240: {
-			slidesPerView: 4,
-		},
-		1920: {
-			slidesPerView: 5,
-		},
-	},
-})
+	// init tabs
+	function initSwiperTabs(selector, spaceBetween = 10) {
+		return new Swiper(selector, {
+			slidesPerView: 'auto',
+			spaceBetween: spaceBetween,
+			mousewheel: true,
+			freeMode: true,
+			scrollbar: {
+				el: '.swiper-scrollbar',
+			},
+		})
+	}
 
-new Swiper('.partners__swiper', {
-	grid: {
-		fill: 'row',
-		rows: 2,
-	},
-	spaceBetween: 15,
-	breakpoints: {
-		320: {
-			slidesPerView: 1,
-			centeredSlides: true,
+	initSwiperTabs('.help-now__tabs')
+	initSwiperTabs('.projects-tile__tabs')
+	initSwiperTabs('.animal__tabs', (spaceBetween = 30))
+	initSwiperTabs('.animals__tabs')
+
+	// swipers with common options
+	function mergeOptions(customOptions = {}) {
+		return { ...commonOptions, ...customOptions }
+	}
+
+	const commonOptions = {
+		spaceBetween: 0,
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+				centeredSlides: true,
+			},
+			540: { slidesPerView: 2 },
+			1024: { slidesPerView: 3 },
+			1240: { slidesPerView: 4 },
+		},
+		keyboard: { enabled: true },
+	}
+
+	var projectSwiper = new Swiper(
+		'.projects__swiper',
+		mergeOptions({
+			spaceBetween: 50,
+			breakpoints: {
+				320: { slidesPerView: 1 },
+			},
+			navigation: {
+				prevEl: '.projects__swiper-prev',
+				nextEl: '.projects__swiper-next',
+			},
+			effect: 'fade',
+		})
+	)
+
+	new Swiper(
+		'.animals__swiper',
+		mergeOptions({
+			breakpoints: {
+				320: {
+					centeredSlides: true,
+					slidesPerView: 1,
+				},
+				540: { slidesPerView: 2 },
+				1024: { slidesPerView: 3 },
+				1240: { slidesPerView: 4 },
+				1920: { slidesPerView: 5 },
+			},
+		})
+	)
+
+	new Swiper(
+		'.partners__swiper',
+		mergeOptions({
+			spaceBetween: 15,
 			grid: {
 				fill: 'row',
-				rows: 1,
 			},
-		},
-		540: {
-			slidesPerView: 2,
-		},
-		768: {
-			slidesPerView: 3,
-		},
-		1024: {
-			slidesPerView: 4,
-		},
-		1440: {
-			slidesPerView: 5,
-		},
-	},
-	navigation: {
-		prevEl: '.partners__swiper-prev',
-		nextEl: '.partners__swiper-next',
-	},
-})
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+					centeredSlides: true,
+					grid: { rows: 1 },
+				},
+				540: {
+					slidesPerView: 2,
+					grid: { rows: 2 },
+				},
+				768: {
+					slidesPerView: 3,
+					grid: { rows: 2 },
+				},
+				1024: {
+					slidesPerView: 4,
+					grid: { rows: 2 },
+				},
+				1440: {
+					slidesPerView: 5,
+					grid: { rows: 2 },
+				},
+			},
+			navigation: {
+				prevEl: '.partners__swiper-prev',
+				nextEl: '.partners__swiper-next',
+			},
+		})
+	)
 
-new Swiper('.news__swiper', {
-	spaceBetween: 0,
-	breakpoints: {
-		320: {
-			centeredSlides: true,
+	new Swiper('.news__swiper', mergeOptions())
+
+	new Swiper(
+		'.team__swiper',
+		mergeOptions({
+			spaceBetween: 30,
+			navigation: {
+				prevEl: '.team__swiper-prev',
+				nextEl: '.team__swiper-next',
+			},
+		})
+	)
+
+	new Swiper(
+		'.animal__swiper',
+		mergeOptions({
+			slidesPerView: 2,
+			breakpoints: {
+				320: {
+					slidesPerView: 3,
+				},
+			},
+			spaceBetween: 10,
+			watchSlidesProgress: true,
+			navigation: {
+				prevEl: '.animal__swiper-prev',
+				nextEl: '.animal__swiper-next',
+			},
+		})
+	)
+
+	new Swiper(
+		'.animal__swiper-preview',
+		mergeOptions({
+			grabCursor: true,
 			slidesPerView: 1,
-		},
-		540: {
-			slidesPerView: 2,
-		},
-		1024: {
-			slidesPerView: 3,
-		},
-		1240: {
-			slidesPerView: 4,
-		},
-	},
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+					centeredSlides: true,
+				},
+			},
+			thumbs: { swiper: '.animal__swiper' },
+			spaceBetween: 30,
+			on: {
+				// function to stop youtube video on slidechange
+				slideChange: function (e) {
+					$('.swiper-slide').each(function () {
+						var youtubePlayer = $(this).find('iframe').get(0)
+						if (youtubePlayer) {
+							youtubePlayer.contentWindow.postMessage(
+								'{"event":"command","func":"pauseVideo","args":""}',
+								'*'
+							)
+						}
+					})
+				},
+				// stop <video> on slidechange
+				slideChange: function (e) {
+					$('.swiper-slide').each(function () {
+						var video = $(this).find('video').get(0)
+						if (video) {
+							video.pause()
+						}
+					})
+				},
+			},
+		})
+	)
+
+	new Swiper(
+		'.histories__swiper',
+		mergeOptions({
+			breakpoints: {
+				320: {
+					centeredSlides: true,
+					slidesPerView: 1,
+				},
+				540: { slidesPerView: 2 },
+				1024: { slidesPerView: 3 },
+				1240: { slidesPerView: 4 },
+				1920: { slidesPerView: 5 },
+			},
+		})
+	)
 })
 
-new Swiper('.histories__swiper', {
-	spaceBetween: 0,
+// swap hero's content on mobile with minimal delay
 
-	breakpoints: {
-		320: {
-			centeredSlides: true,
-			slidesPerView: 1,
-		},
-		540: {
-			slidesPerView: 2,
-		},
-		1024: {
-			slidesPerView: 3,
-		},
-		1240: {
-			slidesPerView: 4,
-		},
-		1920: {
-			slidesPerView: 5,
-		},
-	},
-})
+function swapHeroContent() {
+	let isCurrentMobile = $(window).width() <= 767
 
-new Swiper('.team__swiper', {
-	spaceBetween: 30,
+	if (isCurrentMobile && !isSwapped) {
+		$('.hero__content--donation').appendTo('.hero--fund .hero__inner')
+		$('.hero__content--fund').appendTo('.hero--donation .hero__inner')
+		isSwapped = true
+	} else if (!isCurrentMobile && isSwapped) {
+		$('.hero__content--donation').appendTo('.hero--donation .hero__inner')
+		$('.hero__content--fund').appendTo('.hero--fund .hero__inner')
+		isSwapped = false
+	}
+}
 
-	breakpoints: {
-		320: {
-			centeredSlides: true,
-			slidesPerView: 1,
-		},
-		540: {
-			slidesPerView: 2,
-		},
-		1024: {
-			slidesPerView: 3,
-		},
-		1240: {
-			slidesPerView: 4,
-		},
-	},
-	navigation: {
-		prevEl: '.team__swiper-prev',
-		nextEl: '.team__swiper-next',
-	},
-})
-
-new Swiper('.help-now__tabs', {
-	slidesPerView: 'auto',
-	spaceBetween: 10,
-	mousewheel: true,
-	freeMode: true,
-	scrollbar: {
-		el: '.swiper-scrollbar',
-	},
-})
-
-new Swiper('.projects-tile__tabs', {
-	slidesPerView: 'auto',
-	spaceBetween: 10,
-	mousewheel: true,
-	freeMode: true,
-	scrollbar: {
-		el: '.swiper-scrollbar',
-	},
-})
-
-new Swiper('.animal__tabs', {
-	slidesPerView: 'auto',
-	spaceBetween: 30,
-	mousewheel: true,
-	freeMode: true,
-	scrollbar: {
-		el: '.swiper-scrollbar',
-	},
-})
-
-new Swiper('.animal__swiper', {
-	slidesPerView: 2,
-	spaceBetween: 10,
-	watchSlidesProgress: true,
-	breakpoints: {
-		375: {
-			slidesPerView: 3,
-		},
-	},
-	navigation: {
-		prevEl: '.animal__swiper-prev',
-		nextEl: '.animal__swiper-next',
-	},
-})
-
-new Swiper('.animal__swiper-preview', {
-	grabCursor: true,
-	slidesPerView: 1,
-	spaceBetween: 30,
-	thumbs: { swiper: `.animal__swiper` },
-	on: {
-		// function to stop youtube video on slidechange
-		slideChange: function (el) {
-			$('.swiper-slide').each(function () {
-				var youtubePlayer = $(this).find('iframe').get(0)
-				if (youtubePlayer) {
-					youtubePlayer.contentWindow.postMessage(
-						'{"event":"command","func":"pauseVideo","args":""}',
-						'*'
-					)
-				}
-			})
-		},
-		// function to stop <video> on slidechange
-		slideChange: function (el) {
-			$('.swiper-slide').each(function () {
-				var video = $(this).find('video').get(0)
-				if (video) {
-					video.pause()
-				}
-			})
-		},
-	},
-})
+var isSwapped = false
+swapHeroContent()

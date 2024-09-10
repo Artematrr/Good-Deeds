@@ -1,6 +1,22 @@
 .hero {
 	background-image: url('/images/bg-wide.png');
 
+	.donation__form-scrollable-item {
+		font-size: 20px;
+
+		&.is-active {
+			--underlineOffsetTop: 10px;
+
+			@include underline-wave;
+
+			color: var(--secondary-500);
+
+			&::before {
+				opacity: 0.5;
+			}
+		}
+	}
+
 	&--donation {
 		padding-top: 30px;
 		background-image: none;
@@ -33,9 +49,11 @@
 			background-image: url('/images/bg-wide.png');
 
 			img {
+				padding-top: 30px;
 				padding-right: 30px;
 
 				@include mobile {
+					padding-top: 0;
 					padding-right: 0;
 				}
 			}
@@ -76,22 +94,6 @@
 		.donation__form-input {
 			width: 220px;
 			font-size: 60px;
-		}
-
-		.donation__form-scrollable-item {
-			font-size: 20px;
-
-			&.is-active {
-				--underlineOffsetTop: 10px;
-
-				@include underline-wave;
-
-				color: var(--secondary-500);
-
-				&::before {
-					opacity: 0.5;
-				}
-			}
 		}
 	}
 
@@ -243,7 +245,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		gap: 10px 30px;
-		margin-top: calc(50px - 15px); // (necessary margin-top minus row-gap)
+		margin-top: calc(50px - 15px);
 
 		&--short-top {
 			margin-top: calc(30px - 15px);

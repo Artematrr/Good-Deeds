@@ -49,10 +49,6 @@ label {
 	line-height: 1.1;
 }
 
-// p:where(:not([class]):not(:last-child)) {
-// 	margin-bottom: var(24px);
-// }
-
 body {
 	min-height: 100%;
 	min-width: 300px;
@@ -76,10 +72,6 @@ html,
 	scroll-behavior: smooth;
 }
 
-// :target {
-// 	scroll-margin-block: 5ex;
-// }
-
 ul[class],
 ol[class] {
 	list-style: none;
@@ -94,10 +86,6 @@ img {
 	max-width: 100%;
 	display: block;
 }
-
-// article > * + * {
-// 	margin-top: 1em;
-// }
 
 address[class] {
 	font-style: normal;
@@ -123,13 +111,6 @@ textarea,
 select {
 	font: inherit;
 }
-
-// svg *[fill] {
-// 	fill: currentColor;
-// }
-// svg *[stroke] {
-// 	stroke: currentColor;
-// }
 
 svg * {
 	transition-property: fill, stroke;

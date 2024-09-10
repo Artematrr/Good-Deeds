@@ -9,12 +9,8 @@
 	--secondary-500: #cb1517;
 
 	--gray-100: #f9f9f9;
-	// --gray-200: #e9ecef;
-	// --gray-300: #dee2e6;
 	--gray-400: #d4d8e1;
 	--gray-500: #d7d7d7; // in form only
-	// --gray-500: #adb5bd;
-	// --gray-600: #6c757d;
 	--gray-700: #868686;
 	--gray-800: #525252; // in form only
 	--gray-900: #2a3342;
@@ -35,15 +31,16 @@
 		0px 21px 21px 0px rgba(203, 21, 23, 0.17),
 		0px 5px 12px 0px rgba(203, 21, 23, 0.2);
 
-	// --border: 1px solid var(--gray-300);
+	--overlay-shadow: rgba(0, 32, 50, 0.6);
+
 	--border-radius: 5px;
 	--border-radius-small: 3px;
 
-	// --shadow: 0 5px 0 0 var(--gray-300);
-	--overlay-shadow: rgba(0, 32, 50, 0.6);
+	--header-height: 120px;
 
-	--input-height: 52px;
-	--button-height: 48px;
+	--container-width: 1410px;
+	--container-padding-x: 17px;
+	--section-margin-bottom: 50px;
 
 	--font-family-base: 'Geometria', sans-serif;
 	--font-family-accent: 'Unbounded', serif;
@@ -51,23 +48,10 @@
 	--font-family-form-accent: 'Circe', serif;
 	--font-family-extra: 'Montserrat', sans-serif;
 
-	--container-width: 1410px;
-	--container-padding-x: 17px;
-
 	--transition-duration: 0.2s;
-
-	--section-margin-bottom: 50px;
-	--header-height: 120px;
 
 	@include mobile {
 		--section-margin-bottom: 30px;
 		--header-height: 65px;
 	}
-	// --section-padding-y: 70px;
-	// @include desktop {
-	// 	--section-padding-y: 50px;
-	// }
-	// @include mobile {
-	// 	--section-padding-y: 30px;
-	// }
 }

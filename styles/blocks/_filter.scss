@@ -11,7 +11,9 @@
 
 	&--without-container {
 		@include mobile {
-			padding-left: var(--container-padding-x);
+			.swiper-slide:first-child {
+				margin-left: var(--container-padding-x);
+			}
 		}
 	}
 

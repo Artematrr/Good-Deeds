@@ -15,6 +15,10 @@
 		@include tablet {
 			grid-template-columns: 1fr;
 		}
+
+		@include mobile {
+			@include full-width;
+		}
 	}
 
 	&__item {

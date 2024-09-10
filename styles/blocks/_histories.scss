@@ -1,4 +1,8 @@
 .histories {
+	@include mobile {
+		padding-inline: 0;
+	}
+	
 	&__swiper {
 		max-width: 2560px;
 	}

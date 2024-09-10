@@ -1,5 +1,4 @@
 @mixin fluid-text($min: 16, $max: 48) {
-	// 1440 или 2000 - ширина макета
 	$layoutWidth: 1440;
 	font-size: clamp(#{$min}px, #{$max / $layoutWidth * 100}vw, #{$max}px);
 }
@@ -64,7 +63,7 @@
 		aspect-ratio: var(--underlineAspectRatio, 27 / 3);
 		background-image: var(
 			--underlineImage,
-			url('/images/icons/underline-134.svg')
+			url('/images/icons/underline-long.svg')
 		);
 		background-size: 100% 100%;
 		background-repeat: no-repeat;
