@@ -211,5 +211,9 @@
 		&.is-active {
 			color: var(--primary-600);
 		}
+		
+		@include mobile{
+			white-space: wrap;
+		}
 	}
 }

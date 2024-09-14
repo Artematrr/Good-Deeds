@@ -1,4 +1,8 @@
 .news {
+	@include mobile {
+		padding-inline: 0;
+	}
+
 	&__swiper {
 	}
 

@@ -10,6 +10,10 @@
 	<link rel="stylesheet" href="/styles/css/swiper-bundle.min.css">
 	<link rel="stylesheet" href="/styles/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/styles/css/styles.css">
+
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=1af54cd9-f561-4ec2-aa9c-2ffafcd32f59&lang=ru_RU"
+		type="text/javascript">
+		</script>
 </head>
 
 <body>
@@ -99,6 +103,9 @@
 					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Отчет</a></li>
 					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Новости</a></li>
 					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Контакты</a></li>
+					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Партнеры</a></li>
+					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Приюты</a></li>
+					<li class="aside-menu__nav-item"><a href="#" class="aside-menu__nav-link">Счастливые истории</a></li>
 				</ol>
 			</nav>
 			<div class="aside-menu__contacts">
@@ -1115,7 +1122,7 @@
 		<section class="cooperation">
 			<div class="cooperation__inner container">
 				<div class="cooperation__content">
-					<h2 class="visually-hidden">Сотрудничая с нами</h2>
+					<h2 class="visually-hidden">Сотрудничество с нами</h2>
 					<div class="cooperation__text">
 						<div class="cooperation__title">
 							<p>СОТРУДНИЧАЯ С нами,</p>
@@ -1251,9 +1258,7 @@
 				<a href="#" class="button button--primary">Оставить заявку</a>
 			</div>
 			<div class="map__container">
-				<iframe
-					src="https://yandex.ru/map-widget/v1/?um=constructor%3Aafce9996f3d4c41273197ba5a2b337fdfc6f5716b16a7627a3019cf89862574c&amp;source=constructor"
-					width="100%" height="520" frameborder="0"></iframe>
+				<div class="map__map" id="map"></div>
 			</div>
 		</section>
 

@@ -120,6 +120,10 @@
 			background: var(--gray-100);
 			user-select: auto;
 		}
+
+		img {
+			height: 33px;
+		}
 	}
 
 	&__card-description {
